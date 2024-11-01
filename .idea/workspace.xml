@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -26,8 +29,56 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e1108593-cb63-4cf8-9894-877d9ad19767" name="Default" comment="style.css">
-      <change afterPath="$PROJECT_DIR$/_posts/2024-06-04-storyDiffusion.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CNAME" beforeDir="false" afterPath="$PROJECT_DIR$/CNAME" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_includes/widgets/personlized_signature" beforeDir="false" afterPath="$PROJECT_DIR$/_includes/widgets/personlized_signature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_includes/widgets/star_post_list" beforeDir="false" afterPath="$PROJECT_DIR$/_includes/widgets/star_post_list" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_layouts/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/_layouts/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_layouts/keynote.html" beforeDir="false" afterPath="$PROJECT_DIR$/_layouts/keynote.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_layouts/post.html" beforeDir="false" afterPath="$PROJECT_DIR$/_layouts/post.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2018-08-28-Hello-world!.markdown" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2018-10-25-Einstein summation convention.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2018-10-26-caffe_installation_ubuntu_1604.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2018-11-01-sereral_search_engines_urls.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2018-11-20-process_of_blog_setting-up.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2018-11-27-NetVLAD.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2018-11-28-sand-table-simulation-activity_feelings.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2018-11-29-live2D_installation.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2018-12-06-autumn_poems.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2018-12-13-blog's-name-changed.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2018-12-18-notices-for-jekyll-themes-fork.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2018-12-26-GhostVLAD.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-01-07-Image-to-Image-Translation-with-Conditional-Adversarial-Networks.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-01-16-VMware-Windows-no-network-adaptor.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-01-16-reocrds_of_installation_errors_and_operations.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-01-22-ProgressiveGAN.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-01-29-Ubuntu_how_to_mount_disk.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-01-30-face-aging_using_GAN.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-02-01-autumn_poems_2.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-02-26-Ubuntu_Atom_Latex_environment_deploy.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-03-06-CycleGAN.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-03-29-StyleGAN.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-04-18-spring-poems_1.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-05-10-spectral-normalization.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-07-03-SAGAN.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-08-13-Transferable-Adversarial-Attacks-for-Image-and-Video-Object-Detection.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-09-20-SSRNet.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2020-02-09-2019-nCov.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2020-04-08-InvisibleMan.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2021-03-18-LiYunLongGAN.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2024-04-08-InteractiveLearningFromVerbalCorrection.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2024-05-08-RAR-RetrievingAndRanking.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2024-06-04-storyDiffusion.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/imgs/ali_pay.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/imgs/wechat_pay.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/tongji.baidu.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/tongji.baidu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/donate.md" beforeDir="false" afterPath="$PROJECT_DIR$/donate.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/favicon.png" beforeDir="false" afterPath="$PROJECT_DIR$/favicon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/guestbook.html" beforeDir="false" afterPath="$PROJECT_DIR$/guestbook.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,24 +112,21 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="SIGN_OFF_COMMIT" value="true" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="1XOAfmqPgpnBSAgDSjDWVIZpjyg" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="SearchEverywhereHistoryKey" value="duoshuo&#9;null&#9;null" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="add_unversioned_files" value="$PROJECT_DIR$/_site/jekyll/update/2018/08/28/welcome-to-jekyll.html&#10;/home/CVAR/study/interest/blogs/github_page/oukohou.github.io/laboratory/comment_test.html&#10;/home/CVAR/study/interest/blogs/github_page/oukohou.github.io/_site/guestbook/index.html&#10;/home/CVAR/study/interest/blogs/github_page/oukohou.github.io/laboratory/fd.html&#10;true&#10;/home/CVAR/study/interest/blogs/github_page/oukohou.github.io/_site/assets/css/style.css" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../aistudy/projects/FireDetection/codes/yolov5-master-4.0/yolov5-master" />
-    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="Console" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/13072"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/assets/imgs" />
@@ -92,7 +140,7 @@
       <recent name="$PROJECT_DIR$/server" />
     </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.post.html">
+  <component name="RunManager" selected="Python.resize_image">
     <configuration name="post.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/oukohou.github.io/_layouts/post.html">
       <method v="2" />
     </configuration>
@@ -119,16 +167,15 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="JavaScript Debug.post.html" />
       <item itemvalue="Python.resize_image" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JavaScript Debug.post.html" />
         <item itemvalue="Python.resize_image" />
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -593,7 +640,6 @@
                   </entry>
                 </map>
               </option>
-              <option name="COLUMN_ORDER" />
             </State>
           </value>
         </entry>
@@ -641,32 +687,6 @@
     <MESSAGE value="style.css" />
     <MESSAGE value="add post:RAR" />
     <option name="LAST_COMMIT_MESSAGE" value="add post:RAR" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="232" y="384" width="1147" height="626" key="#com.intellij.ide.fileTemplates.ui.ConfigureTemplatesDialog" timestamp="1710321499372">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state x="232" y="384" width="1147" height="626" key="#com.intellij.ide.fileTemplates.ui.ConfigureTemplatesDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1710321499372" />
-    <state x="488" y="69" width="1001" height="967" key="CommitChangelistDialog2" timestamp="1715648268905">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state x="488" y="69" width="1001" height="967" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1715648268905" />
-    <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl" timestamp="1715851580888">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1715851580888" />
-    <state x="813" y="450" key="GitRewordDialog" timestamp="1713454116711">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state x="813" y="450" key="GitRewordDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1713454116711" />
-    <state x="475" y="187" key="SettingsEditor" timestamp="1717569209015">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state x="475" y="187" key="SettingsEditor/67.27.1853.1053@67.27.1853.1053" timestamp="1717569209015" />
-    <state x="588" y="287" width="800" height="531" key="Vcs.Push.Dialog.v2" timestamp="1715648271387">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state x="588" y="287" width="800" height="531" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1715648271387" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

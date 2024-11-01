@@ -1,14 +1,14 @@
 # Site settings
-title: oukohou
-subtitle: [ 璇珠杂俎]
-keywords: oukohou
-description: 我梦扬州，便想到扬州梦我。幸会。微信公众号：oukohou.
+title: lyy0323
+subtitle: [芋椰的小世界]
+keywords: lyy0323
+description: 星河桥下春草晚，和梦长在水中洲。
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://www.oukohou.wang/" # 你的域名
-page_no_title: "oukohou's blog" # 文章无标题时默认显示内容
+url: "https://lyy0323.github.io/writing/" # 你的域名
+page_no_title: "lyy0323's writing" # 文章无标题时默认显示内容
 beian: # "备案号"
-author: oukohou
-email: oukohou@outlook.com
+author: lyy0323
+email: lyy_0323@outlook.com
 
 # Build settings
 permalink: /:year/:month/:day/:title/
@@ -16,6 +16,7 @@ exclude: ["README.md", "changelog.md", "server", "tools", "Pipfile"]
 plugins_dir:
   - jekyll-paginate
   - jemoji
+plugins: [jekyll-paginate]
 # gems:
 #  - jekyll-coffeescript
 #  - jekyll-watch
@@ -62,25 +63,27 @@ menu:
 # Link settings
 links: # 友情链接
 
-  - title: ccslience's blog
-    url: http://ccslience.oukohou.wang/
-  - title: oukohou's github
-    url: https://github.com/oukohou
+  # - title: ccslience's blog
+  #   url: http://ccslience.oukohou.wang/
+  # - title: oukohou's github
+  #   url: https://github.com/oukohou
 #  - title:
 #    url: http://jekyllcn.com/
-  - title: Jekyll blog system
-    url: http://jekyllcn.com/
+  # - title: Jekyll blog system
+  #   url: http://jekyllcn.com/
+  - title: 上海交大国学社社员诗歌
+    url: http://139.224.229.170/
 
 
 # Google Analytics
-ga_track_id: 'UA-130856615-1'            # Format: UA-xxxxxx-xx
-ga_domain: www.oukohou.wang              # 默认的是 auto, 这里我是自定义了的域名，你如果没有自己的域名，需要改成auto
+ga_track_id: 'G-KPN1RS6PHD'            # Format: UA-xxxxxx-xx
+ga_domain: auto             # 默认的是 auto, 这里我是自定义了的域名，你如果没有自己的域名，需要改成auto
 
 
 # Code hub settings
 codehub: # 代码仓库
   - title: Github
-    url: https://github.com/oukohou
+    url: https://github.com/lyy0323
 
 
 #valine:
@@ -96,17 +99,17 @@ codehub: # 代码仓库
 #  pageSize: 10
 
 # Set which comment system to use
-comments:
-  # 'disqus' / 'giscus' / 'utterances' are available
-  provider:            giscus
-#https://github.com/mmistakes/minimal-mistakes/pull/3022#issuecomment-869022785:
-# JEKYLL_ENV=production jekyll serve
-  giscus:
-    repo: oukohou/image_gallery
-    repo_id:  MDEwOlJlcG9zaXRvcnkxODg5ODYzOTY=
-    category: General
-    category_id: DIC_kwDOC0O0HM4CdbSz
-    mapping: pathname # optional, default to 'pathname'
-    input_position: top# optional, default to 'bottom'
-    lang: zh-CN# optional, default to the value of `site.lang`
-    reactions_enabled: 1# optional, default to the value of `1`
+# comments:
+#   # 'disqus' / 'giscus' / 'utterances' are available
+#   provider:            giscus
+# #https://github.com/mmistakes/minimal-mistakes/pull/3022#issuecomment-869022785:
+# # JEKYLL_ENV=production jekyll serve
+#   giscus:
+#     repo: oukohou/image_gallery
+#     repo_id:  MDEwOlJlcG9zaXRvcnkxODg5ODYzOTY=
+#     category: General
+#     category_id: DIC_kwDOC0O0HM4CdbSz
+#     mapping: pathname # optional, default to 'pathname'
+#     input_position: top# optional, default to 'bottom'
+#     lang: zh-CN# optional, default to the value of `site.lang`
+#     reactions_enabled: 1# optional, default to the value of `1`
