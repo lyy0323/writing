@@ -29,56 +29,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e1108593-cb63-4cf8-9894-877d9ad19767" name="Default" comment="style.css">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CNAME" beforeDir="false" afterPath="$PROJECT_DIR$/CNAME" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/widgets/personlized_signature" beforeDir="false" afterPath="$PROJECT_DIR$/_includes/widgets/personlized_signature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/widgets/star_post_list" beforeDir="false" afterPath="$PROJECT_DIR$/_includes/widgets/star_post_list" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_layouts/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/_layouts/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_layouts/keynote.html" beforeDir="false" afterPath="$PROJECT_DIR$/_layouts/keynote.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_layouts/post.html" beforeDir="false" afterPath="$PROJECT_DIR$/_layouts/post.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2018-08-28-Hello-world!.markdown" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2018-10-25-Einstein summation convention.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2018-10-26-caffe_installation_ubuntu_1604.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2018-11-01-sereral_search_engines_urls.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2018-11-20-process_of_blog_setting-up.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2018-11-27-NetVLAD.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2018-11-28-sand-table-simulation-activity_feelings.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2018-11-29-live2D_installation.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2018-12-06-autumn_poems.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2018-12-13-blog's-name-changed.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2018-12-18-notices-for-jekyll-themes-fork.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2018-12-26-GhostVLAD.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2019-01-07-Image-to-Image-Translation-with-Conditional-Adversarial-Networks.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2019-01-16-VMware-Windows-no-network-adaptor.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2019-01-16-reocrds_of_installation_errors_and_operations.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2019-01-22-ProgressiveGAN.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2019-01-29-Ubuntu_how_to_mount_disk.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2019-01-30-face-aging_using_GAN.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2019-02-01-autumn_poems_2.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2019-02-26-Ubuntu_Atom_Latex_environment_deploy.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2019-03-06-CycleGAN.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2019-03-29-StyleGAN.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2019-04-18-spring-poems_1.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2019-05-10-spectral-normalization.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2019-07-03-SAGAN.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2019-08-13-Transferable-Adversarial-Attacks-for-Image-and-Video-Object-Detection.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2019-09-20-SSRNet.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2020-02-09-2019-nCov.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2020-04-08-InvisibleMan.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2021-03-18-LiYunLongGAN.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2024-04-08-InteractiveLearningFromVerbalCorrection.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2024-05-08-RAR-RetrievingAndRanking.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2024-06-04-storyDiffusion.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/imgs/ali_pay.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/imgs/wechat_pay.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/tongji.baidu.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/tongji.baidu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/donate.md" beforeDir="false" afterPath="$PROJECT_DIR$/donate.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/favicon.png" beforeDir="false" afterPath="$PROJECT_DIR$/favicon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/guestbook.html" beforeDir="false" afterPath="$PROJECT_DIR$/guestbook.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
