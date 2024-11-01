@@ -29,7 +29,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e1108593-cb63-4cf8-9894-877d9ad19767" name="Default" comment="style.css">
-      <change beforePath="$PROJECT_DIR$/_includes/widgets/search_box_new" beforeDir="false" afterPath="$PROJECT_DIR$/_includes/widgets/search_box_new" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_posts/2024-08-01-海风集.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_posts/2024-09-01-缘溪集.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_posts/2024-10-01-轨边集.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_posts/2024-11-01-中洲集.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,16 +79,16 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/13072"
+    "last_opened_file_path": "C:/Users/13072/my-awesome-site/oukohou/_posts"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\13072\my-awesome-site\oukohou\_posts" />
       <recent name="$PROJECT_DIR$/assets/imgs" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/assets" />
       <recent name="$PROJECT_DIR$/assets/live2dw" />
-      <recent name="$PROJECT_DIR$/assets/css" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/assets" />
