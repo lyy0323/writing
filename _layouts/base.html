@@ -62,7 +62,7 @@ Yet no award for you……
     <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %} | {{ site.subtitle}}</title>
 
     <!--live2d function-->
-    <script src="/assets/live2dw/lib/L2Dwidget.min.js"></script>
+    <script src="{{site.baseurl}}/assets/live2dw/lib/L2Dwidget.min.js"></script>
     <script>L2Dwidget.init({
         "pluginRootPath": "live2dw/",
         "pluginJsPath": "lib/",
@@ -109,8 +109,8 @@ Yet no award for you……
     <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
 
 
-    <script type="text/javascript" src="/assets/js/jquery.min.js"></script>
-    <script type="text/javascript" src="/assets/js/tongji.baidu.js"></script>
+    <script type="text/javascript" src="{{site.baseurl}}/assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="{{site.baseurl}}/assets/js/tongji.baidu.js"></script>
 
 </head>
 
@@ -194,7 +194,7 @@ Yet no award for you……
     </div>
 
     <a id="rocket" href="#top" class="show"></a>
-    <script src="/assets/js/totop.js" type="text/javascript"></script>
+    <script src="{{site.baseurl}}/assets/js/totop.js" type="text/javascript"></script>
 </div>
 
 <!--{% include plugins/baidu_push %}-->
