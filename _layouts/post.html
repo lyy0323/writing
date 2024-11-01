@@ -41,7 +41,7 @@ layout: base
     </div>
 
     <div id="donate" >
-        <a href="/donate/" style="text-decoration: none" title="点击直达打赏页面～" >
+        <a href="{{ '/donate/' | prepend: site.baseurl }}" style="text-decoration: none" title="点击直达打赏页面～" >
             <button>宝宝如果喜欢这里的话，<mark>赏个铜板</mark>再走啊🐼</button>
         </a>
     </div>
@@ -52,7 +52,7 @@ layout: base
         <a href="{{ page.previous.url | prepend: site.baseurl }}" class="pre"><i class="icon-post-pre"> {{
             page.previous.title }}</i></a>
         {% endif %} {% if page.next %}
-        <a href="{{ page.next.url | prepend: site.baseur }}" class="next">{{ page.next.title }} <i
+        <a href="{{ page.next.url | prepend: site.baseurl }}" class="next">{{ page.next.title }} <i
                 class="icon-post-next"></i></a>
         {% endif %}
     </div>
