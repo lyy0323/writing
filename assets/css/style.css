@@ -109,8 +109,8 @@ a:focus {
 
 #header #nav-menu a.current {
     border: 1px solid #C2C2C2;
-    border-bottom-color: #F2F2F2;
-    background-color: #F2F2F2;
+    border-bottom-color: #F8F2F5;
+    background-color: #F8F2F5;
 }
 
 #sidebar {
@@ -271,7 +271,7 @@ a:focus {
 }
 
 .post .post-content p a {
-    color: #01579f;
+    color: #57339f;
     padding-bottom: 2px;
     word-break: break-all;
 }
