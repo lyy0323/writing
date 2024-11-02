@@ -72,7 +72,7 @@ a:focus {
 }
 
 #header .site-name #logo {
-    font: bold 30px/1.12 "Times New Roman", Georgia, Times, sans-serif;
+    font: bold 30px/1.12 "Times New Roman", "lxgw", Georgia, Times, sans-serif;
     color: #555;
 }
 
@@ -81,7 +81,7 @@ a:focus {
 }
 
 #header .site-name .description {
-    font-family: "ff-tisa-web-pro", Cambria, "Times New Roman", Georgia, Times, sans-serif;
+    font-family: "lxgw", "ff-tisa-web-pro", Cambria, "Times New Roman", Georgia, Times, sans-serif;
     margin: .4em 0 .2em;
     color: #999;
 }
@@ -203,7 +203,7 @@ a:focus {
     margin: 0;
     color: #555;
     text-align: left;
-    font: bold 25px/1.1 "ff-tisa-web-pro", Cambria, "Times New Roman", Georgia, Times, sans-serif;
+    font: bold 25px/1.1 "lxgw", "ff-tisa-web-pro", Cambria, "Times New Roman", Georgia, Times, sans-serif;
 }
 
 .post .post-title a {
@@ -395,7 +395,7 @@ a:focus {
 }
 
 #footer {
-    font-family: "ff-tisa-web-pro", Cambria, "Times New Roman", Georgia, Times, sans-serif;
+    font-family: "lxgw", "ff-tisa-web-pro", Cambria, "Times New Roman", Georgia, Times, sans-serif;
     font-size: .9em;
     padding: .8em 0 3.6em;
     margin-top: 1.6em;
@@ -413,7 +413,7 @@ a:focus {
 
 .post-archive h2 {
     margin: 0;
-    font: bold 25px/1.1 "ff-tisa-web-pro", Cambria, "Times New Roman", Georgia, Times, sans-serif;
+    font: bold 25px/1.1 "lxgw", "ff-tisa-web-pro", Cambria, "Times New Roman", Georgia, Times, sans-serif;
 }
 
 .post-archive .date {
@@ -1156,7 +1156,7 @@ figure {
 .post-nav a {
     display: inline-block;
     line-height: 25px;
-    font-family: "TIBch", "Classic Grotesque W01", "Helvetica Neue", Arial, "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "WenQuanYi Micro Hei", SimSun, sans-serif;
+    font-family: "lxgw", "TIBch", "Classic Grotesque W01", "Helvetica Neue", Arial, "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "WenQuanYi Micro Hei", SimSun, sans-serif;
     font-size: 15px;
     color: #555;
     border-bottom: none;
