@@ -99,7 +99,7 @@ a:focus {
     padding: 3px 20px 3px;
     line-height: 30px;
     color: #444;
-    font-size: 13px;
+    font-size: 14px;
     border: 1px solid transparent;
 }
 
@@ -239,7 +239,7 @@ a:focus {
 
 .post .post-content {
     clear: left;
-    font-size: 15px;
+    font-size: 16px;
     line-height: 1.77;
     color: #444;
     padding-top: 20px;
@@ -348,7 +348,7 @@ a:focus {
     list-style: none;
     margin-top: 25px;
     padding: 25px 0;
-    font-size: 14px;
+    font-size: 15px;
     text-align: center;
 }
 
@@ -383,7 +383,7 @@ a:focus {
     height: 25px;
     line-height: 25px;
     padding: 5px 20px;
-    font-size: 13px;
+    font-size: 14px;
 }
 
 .page-navigator span.pre {
@@ -406,7 +406,7 @@ a:focus {
 
 /* for different pages starts*/
 .post-archive {
-    font-size: 15px;
+    font-size: 16px;
     line-height: 2;
     padding-bottom: .8em;
 }
@@ -489,7 +489,7 @@ a:focus {
         padding: 0 15px;
         line-height: 27px;
         height: 27px;
-        font-size: 13px;
+        font-size: 14px;
     }
 }
 
@@ -658,7 +658,7 @@ div {
     margin-left: -2px;
     padding: 0 0 40px 35px;
     border-left: 4px solid #aaa;
-    font-size: 14px;
+    font-size: 15px;
     line-height: 20px;
 }
 
@@ -702,7 +702,7 @@ div {
 
 /* read more*/
 .readmore a {
-    font-size: 13px;
+    font-size: 14px;
     color: #999;
     margin-top: -10px;
     margin-bottom: -10px;
@@ -1157,7 +1157,7 @@ figure {
     display: inline-block;
     line-height: 25px;
     font-family: "lxgw", "TIBch", "Classic Grotesque W01", "Helvetica Neue", Arial, "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "WenQuanYi Micro Hei", SimSun, sans-serif;
-    font-size: 15px;
+    font-size: 16px;
     color: #555;
     border-bottom: none;
     float: left;
@@ -1241,7 +1241,7 @@ table tr:nth-child(2n) {
 
 #donate button {
     color: #F2F2F2;
-    font-size: 14px;
+    font-size: 15px;
     padding-top: 6px;
     padding-bottom: 6px;
     padding-left: 15px;
