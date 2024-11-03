@@ -33,13 +33,43 @@ permalink: /guestbook/
 </style>
 
 <div class='slogan'>
-    <b>关于我</b>
+    <b>欢迎光临 ~</b>
 </div>
 
-<div align="center">今日供应：椰林飘香。</div>
+<div id="dessert-of-the-day" align="center" style="background: #E6E0EC"></div>
+
+<script>
+// 定义甜品数组
+const desserts = [
+  "芋泥椰子冻", // 周一
+  "芋圆椰乳",   // 周二
+  "芋泥椰椰冰沙", // 周三
+  "芋泥波波椰",  // 周四
+  "芋泥椰香拿铁", // 周五
+  "芋椰舒芙蕾",  // 周六
+  "芋泥生椰奶茶" // 周日
+];
+
+// 获取当前日期
+const today = new Date();
+
+// 获取今天是星期几（0-6，0为周日）
+const dayOfWeek = today.getDay();
+
+// 检查dayOfWeek的值，确保它在0-6的范围内
+if (dayOfWeek === 0) {
+  dayOfWeek = 7; // 如果是周日，调整为7
+}
+
+// 计算今日供应的甜品
+const dessertOfTheDay = "今日供应：" + desserts[dayOfWeek - 1];
+
+// 将结果输出到div中
+document.getElementById("dessert-of-the-day").innerText = dessertOfTheDay;
+</script>
 
 <h4 align="right">
-        lyy0323.
+        ——店主
 </h4>
 
 
