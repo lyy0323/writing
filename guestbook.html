@@ -54,7 +54,7 @@ const desserts = [
 const today = new Date();
 
 // 获取今天是星期几（0-6，0为周日）
-const dayOfWeek = today.getDay();
+let dayOfWeek = today.getDay();
 
 // 检查dayOfWeek的值，确保它在0-6的范围内
 if (dayOfWeek === 0) {
