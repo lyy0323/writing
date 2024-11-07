@@ -29,6 +29,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e1108593-cb63-4cf8-9894-877d9ad19767" name="Default" comment="style.css">
+      <change afterPath="$PROJECT_DIR$/_posts/2024-11-07-Feminism.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/papers/1-Too-Soon-for-Post-Feminism-The-Ongoing-Life-of-Patriarchy-in-Neoliberal-America.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
@@ -68,16 +70,20 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="1XOAfmqPgpnBSAgDSjDWVIZpjyg" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "last_opened_file_path": "C:/Users/13072/my-awesome-site/oukohou/_posts",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -614,6 +620,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="add post: SAGAN." />
     <MESSAGE value="refactor:donate.md." />
     <MESSAGE value="add post: UEA." />
