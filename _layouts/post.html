@@ -25,13 +25,37 @@ layout: base
             </i>
         </span>{% endif %}
 
+        <br>
+        {% if page.content-created %}
+        <time datetime="{{ page.content-created | date_to_xmlschema }}" >
+            内容已创建 <i class="icon-post-date">{{ page.content-created | date: "%b %-d, %Y" }}</i>
+        </time>
+        {% endif %}
+
+        {% if page.content-updated %}
+        <time datetime="{{ page.content-updated | date_to_xmlschema }}" >
+            内容已更新 <i class="icon-post-date">{{ page.content-updated | date: "%b %-d, %Y" }}</i>
+        </time>
+        {% endif %}
+
+        {% if page.archive-created %}
+        <time datetime="{{ page.archive-created | date_to_xmlschema }}" >
+            页面已创建 <i class="icon-post-date">{{ page.archive-created | date: "%b %-d, %Y" }}</i>
+        </time>
+        {% endif %}
+
+        {% if page.archive-updated %}
+        <time datetime="{{ page.archive-updated | date_to_xmlschema }}" >
+            页面已更新 <i class="icon-post-date">{{ page.archive-updated | date: "%b %-d, %Y" }}</i>
+        </time>
+        {% endif %}
 
             <!-- 阅读量统计， id 将作为查询条件 -->
-            <span id={{page.url}} class="leancloud-visitors" data-flag-title={{page.title}}>
+            <!-- <span id={{page.url}} class="leancloud-visitors" data-flag-title={{page.title}}>
                 <span class="post-meta-divider">|</span>
                 <span class="post-meta-item-text">阅读量 </span>
                 <span class="leancloud-visitors-count"></span>
-            </span>
+            </span> -->
         </p>
 
     </header>
