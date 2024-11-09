@@ -25,7 +25,7 @@ layout: base
             </i>
         </span>{% endif %}
 
-        {% if page.content-created %} | 
+        {% if page.content-created %}
         <br>
         <i class="icon-post-date"></i>
         <time datetime="{{ page.content-created | date_to_xmlschema }}" >
@@ -33,7 +33,7 @@ layout: base
         </time>
         {% endif %}
 
-        {% if page.content-updated %} | 
+        {% if page.content-updated %}
         <br>
         <i class="icon-post-date"></i>
         <time datetime="{{ page.content-updated | date_to_xmlschema }}" >
@@ -41,7 +41,7 @@ layout: base
         </time>
         {% endif %}
 
-        {% if page.archive-created %} | 
+        {% if page.archive-created %}
         <br>
         <i class="icon-post-date"></i>
         <time datetime="{{ page.archive-created | date_to_xmlschema }}" >
@@ -49,7 +49,7 @@ layout: base
         </time>
         {% endif %}
 
-        {% if page.archive-updated %} | 
+        {% if page.archive-updated %}
         <br>
         <i class="icon-post-date"></i>
         <time datetime="{{ page.archive-updated | date_to_xmlschema }}" >
