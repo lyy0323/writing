@@ -72,7 +72,10 @@ function TOCize(toc, content, matchHeightTo) {
         var level = +hs[i].tagName.substr(1);
         var hi = hs[i];
         var ti = make('li');
-        ti.appendChild(generateLink(hi));
+        var clonedHi = hi.cloneNode(true); // 复制当前标题节点
+        var codes = clonedHi.querySelectorAll('code'); // 找到所有 <code> 标签
+        codes.forEach(code => code.remove()); // 移除 <code> 标签
+        ti.appendChild(generateLink(clonedHi));
         if (plevel < level) {
             do {
                 uls.push(make('ul'));
