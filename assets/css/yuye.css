@@ -130,7 +130,7 @@
 
 .authorspan {
     border-radius: 1em;
-    border: 1px solid;
+    border: 2px solid;
     padding: 0 0.5em;
     display: inline-block;
     position: relative;
@@ -151,6 +151,10 @@
     padding-right: 3.5em; /* 增加的额外宽度 */
 }
 
+.authorspan.linyuye0 {
+    padding-right: 4.5em; /* 增加的额外宽度 */
+}
+
 .huatong8 {
     border-color: #cadbce;
 }
@@ -161,6 +165,10 @@
 
 .shaoni2 {
     border-color: #d2e3e3;
+}
+
+.linyuye0 {
+    border-color: #d2d2e3;
 }
 
 .authorspan.huatong8::after {
@@ -176,4 +184,9 @@
 .authorspan.shaoni2::after {
     content: "韶逆";
     background-color: #d2e3e3;
+}
+
+.authorspan.linyuye0::after {
+    content: "林雨夜";
+    background-color: #d2d2e3;
 }
