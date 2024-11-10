@@ -13,6 +13,7 @@
     justify-content: center;
     padding: 0 0.5em;
     color: white;
+    font-weight: bold;
 }
 
 .MBTIfuncJ.Fi {
@@ -32,6 +33,7 @@
 }
 
 .MBTIfuncP {
+    font-weight: bold;
     color: white;
     padding: 0.25em 0.5em;
     border-radius: 1em;
@@ -56,7 +58,8 @@
 .MBTItag {
     color: white;
     padding: 0 0.5em;
-    border-radius: 1em
+    border-radius: 1em;
+    font-weight: bold;
 }
 
 .MBTItag.infj {

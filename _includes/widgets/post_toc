@@ -75,6 +75,8 @@ function TOCize(toc, content, matchHeightTo) {
         var clonedHi = hi.cloneNode(true); // 复制当前标题节点
         var codes = clonedHi.querySelectorAll('code'); // 找到所有 <code> 标签
         codes.forEach(code => code.remove()); // 移除 <code> 标签
+        var mbtiTags = clonedHi.querySelectorAll('span.MBTItag');
+        mbtiTags.forEach(mbtiTag => mbtiTag.remove());
         ti.appendChild(generateLink(clonedHi));
         if (plevel < level) {
             do {
