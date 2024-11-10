@@ -1,0 +1,36 @@
+/**
+ * @Custermized elements
+ * @lyy0323
+ * @version 1.0
+ *
+ */
+
+/* 通用 MBTI 判断功能 */
+.MBTIfuncJ {
+    clip-path: polygon(100% 50%, 85% 100%, 15% 100%, 0% 50%, 15% 0%, 85% 0%);
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0.5em;
+    color: white;
+}
+
+/* Fi 类的样式 */
+.MBTI.Fi {
+    background-color: #FF9999;
+}
+
+/* Fe 类的样式 */
+.MBTI.Fe {
+    background-color: #99CC00;
+}
+
+/* Ti 类的样式 */
+.MBTI.Ti {
+    background-color: #996600;
+}
+
+/* Te 类的样式 */
+.MBTI.Te {
+    background-color: #336699;
+}
