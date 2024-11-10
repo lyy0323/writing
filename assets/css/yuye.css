@@ -5,7 +5,7 @@
  *
  */
 
-/* 通用 MBTI 判断功能 */
+/* MBTI */
 .MBTIfuncJ {
     clip-path: polygon(100% 50%, 85% 100%, 15% 100%, 0% 50%, 15% 0%, 85% 0%);
     display: inline-block;
@@ -124,4 +124,56 @@
 
 .MBTItag.esfp {
     background: #FFCC33;
+}
+
+/* 唱和作者 */
+
+.authorspan {
+    border-radius: 1em;
+    border: 1px solid;
+    padding: 0 0.5em;
+    display: inline-block;
+    position: relative;
+}
+
+.authorspan::after {
+    position: absolute;
+    right: 0em;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 100%;
+    border: none;
+    border-radius: 0 1em 1em 0;
+    padding: 0 0.5em;
+}
+
+.authorspan.huatong8, .authorspan.xiyan3, .authorspan.shaoni2{
+    padding-right: 3.5em; /* 增加的额外宽度 */
+}
+
+.huatong8 {
+    border-color: #cadbce;
+}
+
+.xiyan3 {
+    border-color: #e3e3d2;
+}
+
+.shaoni2 {
+    border-color: #d2e3e3;
+}
+
+.authorspan.huatong8::after {
+    content: "花桐";
+    background-color: #cadbce;
+}
+
+.authorspan.xiyan3::after {
+    content: "溪烟";
+    background-color: #e3e3d2;
+}
+
+.authorspan.shaoni2::after {
+    content: "韶逆";
+    background-color: #d2e3e3;
 }
