@@ -62,3 +62,63 @@
 .MBTItag.infj {
     background: #669966;
 }
+
+.MBTItag.enfj {
+    background: #66CC66;
+}
+
+.MBTItag.infp {
+    background: #669900;
+}
+
+.MBTItag.enfp {
+    background: #99CC33;
+}
+
+.MBTItag.intj {
+    background: #996699;
+}
+
+.MBTItag.entj {
+    background: #CC6699;
+}
+
+.MBTItag.intp {
+    background: #663399;
+}
+
+.MBTItag.entp {
+    background: #9966FF;
+}
+
+.MBTItag.istj {
+    background: #003399;
+}
+
+.MBTItag.estj {
+    background: #0066CC;
+}
+
+.MBTItag.isfj {
+    background: #0099CC;
+}
+
+.MBTItag.esfj {
+    background: #00CCCC;
+}
+
+.MBTItag.istp {
+    background: #996633;
+}
+
+.MBTItag.estp {
+    background: #CC9966;
+}
+
+.MBTItag.isfp {
+    background: #FF9900;
+}
+
+.MBTItag.esfp {
+    background: #FFCC33;
+}
