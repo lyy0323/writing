@@ -15,22 +15,40 @@
     color: white;
 }
 
-/* Fi 类的样式 */
-.MBTI.Fi {
+.MBTIfuncJ.Fi {
     background-color: #FF9999;
 }
 
-/* Fe 类的样式 */
-.MBTI.Fe {
+.MBTIfuncJ.Fe {
     background-color: #99CC00;
 }
 
-/* Ti 类的样式 */
-.MBTI.Ti {
+.MBTIfuncJ.Ti {
     background-color: #996600;
 }
 
-/* Te 类的样式 */
-.MBTI.Te {
+.MBTIfuncJ.Te {
     background-color: #336699;
+}
+
+.MBTIfuncP {
+    color: white;
+    padding: 0.25em 0.5em;
+    border-radius: 1em;
+}
+
+.MBTIfuncP.Si {
+    background-color: #99CCCC;
+}
+
+.MBTIfuncP.Se {
+    background-color: #FFCC00;
+}
+
+.MBTIfuncP.Ni {
+    background-color: #660099;
+}
+
+.MBTIfuncP.Ne {
+    background-color: #CC99FF;
 }
