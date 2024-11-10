@@ -51,7 +51,7 @@ function TOCize(toc, content, matchHeightTo) {
         }
     }
 
-    var generateLink = function(h) {
+    var generateLink = function(h, ch) {
         var q = make('a');
         cnt++;
         var hash = h.getAttribute('id');
@@ -59,7 +59,7 @@ function TOCize(toc, content, matchHeightTo) {
             hash = ('generated-hash-' + cnt);
             h.setAttribute('id', hash);
         }
-        q.textContent = h.textContent;
+        q.textContent = ch.textContent;
         q.setAttribute('href', '#' + hash );
         q.addEventListener('click', scrollToHeader.bind(this, h, hash), false);
         return q;
@@ -77,7 +77,7 @@ function TOCize(toc, content, matchHeightTo) {
         codes.forEach(code => code.remove()); // 移除 <code> 标签
         var mbtiTags = clonedHi.querySelectorAll('span.MBTItag');
         mbtiTags.forEach(mbtiTag => mbtiTag.remove());
-        ti.appendChild(generateLink(hi));
+        ti.appendChild(generateLink(hi, clonedHi));
         if (plevel < level) {
             do {
                 uls.push(make('ul'));
