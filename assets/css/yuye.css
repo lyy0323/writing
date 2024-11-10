@@ -16,19 +16,19 @@
 }
 
 .MBTIfuncJ.Fi {
-    background-color: #FF9999;
+    background: #FF9999;
 }
 
 .MBTIfuncJ.Fe {
-    background-color: #99CC00;
+    background: #99CC00;
 }
 
 .MBTIfuncJ.Ti {
-    background-color: #996600;
+    background: #996600;
 }
 
 .MBTIfuncJ.Te {
-    background-color: #336699;
+    background: #336699;
 }
 
 .MBTIfuncP {
@@ -38,17 +38,27 @@
 }
 
 .MBTIfuncP.Si {
-    background-color: #99CCCC;
+    background: #99CCCC;
 }
 
 .MBTIfuncP.Se {
-    background-color: #FFCC00;
+    background: #FFCC00;
 }
 
 .MBTIfuncP.Ni {
-    background-color: #660099;
+    background: #660099;
 }
 
 .MBTIfuncP.Ne {
-    background-color: #CC99FF;
+    background: #CC99FF;
+}
+
+.MBTItag {
+    color: white;
+    padding: 0 0.5em;
+    border-radius: 1em
+}
+
+.MBTItag.infj {
+    background: #669966;
 }
