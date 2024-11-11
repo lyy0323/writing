@@ -1240,13 +1240,13 @@ table tr:nth-child(2n) {
 }
 
 #donate button {
-    color: #F2F2F2;
+    color: #393336;
     font-size: 15px;
     padding-top: 6px;
     padding-bottom: 6px;
     padding-left: 15px;
     padding-right: 15px;
-    box-shadow: #E8E2E5 2px 3px 5px 0px;
+    box-shadow: #F0E4EA 2px 3px 5px 0px;
     border-width: 2px;
     border-color: #E8E2E5;
     border-style: solid;
@@ -1255,7 +1255,7 @@ table tr:nth-child(2n) {
 }
 
 #donate button:hover {
-    background-color: #E8E2E5;
+    background-color: #F0E4EA;
 }
 
 .hide {
