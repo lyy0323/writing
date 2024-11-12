@@ -13,7 +13,7 @@
     justify-content: center;
     padding: 0 0.5em;
     color: white;
-    font-weight: bold;
+    font-weight: bold
 }
 
 .MBTIfuncJ.Fi {
@@ -37,6 +37,7 @@
     color: white;
     padding: 0.25em 0.5em;
     border-radius: 1em;
+    display: inline-block
 }
 
 .MBTIfuncP.Si {
