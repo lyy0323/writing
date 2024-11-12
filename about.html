@@ -23,7 +23,11 @@ permalink: /about/
 
     <h3>林雨夜 | Yuye [y'jɛ:]</h3>
     <p>可以叫我雨夜！也可以叫我芋椰、椰椰 ~ </p>
-    <p>INFJ 4w5 415 sx/so EII</p>
+    <p><span class="MBTItag infj" id="INFJtoggleButton">⚬ INFJ</span> 4w5 415 sx/so EII</p>
+    <p id="contentDiv">咦，你也知道绿老头有好多面具吗 ^ ^
+        <br> 有些时候我会更像<span class="MBTItag intj">⚬ INTJ</span>
+        <br> 其他常用的面具包括但不限于<span class="MBTItag infp">⚬ INFP</span><span class="MBTItag esfp">⚬ ESFP</span><span class="MBTItag entj">⚬ ENTJ</span>
+    </p>
     <p>沪人</p>
 
     <hr>
@@ -257,6 +261,18 @@ permalink: /about/
   </div>
 </div>
 
+<script>
+    document.getElementById("INFJtoggleButton").addEventListener("click", function() {
+        var contentDiv = document.getElementById("contentDiv");
+
+        // 切换内容区域的展开和收起状态
+        if (contentDiv.style.maxHeight) {
+            contentDiv.style.maxHeight = null;  // 收起内容
+        } else {
+            contentDiv.style.maxHeight = contentDiv.scrollHeight + "px";  // 展开内容
+        }
+    });
+</script>
 
 <!--<div id="disqus_thread"></div>-->
 <!--<script>-->
