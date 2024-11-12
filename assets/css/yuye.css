@@ -191,3 +191,76 @@
     content: "林雨夜";
     background-color: #d2d2e3;
 }
+
+/* pride flags background */
+
+.pride-rainbow {
+    background: repeating-linear-gradient(
+    127deg,
+    #00000000,
+    #00000000 1.2em,
+    #00000025 1.8em,
+    #e4030375 1.8em,
+    #e4030375 2.5em,
+    #ff8c0075 2.5em,
+    #ff8c0075 3.2em,
+    #ffed0075 3.2em,
+    #ffed0075 3.9em,
+    #00802675 3.9em,
+    #00802675 4.6em,
+    #24408e75 4.6em,
+    #24408e75 5.3em,
+    #73298275 5.3em,
+    #73298275 6em)
+}
+
+.pride-trans {
+    background: repeating-linear-gradient(
+    127deg,
+    #00000000,
+    #00000000 1.2em,
+    #00000025 1.8em,
+    #66ccff75 1.8em,
+    #66ccff75 2.64em,
+    #ff99cc75 2.64em,
+    #ff99cc75 3.48em,
+    #ffffff75 3.48em,
+    #ffffff75 4.32em,
+    #ff99cc75 4.32em,
+    #ff99cc75 5.16em,
+    #66ccff75 5.16em,
+    #66ccff75 6em)
+}
+
+.pride-ace {
+    background: repeating-linear-gradient(
+    127deg,
+    #00000000,
+    #00000000 1.2em,
+    #00000025 1.8em,
+    #00000075 1.8em,
+    #00000075 2.85em,
+    #9e9e9e75 2.85em,
+    #9e9e9e75 3.9em,
+    #fcfcfc75 3.9em,
+    #fcfcfc75 4.95em,
+    #64198975 4.95em,
+    #64198975 6em)
+}
+
+.pride-enby {
+    background: repeating-linear-gradient(
+    127deg,
+    #00000000,
+    #00000000 1.2em,
+    #00000025 1.8em,
+    #fcf43175 1.8em,
+    #fcf43175 2.85em,
+    #fcfcfc75 2.85em,
+    #fcfcfc75 3.9em,
+    #9d59d575 3.9em,
+    #9d59d575 4.95em,
+    #00000075 4.95em,
+    #00000075 6em)
+}
+
