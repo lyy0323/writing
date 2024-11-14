@@ -295,7 +295,7 @@
 }
 
 .hub-post-title h3{
-    margin: 0;
+    margin: 0 0 0 0 !important;
     font-size: 1em;
     line-height: 1.25
 }
