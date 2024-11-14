@@ -296,7 +296,7 @@
 
 .hub-post-title h3{
     margin: 0 0 0 0 !important;
-    font-size: 1em;
+    font-size: 1.1em;
     line-height: 1.25
 }
 
@@ -306,6 +306,27 @@
     color: #fff
 }
 
+.hub-post-title-special{
+    border-radius: calc(1em - 1px) calc(1em - 1px) 0 0;
+    min-height: 1em;
+    padding: 1em;
+    color: #fff
+}
+
+.hub-post-title-special h3{
+    margin: 0 0 0 0 !important;
+    font-size: 1.1em;
+    line-height: 1.25
+}
+
+.hub-post-title-special h3 a{
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+    color: #222;
+    background: #ffffff80;
+    padding: 0.25em
+}
+
 .hub-post-content{
     border-radius: 0 0 calc(1em - 1px) calc(1em - 1px);
     background: #ddd7da;
@@ -313,4 +334,17 @@
     padding: 1em;
     color: #523;
     text-align: justify
+}
+
+.hub-post-tags{
+    margin: 0.5em 0 0 0;
+    text-align: center;
+    background: #ccc6c9;
+    padding: 0.5em 0
+}
+
+.hub-post-tags span{
+    color: white;
+    padding: 0.1em 0.5em 0.2em 0.5em;
+    border-radius: 1em
 }
