@@ -32,6 +32,35 @@ permalink: /guestbook/
 
 </style>
 
+<script>
+    function toggleDivVisibility() {
+    const today = new Date();
+    const divs = document.querySelectorAll('.dated-div');
+
+    divs.forEach(div => {
+        const start = new Date(div.getAttribute('data-start'));
+        const end = new Date(div.getAttribute('data-end'));
+
+        if (today >= start && today <= end) {
+            div.style.display = 'block';
+        } else {
+            div.style.display = 'none';
+        }
+    });
+}
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', toggleDivVisibility);
+    setInterval(toggleDivVisibility, 1000 * 60 * 60); // 每小时检查一次
+</script>
+
+<div class="dated-div pride-trans" data-start="2024-11-13" data-end="2024-11-19">
+    <span style="background: #ffffff50; padding: 0.1em; margin: 0.1em">
+        Transgender Awareness Week is observed annually from November 13-19 and leads up to the Transgender Day of Remembrance on November 20 — a day to memorialize victims of transphobic violence. November 20 was originally a vigil to honour Rita Hester, a transgender woman killed in 1998. Now this day represents a time to honour those lives lost to transphobic violence every year. The Defence Team is encouraged to use this week to foster awareness about the experiences of trans and gender diverse people, learn more about inclusion, and to honour lives lost to transphobic violence.
+    </span>
+</div>
+
 <div class='slogan'>
     <b>欢迎光临 ~</b>
 </div>
@@ -67,6 +96,8 @@ const dessertOfTheDay = "今日供应：" + desserts[dayOfWeek - 1];
 // 将结果输出到div中
 document.getElementById("dessert-of-the-day").innerText = dessertOfTheDay;
 </script>
+
+
 
 <h4 align="right">
         ——店主
