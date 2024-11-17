@@ -274,8 +274,12 @@ visButtons.forEach(function(button) {
         // 切换内容区域的展开和收起状态
         if (visContent.style.maxHeight) {
             visContent.style.maxHeight = null;  // 收起内容
+            visContent.style.margin-top = null;
+            visContent.style.margin-bottom = null;
         } else {
             visContent.style.maxHeight = visContent.scrollHeight + "px";  // 展开内容
+            visContent.style.margin-top = "1em";
+            visContent.style.margin-bottom = "1em";
         }
     });
 });
