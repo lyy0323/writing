@@ -23,7 +23,7 @@ permalink: /about/
 
     <h3>林雨夜 | Yuye [y'jɛ:]</h3>
     <p>可以叫我雨夜！也可以叫我芋椰、椰椰 ~ </p>
-    <p style="margin-bottom: 0"><span class="vis-button MBTItag infj" data-target="infjDiv">⚬ INFJ</span> 4w5 415 sx/so EII</p>
+    <p><span class="vis-button MBTItag infj" data-target="infjDiv">⚬ INFJ</span> 4w5 415 sx/so EII</p>
     <p id="infjDiv" class="vis-content" style="margin-bottom: 0; margin-top: 0">咦，你也知道绿老头有好多面具吗 ^ ^
         <br> 有些时候我会更像<span class="MBTItag intj">⚬ INTJ</span>
         <br> 其他常用的面具包括但不限于<span class="MBTItag infp">⚬ INFP</span><span class="MBTItag esfp">⚬ ESFP</span><span class="MBTItag entj">⚬ ENTJ</span>
@@ -265,7 +265,7 @@ permalink: /about/
 var visButtons = document.getElementsByClassName('vis-button');
 
 // 为每个按钮添加点击事件监听器
-visButtons.forEach(function(button) {
+Array.from(visButtons).forEach(function(button) {
     button.addEventListener('click', function() {
         // 获取按钮对应的contentDiv的ID
         var targetId = this.getAttribute('data-target');
@@ -279,7 +279,7 @@ visButtons.forEach(function(button) {
         } else {
             visContent.style.maxHeight = visContent.scrollHeight + "px";  // 展开内容
             visContent.style.marginTop = "1em";
-            visContent.style.marginBottom = "1em";
+            visContent.style.marginBottom = null;
         }
     });
 });
