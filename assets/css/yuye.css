@@ -274,7 +274,7 @@
     #00000000 6em)
 }
 
-.collapsible-content {
+.vis-content {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.5s ease-out;
