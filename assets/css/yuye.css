@@ -278,6 +278,8 @@
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.5s ease-out;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .hub-post{

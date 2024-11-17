@@ -24,11 +24,11 @@ permalink: /about/
     <h3>林雨夜 | Yuye [y'jɛ:]</h3>
     <p>可以叫我雨夜！也可以叫我芋椰、椰椰 ~ </p>
     <p><span class="vis-button MBTItag infj" data-target="infjDiv">⚬ INFJ</span> 4w5 415 sx/so EII</p>
-    <p id="infjDiv" class="vis-content" style="margin-bottom: 0; margin-top: 0">咦，你也知道绿老头有好多面具吗 ^ ^
+    <p id="infjDiv" class="vis-content">咦，你也知道绿老头有好多面具吗 ^ ^
         <br> 有些时候我会更像<span class="MBTItag intj">⚬ INTJ</span>
         <br> 其他常用的面具包括但不限于<span class="MBTItag infp">⚬ INFP</span><span class="MBTItag esfp">⚬ ESFP</span><span class="MBTItag entj">⚬ ENTJ</span>
     </p>
-    <p  style="margin-top: 0">沪人</p>
+    <p>沪人</p>
 
     <hr>
 
@@ -43,7 +43,21 @@ permalink: /about/
 
     <hr>
 
-    <p>诗词/散文/音乐/随手摄影记录一些小美好/城市规划/区域经济/python/语言学/数字人文/荣格心理学/MBTI重度爱好者/酷儿理论/女性主义者/文创产品设计</p>
+    <p><span class="vis-button" data-target="about1">诗词</span>/散文/<span class="vis-button" data-target="about3">音乐</span>>/随手摄影记录一些小美好/城市规划/区域经济/python/语言学/数字人文/荣格心理学/MBTI重度爱好者/酷儿理论/女性主义者/文创产品设计</p>
+    <p id="about1" class="vis-content">> 2019年上海市中学生诗歌创作大赛 一等奖
+    <br>> 2020年上海市中学生诗歌创作大赛 古诗组评委
+    <br>> 2022年全国华语短诗大赛 旧诗组评委
+    <br>> 2024年全国华语短诗大赛 旧诗组评委
+    <br>> 2024年上海市民诗歌节 “新锐诗人”称号
+    <br>> 作品散见于《中华辞赋》等刊物
+    <br>> 自编有《中洲集》《海风集》《轨边集》等</p>
+    <p id="about3" class="vis-content">> 第六届“汇创青春”上海大学生文化创意作品展示活动 三等奖 《雨秋》
+    <br>> 第八届“汇创青春”上海大学生文化创意作品展示活动 三等奖 《画蝶》
+    <br>> 2022年全国华语短诗大赛 旧诗组评委
+    <br>> 2024年全国华语短诗大赛 旧诗组评委
+    <br>> 2024年上海市民诗歌节 “新锐诗人”称号
+    <br>> 作品散见于《中华辞赋》等刊物
+    <br>> 自编有《中洲集》《海风集》《轨边集》等</p>
 
     <hr>
 
@@ -274,12 +288,12 @@ Array.from(visButtons).forEach(function(button) {
         // 切换内容区域的展开和收起状态
         if (visContent.style.maxHeight) {
             visContent.style.maxHeight = null;  // 收起内容
-            visContent.style.marginTop = null;
-            visContent.style.marginBottom = null;
+            visContent.style.marginTop = 0;
+            visContent.style.marginBottom = 0;
         } else {
             visContent.style.maxHeight = visContent.scrollHeight + "px";  // 展开内容
             visContent.style.marginTop = "1em";
-            visContent.style.marginBottom = null;
+            visContent.style.marginBottom = "1em";
         }
     });
 });
