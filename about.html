@@ -262,7 +262,7 @@ permalink: /about/
 
 <script>
     // 获取所有的toggle按钮
-var visButtons = document.querySelectorAll('.vis-button');
+var visButtons = document.getElementsByClassName('vis-button');
 
 // 为每个按钮添加点击事件监听器
 visButtons.forEach(function(button) {
@@ -274,8 +274,6 @@ visButtons.forEach(function(button) {
         // 切换内容区域的展开和收起状态
         if (visContent.style.maxHeight) {
             visContent.style.maxHeight = null;  // 收起内容
-            visContent.style.margin-top = null;
-            visContent.style.margin-bottom = null;
         } else {
             visContent.style.maxHeight = visContent.scrollHeight + "px";  // 展开内容
         }
