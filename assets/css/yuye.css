@@ -351,6 +351,13 @@
     border-radius: 1em
 }
 
+.appicon{
+    margin: 0.2em 0.2em -0.2em 0;
+    width: 1em;
+    height: 1em;
+    background-size: contain;
+    display: inline-block
+}
 
 .metro.sh1{
     background: #e3002b
