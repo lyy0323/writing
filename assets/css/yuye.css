@@ -384,6 +384,10 @@
   font-size: 14px;
 }
 
+.image-card-1 .caption p{
+  margin: 0 0 0 0
+}
+
 .image-card-2 {
   width: 80%;
   max-width: 600px;
@@ -398,6 +402,7 @@
   width: 100%;
   height: auto;
   display: block;
+  padding: 0 0;
 }
 
 .image-card-2 .caption {
@@ -408,7 +413,11 @@
   color: white;
   padding: 0.2em 1em 0.2em 1em;
   font-size: 0.6em;
-  border-top-left-radius: 8px; /* Rounded corner at the top left */
+  border-top-left-radius: 1em; /* Rounded corner at the top left */
+}
+
+.image-card-2 .caption p{
+  margin: 0 0 0 0
 }
 
 .metro.sh1{
