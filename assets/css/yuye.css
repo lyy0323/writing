@@ -367,7 +367,7 @@
   flex-direction: column;
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 .image-card-1 img {
@@ -389,9 +389,9 @@
   max-width: 600px;
   margin: 20px auto;
   position: relative;
-  border-radius: 8px;
+  border-radius: 0;
   overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 .image-card-2 img {
