@@ -29,9 +29,544 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e1108593-cb63-4cf8-9894-877d9ad19767" name="Default" comment="style.css">
+      <change afterPath="$PROJECT_DIR$/_posts/2023-04-06-明信片-春归.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/imgs/capture/0001.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/imgs/capture/0002.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/imgs/capture/0003.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/imgs/capture/0004.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/imgs/capture/0005.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/imgs/capture/0006.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/imgs/capture/0007.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/imgs/capture/0008.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/imgs/capture/0009.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/imgs/capture/0010.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/imgs/capture/0011.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/imgs/capture/0012.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/imgs/capture/0013.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/imgs/capture/0014.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/imgs/capture/0015.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/imgs/capture/0016.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/imgs/capture/0017.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/imgs/design/0001.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/imgs/design/0002.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/imgs/design/0003.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/imgs/design/0004.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/imgs/design/0005.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/imgs/design/0006.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/imgs/design/0007.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/imgs/design/0008.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/imgs/design/0009.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/imgs/design/0010.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/imgs/design/0011.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/imgs/design/0012.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/imgs/design/0013.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/imgs/design/0014.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/imgs/design/0015.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/二十六史：完本精校大全集.rar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/全清词钞(全2册) (叶恭绰) (z-lib.org).pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/《半梦庐词话》.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/《珠花簃词话》.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/《能改斋词话》.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/《赌棋山庄词话》.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/《问花楼词话》.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/《雕菰楼词话》.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/七颂堂词绎 [清] 刘体仁.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/三家诗话 [清] 尚鎔.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/中山诗话 [宋] 刘攽着.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/中山诗话-宋-刘攽.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/乐府余论 [清] 宋翔凤.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/乐府古题要解 [唐] 吴兢.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/乐府指迷 [宋] 沈义父.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/乐府杂录 [唐] 段安节.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/二十四诗品 [唐] 司空图.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/二老堂诗话 [宋] 周必大.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/五古创作浅谈.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/人间词话 [清] 王国维.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/介存斋论词杂著 [清] 周济.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/优古堂诗话 [宋] 吴开.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/全唐诗话 [宋] 尤袤.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/全唐诗话续编 [清] 孙涛续辑.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/六一诗话 [宋] 欧阳修.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/兰丛诗话 [清] 方世举.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/典论·论文 [魏] 曹丕.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/养一斋李杜诗话 [清] 潘德舆.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/养一斋诗话 [清] 潘德舆.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/分春馆词话.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/升庵诗话 [明] 杨慎.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/南亭词话 [清] 李宝嘉撰.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/南濠诗话 [明] 都穆.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/卧庐词话 [近代] 周曾锦撰.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/历代词话 [清]王弈清.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/历代诗话索考 [清] 嘉善何文焕.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/双砚斋词话 [清] 邓廷桢撰.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/古今词话 [宋] 杨湜.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/古今词话 [清] 沈雄撰.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/古画品录 [南朝] 谢赫.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/后山诗话 [宋] 陈师道.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/后山诗话-宋-陈师道.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/听秋声馆词话 [清] 丁绍仪撰.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/吴礼部诗话 [元] 吴师道.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/唐子西文录 [宋] 强幼安述.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/唐宋词简释 [近代] 唐圭璋.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/唐诗百话 [民国] 施蛰存.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/唐诗的脉络.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/四溟诗话 [明] 谢榛撰.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/四溟诗话-明-谢榛.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/围炉诗话 [清] 吴乔著.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/国朝诗话 [清] 杨际昌.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/国雅品 [明] 顾起纶.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/填词杂说 [清] 沈谦.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/填词浅说 [清] 谢元淮撰.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/处囊诀 [宋] 僧保暹撰.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/复堂词话 [清] 谭献撰.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/复堂词话 清 谭献.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/复雅歌词 [宋] 鲖阳居士.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/大鹤山人词话 [近代] 郑文焯撰.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/夷白斋诗话 [元] 蔣正子.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/夷白斋诗话 [明] 顾元庆.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/孔子诗论 [先秦] 孔子.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/存余堂诗话 [明] 朱承爵.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/宋四家词选目录序论 [清] 周济.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/宋诗选注.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/寓简 [宋] 沈作.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/小三吾亭词话 [近代] 冒广生撰.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/小清华园诗谈 [清] 王寿昌.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/尔雅注疏 [晋] 郭璞注.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/山房随笔 [元] 蒋正子.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/岁寒堂诗话 [宋] 张戒撰.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/岁寒居词话 [清] 胡薇元撰.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/左庵词话 [清] 李佳.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/庚溪诗话 [宋] 陈岩肖.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/张惠言论词 [清] 张惠言.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/弹指词笺注  顾贞观.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/彊村老人评词 [清] 朱祖谋.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/归田诗话 [明] 瞿佑.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/彥周詩話 [宋] 許顗著.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/忍古楼词话 [近代] 夏敬观撰.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/憩园词话 [清] 杜文澜撰.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/憩园词话-清-杜文澜.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/抱真堂诗话 [清] 宋征璧笔记.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/拙轩词话 [宋] 张侃.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/文笔要诀 [唐] 杜正伦.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/文苑诗格 [唐] 白居易撰.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/新定诗格 [唐] 崔融.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/时贤本事曲子集 [宋] 杨绘.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/易顺鼎诗论及诗集.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/春酒堂诗话 [清]周容撰.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/木天禁語 [元] 范德機著.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/本事词 [清] 叶申芗撰.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/杜工部草堂诗话 [宋] 蔡梦弼.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/杜诗详注-清-仇兆鳌.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/杜诗详注.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/林泉高致 [宋] 郭熙.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/柯亭词论 [清] 蔡嵩云撰.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/梅间诗话 [元] 韦居安.Txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/梨园诗话 [现代] 楚成.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/汉诗总说 [清] 费锡璜.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/江西诗派小序 [宋] 刘克庄 撰.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/沧浪诗话 [宋] 严羽.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/流类手鉴 [唐] 释虚中撰.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/浩然斋词话 [宋] 周密.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/海绡词话.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/海绡说词 [清] 陈洵撰.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/清代词人和词派.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/渚山堂词话 [明] 陈霆.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/温公续诗话 [宋] 司马光.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/灵芬馆词话 [清] 郭麐.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/炙毂子诗格 [唐] 王叡撰.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/爰园词话 [明] 俞彦.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/片玉山房词话 [清] 孙兆溎撰.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/玉台新咏 [南朝陈] 徐陵编选.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/玉栖述雅 [明] 况周颐撰.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/王力论格律 [现代] 王力.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/瓯北诗话 [清] 赵翼.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/白石道人诗说 [宋] 姜夔.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/白雨斋词话 [清] 陈廷焯撰.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/白雨斋词话-清-陈廷焯.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/白雨斋词话.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/白香词谱 [清] 舒梦兰.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/皱水轩词筌 [清] 贺裳撰.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/石林诗话 [宋] 叶梦得.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/石洲诗话 [清] 翁方纲.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/碧鸡漫志 [宋] 王灼.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/秋星阁诗话 [清] 李沂.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/窥词管见 [清] 李渔.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/答万季埜诗问 [清] 冯班.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/粤词雅 [清] 潘飞声撰.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/紫微诗话 [宋] 吕本中.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/紫微诗话-宋-吕本中.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/綴石軒詩話 [现代] 徐晋如.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/续诗品 [清] 袁枚.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/缀石轩诗话 [现代] 徐晋如.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/能改斋词话 [宋] 吴曾.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/艺圃撷余 [明] 王世懋.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/艺苑卮言 [明] 王世贞.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/艺苑卮言·论词 [明] 王世贞.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/芬陀利室词话 [清] 蒋敦复撰.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/花草蒙拾 [清] 王士祯撰.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/苕溪渔隐词话 [宋] 胡仔.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/草堂詩話 [宋] 蔡夢弼集錄.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/莲子居词话 [清] 吴衡照.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/菌阁琐谈 [清] 沈曾植撰.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/蒿庵论词 [清] 冯煦撰.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/蓼园词评 [清] 黄氏撰.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/蕙风词话 [清] 周颐撰.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/蕙风词话.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/薑斋诗话 [清] 王夫之.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/藏海诗话 [宋] 吴可撰.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/藏海诗话-宋-吴可.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/褒碧斋词话 [清] 陈锐撰.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/西圃词说 [清] 田同之.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/观林诗话 [宋] 吴聿.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/詩詞格律.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/论词随笔 [清] 沈祥龙撰.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/评诗格 [唐] 李峤撰.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/词品 [明] 杨慎.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/词学名词释义 [现代] 施蛰存.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/词学集成 [清] 江顺诒辑.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/词征 [清] 张德瀛撰.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/词径 [清] 孙麟趾.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/词旨 [元]  陆辅之.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/词林正韵.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/词格律.TXT" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/词概 [清] 刘熙载.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/词源 [宋] 张炎.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/词综偶评 [清] 许昂霄撰.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/词苑萃编 [清] 冯金伯辑.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/词论 [宋] 李清照.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/词论 [清] 张祥龄.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/诗 谱.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/诗人主客图 [唐] 张为.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/诗品 [梁] 钟嵘.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/诗品校定本 [梁] 钟嵘.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/诗学禁脔[元] 范德机.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/诗式 [唐] 僧皎然.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/诗律浅说 [现代] 方舟子.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/诗格 [唐] 王昌龄撰.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/诗概 [清] 刘熙载.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/诗法家数 [元] 杨载.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/诗筏 [清] 贺贻孙.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/诗词曲名词术语释.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/诗词津梁.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/诗词读写丛话 [现代] 张中行.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/诗话总龟前集 [宋] 阮阅编.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/诗话总龟後集 [宋] 阮阅编.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/诗谱 [元] 陈绎曾.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/诗辩坻 [清] 毛先舒.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/诗镜总论 [明] 陆时雍.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/诚斋诗话 [宋] 杨万里.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/说诗语 [清] 沈德潜.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/谈艺录 [明] 徐祯卿著.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/赌棋山庄词话 [清] 谢章铤.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/载酒园诗话 [清] 贺裳.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/辛亥革命诗话 [现代] 任光椿.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/辽诗话 [清] 周春辑.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/近代词人逸事 [清] 张尔田.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/近词丛话 [清] 徐珂.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/远志斋词衷 [清] 邹谟撰.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/逸老堂诗话 [明] 俞弁撰.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/金粟词话 [清] 彭孙撰.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/金粟轩诗话 [现代] 门人等辑.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/金针诗格 [唐] 白居易撰.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/钝吟杂录 [清] 冯班.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/铜鼓书堂词话 [清] 查礼.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/问花楼词话 [清] 陆蓥撰.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/闲话诗钟 [现代] 张西厢.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/闽川闺秀诗话 [清] 梁章钜.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/随园诗话.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/随园诗话[上] [清] 袁枚.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/随园诗话[下] [清] 袁枚.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/随园诗话[中] [清] 袁枚.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/雅道机要 [唐] 徐寅撰.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/雕菰楼词话 [清] 焦循.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/雨华盦词话 [清] 钱裴仲.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/雨村词话 [清] 李调元.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/韩诗外传 [汉] 韩婴.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/韻語陽秋 [宋] 葛立方.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/风骚旨格 [唐] 齐己.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/风骚要式 [唐] 徐衍撰.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/饮冰室评词 [清] 梁启超.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/魏庆之词话 [明] 魏庆之.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/历代诗话/麓堂诗话 [明] 李东阳.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/哲学是做出来的.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/宋诗精华录.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/晚清四十家诗钞（吴闿生）.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/梦窗词汇校笺释集评.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/西方哲学史：从古希腊到二十世纪.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/_李贺诗集.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/《唐诗鉴赏大辞典》(全集).txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/《已亥行雲齋吟藁—未赧集》.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/《庚子行雲齋吟藁——褪繭集》(1).doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/《戊戌行雲齋吟藁—不見集》.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/《散原精舍詩集》陳三立【顧青翎錄入】.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/《明清词选》.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/《李煜词全集》.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/《杯水集》杜随.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/《浮生六记》作者：清.沉复.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/《海藏樓詩集》鄭孝胥.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/《滄趣樓詩集》陳寶琛.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/《秋灯琐忆》 清·蒋坦.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/《纳兰词全集》.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/《行雲齋精選稿51篇》.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/七星集1.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/七星集2.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/七星集3.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/七星集4.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/万俟咏《大声集》.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/丘逢甲【嶺雲海日樓詩鈔・五律】.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/东坡乐府.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/东坡诗词/卷01.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/东坡诗词/卷02.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/东坡诗词/卷03.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/东坡诗词/卷04.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/东坡诗词/卷05.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/东坡诗词/卷06.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/东坡诗词/卷07.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/东坡诗词/卷08.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/东坡诗词/卷09.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/东坡诗词/卷10.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/东坡诗词/卷11.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/东坡诗词/卷12.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/东坡诗词/卷13.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/东坡诗词/卷14.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/东坡诗词/卷15.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/东坡诗词/卷16.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/东坡诗词/卷17.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/东坡诗词/卷18.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/东坡诗词/卷19.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/东坡诗词/卷20.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/东坡诗词/卷21.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/东坡诗词/卷22.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/东坡诗词/卷23.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/东坡诗词/卷24.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/东坡诗词/卷25.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/东坡诗词/卷26.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/东坡诗词/卷27.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/东坡诗词/卷28.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/东堂词.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/东山词  贺铸.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/两当轩全集.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/两当轩集  黄景仁 .txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/临川先生歌曲  王安石.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/乐府全集.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/乐府指迷-宋-沈义父.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/乐府诗集.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/二十四诗品.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/于湖词  张孝祥.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/云下词.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/云絮集.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/云起轩词抄   文廷式.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/介庵词   赵彦端.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/元好问诗全集.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/元诗别裁.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/元诗纪事-清-陈衍.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/元遗山集-元-元好问.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/克斋词   沈端节.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/全元曲.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/全唐詩.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/六一词   欧阳修.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/列朝诗集.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/刘禹锡词.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/刘禹锡诗词全集.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/半梦庐词  王蛰堪诗词.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/南唐二主词.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/历代词选.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/厉鹗《樊榭山房词集》.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/发初覆眉 空花集.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/发覆初眉  作品.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/古诗镜唐诗镜.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/叶燮《原诗》.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/吕碧城.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/吴文英《梦窗集》.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/吴梅村七律选.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/周之琦《心日斋词》.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/唐人万首绝句选-宋-洪迈.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/唐人绝句精华.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/唐人绝句精华ocr版.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/唐人萬首絶句.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/唐百家诗选.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/唐诗鉴赏大辞典.umd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/四庫集部145闽中十子诗 明 袁表、马荧 编.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/夕秀词   寇梦碧.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/夕秀词.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/大师顾随.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/大陸詩草.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/姜夔词全集-白石词.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/姜夔词选 .txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/姜夔诗词全集.TXT" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/孏窟词   侯寘.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/子野词   张先.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/孟浩然集.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/安陆集.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/宋人千首绝句.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/宋百家诗存.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/宋词300首.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/宋词鉴赏大辞典.umd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/宋词鉴赏辞典.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/宋诗选注.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/定庵诗  龚自珍.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/定风波.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/宝晋长短句  米芾.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/寒云集   袁克文.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/尺水集精简版.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/山中白云词-宋-张炎.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/山谷七律  黄庭坚.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/山谷词   黄庭坚.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/山谷词.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/岭云海日楼诗钞-清-丘逢甲.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/已亥杂诗-龚自珍.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/广州四先生诗.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/张大家兰雪集-宋-张玉娘.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/张炎词集.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/徐渭诗.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/忏慧堂新编千家诗.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/戴延介《银藤花馆词》(1).doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/提刀买菜集.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/放翁词  陆游.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/散原辛丑前集黃遵憲勘定本—七律.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/散花庵词.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/敦煌曲子词.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/文廷式《云起轩词钞》.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/文镜秘府论-日-空海.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/断肠词  朱淑真.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/明清词选.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/易顺鼎诗论及诗集.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/星辰集.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/晓珠词  吕碧城.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/晓珠词（繁体）.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/晞发集补钞  少司命整理.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/晞发集钞  少司命整理.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/曉珠詞.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/月出集.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/未休集——吴畏(1).docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/朱敦儒诗词集.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/李希圣七律.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/李清照词集.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/李白诗全集.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/李贺诗选.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/李雯《蓼斋集》.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/杜工部七律.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/杜甫诗全集.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/杨升菴集.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/柳永词集(全集).txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/梅溪词  史达祖.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/梅溪词(1).txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/梦槐戊戌集.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/梦窗全集.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/梦窗词  吴文英.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/梦窗词.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/樊榭山房集一.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/樊榭山房集三.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/樊榭山房集二.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/樊榭山房集四.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/欧阳修/欧阳修词.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/欧阳修/欧阳修词选31首.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/欧阳修/欧阳修集_2.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/欧阳修/欧阳修集_3.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/欧阳修/欧阳修集_4.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/欧阳修/欧阳修集_5.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/欧阳修/欧阳修集_6.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/欧阳修/欧阳修集_7.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/欧阳修词集.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/民国•小檀栾室闺秀词钞.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/水云楼全集  蒋春霖.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/水云楼词.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/水云楼集  蒋春霖.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/水师诗稿.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/沈祖棻诗选.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/浣花词   韦庄.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/海岳天风集.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/淮海居士长短句   秦观.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/清 黄仲则《两当轩集》 .txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/清《半塘词稿》王鹏运.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/清人七律1000首.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/清人绝句选.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/清词菁华.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/清诗别裁集.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/漱玉词   李清照.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/瀛奎律髓-七言.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/片玉词  周邦彦.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/片玉词.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/牧斋初学集-清-钱谦益.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/牧斋有学集-清-钱谦益.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/独孤食肉兽诗词精选.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/王士祯《衍波词》.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/王昌龄七绝.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/王维诗集.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/珠玉词   晏殊.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/白石词  姜夔.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/白石道人歌曲.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/百张机.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/相思浓意彻心愁——《红鸳词集》.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/石林词   叶梦得.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/石湖词   范成大.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/碧山词  王沂孙.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/禅诗.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/秦韬玉诗集.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/程文海《雪楼词》.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/稼轩长短句.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/竜咳集.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/竹坡词   周紫芝.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/竹山词   蒋捷.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/竹山词.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/红朝士林见闻录.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/纳兰性德-饮水词.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/纳兰词   纳兰容若.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/结集.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/罗隐七言律诗273首.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/花间集.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/苏东坡文集.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/苏曼殊全集.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/草窗词  周密.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/草草词.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/萨都剌诗词选.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/西崑酬唱集［老馬整理］.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/西昆酬唱集-清-杨亿.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/词湖海楼词集.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/谁人更解冷星词——《星辰诗集》.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/辛弃疾词全集.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/近三百年名家词选.TXT" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/迦陵词  陈维崧.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/逃禅词  杨无咎.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/遗山集   元好问.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/郑文焯·樵风乐府.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/酒边词   向子諲.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/金元明清诗选.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/金荃集  温庭筠.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/钱钟书诗词全集.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/阳春集   冯延巳.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/阳春集.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/陆放翁全集剑南诗稿渭南文集.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/陈子龙诗词选.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/陈子龙诗词集.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/陈寅恪生平及诗.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/陈寅恪诗选.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/陈洵《海绡词》.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/陈维崧《湖海楼词》.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/頡頏樓詩詞稿.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/项鸿祚《忆云词》.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/顾太清词选.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/顾随讲唐宋诗上.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/顾随讲唐宋诗下.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/饮水词  纳兰容若.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/黄侃词.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/黄庭坚诗全集.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/黄景仁七律集.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/黄景仁诗词选.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/龚自珍诗集.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/books/诗词集子/龚自珍集-清-龚自珍.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/papers/4-2021全国跨性别健康调研报告.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/slides/lyric/林雨夜_古风、国风歌曲与文化象征.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/static/slides/lyric/林雨夜_歌词概论与中国音乐文学史.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tools/convert-webp.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_layouts/keynote.html" beforeDir="false" afterPath="$PROJECT_DIR$/_layouts/keynote.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_layouts/post.html" beforeDir="false" afterPath="$PROJECT_DIR$/_layouts/post.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/about.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/css/yuye.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/yuye.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/robots.txt" beforeDir="false" afterPath="$PROJECT_DIR$/robots.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +579,6 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="12" />
         <option value="markdown" />
         <option value="blog_post" />
@@ -53,6 +587,7 @@
         <option value="MarkDown" />
         <option value="Blog_post" />
         <option value="blog" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -65,6 +600,12 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="SIGN_OFF_COMMIT" value="true" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/_layouts/base.html" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/about.html" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/assets/css/yuye.css" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/tools/convert-webp.py" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -76,30 +617,51 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/13072/my-awesome-site/oukohou/_posts&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/13072/my-awesome-site/oukohou/_posts",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\13072\my-awesome-site\oukohou\_posts" />
+      <recent name="C:\Users\13072\my-awesome-site\oukohou\assets\imgs\design" />
+      <recent name="C:\Users\13072\my-awesome-site\oukohou\assets\imgs\capture" />
       <recent name="C:\Users\13072\my-awesome-site\oukohou\assets\fonts" />
       <recent name="C:\Users\13072\my-awesome-site\oukohou\_includes\fonts" />
-      <recent name="$PROJECT_DIR$/assets/imgs" />
-      <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/assets" />
       <recent name="$PROJECT_DIR$/server" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.resize_image">
+  <component name="RunManager" selected="Python.convert-webp">
     <configuration name="post.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/oukohou.github.io/_layouts/post.html">
+      <method v="2" />
+    </configuration>
+    <configuration name="convert-webp" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="oukohou.github.io" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="D:\Program Files\Python39\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tools" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tools/convert-webp.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
     <configuration name="resize_image" type="PythonConfigurationType" factoryName="Python" temporary="true">
@@ -125,10 +687,12 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Python.convert-webp" />
       <item itemvalue="Python.resize_image" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.convert-webp" />
         <item itemvalue="Python.resize_image" />
       </list>
     </recent_temporary>

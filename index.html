@@ -43,29 +43,6 @@ layout: base
 </div>
 {% endfor %}
 
-<!--&lt;!&ndash;初始化Valine&ndash;&gt;-->
-<!--<script>-->
-<!--    var notify = '{{site.valine.notify}}' === true;-->
-<!--    var verify = '{{site.valine.verify}}.>' === true;-->
-<!--    var visitor = '{{site.valine.visitor}}.>' === true;-->
-
-<!--    new Valine({-->
-<!--        av: AV,-->
-<!--        el: '#valine_comment',-->
-<!--        notify: notify,-->
-<!--        verify: verify,-->
-<!--        // smiles_url: '/smiles',-->
-<!--        visitor: true,-->
-<!--        app_id: '{{site.valine.app_id}}',-->
-<!--        app_key: '{{site.valine.app_key}}',-->
-<!--        placeholder: '{{site.valine.placeholder}}',-->
-<!--        avatar: '{{site.valine.avatar}}',-->
-<!--    });-->
-<!--</script>-->
-
-
-
-
 <div class="page-navigator">
     {% if paginator.previous_page %}
     {% if paginator.page == 2 %}
