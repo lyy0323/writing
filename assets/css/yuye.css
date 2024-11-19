@@ -395,7 +395,7 @@
   position: relative;
   border-radius: 0;
   overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
 }
 
 .image-card-2 img {
