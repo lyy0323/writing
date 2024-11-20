@@ -278,6 +278,42 @@
     #00000000 6em)
 }
 
+.pride-gay {
+    background: repeating-linear-gradient(
+    127deg,
+    #00000000,
+    #00000000 0.6em,
+    #00000025 1.2em,
+    #078a6c75 1.2em,
+    #078a6c75 2.04em,
+    #93e1bb75 2.04em,
+    #93e1bb75 2.88em,
+    #ffffff75 2.88em,
+    #ffffff75 3.72em,
+    #77a8db75 3.72em,
+    #77a8db75 4.56em,
+    #3b197475 4.56em,
+    #3b197475 5.4em,
+    #00000025 5.4em,
+    #00000000 6em)
+}
+
+.pride-bi {
+    background: repeating-linear-gradient(
+    127deg,
+    #00000000,
+    #00000000 0.6em,
+    #00000025 1.2em,
+    #d7007175 1.2em,
+    #d7007175 2.88em,
+    #9c4e9775 2.88em,
+    #9c4e9775 3.72em,
+    #0035aa75 3.72em,
+    #0035aa75 5.4em,
+    #00000025 5.4em,
+    #00000000 6em)
+}
+
 .pride-ace {
     background: repeating-linear-gradient(
     127deg,
