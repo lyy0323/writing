@@ -274,6 +274,22 @@
     #00000000 6em)
 }
 
+.pride-pan {
+    background: repeating-linear-gradient(
+    127deg,
+    #00000000,
+    #00000000 0.6em,
+    #00000025 1.2em,
+    #F51F8675 1.2em,
+    #F51F8675 2.6em,
+    #F4D10075 2.6em,
+    #F4D10075 4em,
+    #20AAF675 4em,
+    #20AAF675 5.4em,
+    #00000025 5.4em,
+    #00000000 6em)
+}
+
 .vis-content {
     max-height: 0;
     overflow: hidden;
