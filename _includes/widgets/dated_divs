@@ -1,0 +1,48 @@
+<script>
+    function toggleDivVisibility() {
+    const today = new Date();
+    const divs = document.querySelectorAll('.dated-div');
+
+    divs.forEach(div => {
+        var start = new Date(div.getAttribute('data-start'));
+        start.setFullYear(today.getFullYear());
+        var end = new Date(div.getAttribute('data-end'));
+        end.setFullYear(today.getFullYear());
+
+        if (today >= start && today <= end) {
+            div.style.display = 'block';
+        } else {
+            div.style.display = 'none';
+        }
+    });
+}
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', toggleDivVisibility);
+    setInterval(toggleDivVisibility, 1000 * 60 * 60); // 每小时检查一次
+</script>
+
+<div class="dated-div pride-trans" data-start="2024-03-31T00:00:00" data-end="2024-03-31T23:59:59" style="border-left: 5px solid #c8a; border-right: 5px solid #c8a; margin-bottom: 1.5em; text-align: center">
+    <p style="padding: 0.25em"><span style="background: #ffffff50; margin: 0.5em">
+        🍥 Mar 31 | International Transgender Day of Visibility 🍥
+    </span></p>
+</div>
+
+<div class="dated-div pride-trans" data-start="2024-11-13T00:00:00" data-end="2024-11-19T23:59:59" style="border-left: 5px solid #c8a; border-right: 5px solid #c8a; margin-bottom: 1.5em; text-align: center">
+    <p style="padding: 0.25em"><span style="background: #ffffff50; margin: 0.5em">
+        🕯 Nov 13 - Nov 19 | Transgender Awareness Week 🕯
+    </span></p>
+</div>
+
+<div class="dated-div pride-trans" data-start="2024-11-20T00:00:00" data-end="2024-11-20T23:59:59" style="border-left: 5px solid #c8a; border-right: 5px solid #c8a; margin-bottom: 1.5em; text-align: center">
+    <p style="padding: 0.25em"><span style="background: #ffffff50; margin: 0.5em">
+        🕯 Nov 20 | Transgender Day of Remembrance 🕯
+    </span></p>
+</div>
+
+<div class="dated-div pride-pan" data-start="2024-12-08T00:00:00" data-end="2024-12-08T23:59:59" style="border-left: 5px solid #c8a; border-right: 5px solid #c8a; margin-bottom: 1.5em; text-align: center">
+    <p style="padding: 0.25em"><span style="background: #ffffff50; margin: 0.5em">
+        ✨ Dec 8 | Pansexual/Panromantic Pride Day ✨
+    </span></p>
+</div>
