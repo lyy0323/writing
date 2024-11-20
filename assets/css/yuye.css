@@ -238,6 +238,46 @@
     #00000000 6em)
 }
 
+.pride-aro {
+    background: repeating-linear-gradient(
+    127deg,
+    #00000000,
+    #00000000 0.6em,
+    #00000025 1.2em,
+    #3da54275 1.2em,
+    #3da54275 2.04em,
+    #a7d37975 2.04em,
+    #a7d37975 2.88em,
+    #ffffff75 2.88em,
+    #ffffff75 3.72em,
+    #a9a9a975 3.72em,
+    #a9a9a975 4.56em,
+    #00000075 4.56em,
+    #00000075 5.4em,
+    #00000025 5.4em,
+    #00000000 6em)
+}
+
+.pride-les {
+    background: repeating-linear-gradient(
+    127deg,
+    #00000000,
+    #00000000 0.6em,
+    #00000025 1.2em,
+    #d6290075 1.2em,
+    #d6290075 2.04em,
+    #ffce5575 2.04em,
+    #ffce5575 2.88em,
+    #ffffff75 2.88em,
+    #ffffff75 3.72em,
+    #d462a675 3.72em,
+    #d462a675 4.56em,
+    #a4006275 4.56em,
+    #a4006275 5.4em,
+    #00000025 5.4em,
+    #00000000 6em)
+}
+
 .pride-ace {
     background: repeating-linear-gradient(
     127deg,
