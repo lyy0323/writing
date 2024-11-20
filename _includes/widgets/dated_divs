@@ -23,9 +23,51 @@
     setInterval(toggleDivVisibility, 1000 * 60 * 60); // 每小时检查一次
 </script>
 
+<div class="dated-div pride-aro" data-start="2024-02-15T00:00:00" data-end="2024-02-21T23:59:59" style="border-left: 5px solid #c8a; border-right: 5px solid #c8a; margin-bottom: 1.5em; text-align: center">
+    <p style="padding: 0.25em"><span style="background: #ffffff50; margin: 0.5em">
+        ✨ Feb 15 - Feb 21 | Aromantic Spectrum Awareness Week ✨
+    </span></p>
+</div>
+
 <div class="dated-div pride-trans" data-start="2024-03-31T00:00:00" data-end="2024-03-31T23:59:59" style="border-left: 5px solid #c8a; border-right: 5px solid #c8a; margin-bottom: 1.5em; text-align: center">
     <p style="padding: 0.25em"><span style="background: #ffffff50; margin: 0.5em">
         🍥 Mar 31 | International Transgender Day of Visibility 🍥
+    </span></p>
+</div>
+
+<div class="dated-div pride-ace" data-start="2024-04-06T00:00:00" data-end="2024-04-06T23:59:59" style="border-left: 5px solid #c8a; border-right: 5px solid #c8a; margin-bottom: 1.5em; text-align: center">
+    <p style="padding: 0.25em"><span style="background: #ffffff50; margin: 0.5em">
+        💜 Apr 06 | International Asexuality Day 💜
+    </span></p>
+</div>
+
+<div class="dated-div pride-enby" data-start="2024-04-18T00:00:00" data-end="2024-04-18T23:59:59" style="border-left: 5px solid #c8a; border-right: 5px solid #c8a; margin-bottom: 1.5em; text-align: center">
+    <p style="padding: 0.25em"><span style="background: #ffffff50; margin: 0.5em">
+        💜 Apr 18 | Nonbinary Parents Day 💜
+    </span></p>
+</div>
+
+<div class="dated-div pride-les" data-start="2024-04-26T00:00:00" data-end="2024-04-26T23:59:59" style="border-left: 5px solid #c8a; border-right: 5px solid #c8a; margin-bottom: 1.5em; text-align: center">
+    <p style="padding: 0.25em"><span style="background: #ffffff50; margin: 0.5em">
+        💖 Apr 26 | Lesbian Visibility Day 💖
+    </span></p>
+</div>
+
+<div class="dated-div pride-rainbow" data-start="2024-05-17T00:00:00" data-end="2024-05-17T23:59:59" style="border-left: 5px solid #c8a; border-right: 5px solid #c8a; margin-bottom: 1.5em; text-align: center">
+    <p style="padding: 0.25em"><span style="background: #ffffff50; margin: 0.5em">
+        🤝 May 17 | International Day Against Homophobia, Transphobia, and Biphobia 🤝
+    </span></p>
+</div>
+
+<div class="dated-div pride-pan" data-start="2024-05-24T00:00:00" data-end="2024-05-24T23:59:59" style="border-left: 5px solid #c8a; border-right: 5px solid #c8a; margin-bottom: 1.5em; text-align: center">
+    <p style="padding: 0.25em"><span style="background: #ffffff50; margin: 0.5em">
+        ✨ May 24 | Pansexual/Panromantic Awareness and Visibility Day ✨
+    </span></p>
+</div>
+
+<div class="dated-div pride-rainbow" data-start="2024-06-01T00:00:00" data-end="2024-06-01T23:59:59" style="border-left: 5px solid #c8a; border-right: 5px solid #c8a; margin-bottom: 1.5em; text-align: center">
+    <p style="padding: 0.25em"><span style="background: #ffffff50; margin: 0.5em">
+        🤝 Jun 1 | LGBTQ Family Day 🤝
     </span></p>
 </div>
 
