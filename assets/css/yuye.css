@@ -367,7 +367,7 @@
 }
 
 .vis-content {
-    max-height: 0
+    max-height: 0;
     overflow: hidden;
     transition: padding 0.5s ease-out; margin 0.5s ease-out; max-height 0.5s ease-out;
     padding: 0 0.5em;
