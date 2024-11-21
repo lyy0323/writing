@@ -378,6 +378,12 @@
     width: calc(100% - 1.5em)
 }
 
+.vis-content a{
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+    color: #c8a
+}
+
 .hub-post{
     margin: 0 0 2em 0;
     border: 1px solid #936;
