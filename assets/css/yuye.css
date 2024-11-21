@@ -367,12 +367,11 @@
 }
 
 .vis-content {
-    display: none;
+    max-height: 0
     overflow: hidden;
-    transform: scale(0);
-    transition: transform 0.5s ease-out;
-    padding: 0.5em;
-    margin: 0.5em 0;
+    transition: padding 0.5s ease-out; margin 0.5s ease-out; max-height 0.5s ease-out;
+    padding: 0 0.5em;
+    margin: 0 0;
     background: #cc88aa33;
     border-left: 0.5em solid #c8a
 }

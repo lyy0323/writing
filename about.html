@@ -92,13 +92,14 @@ permalink: /about/
             var visContent = document.getElementById(targetId);
 
             // 切换内容区域的展开和收起状态
-            if (visContent.style.display === 'none') {
+            if (visContent.style.maxHeight == 0) {
                 visContent.style.display = 'block'; // 显示内容
                 visContent.style.maxHeight = visContent.scrollHeight + "px";
                 visContent.style.paddingTop = "0.5em";
                 visContent.style.paddingBottom = "0.5em";
                 visContent.style.marginTop = "0.5em";
                 visContent.style.marginBottom = "0.5em";
+
             } else {
                 visContent.style.display = 'none'; // 隐藏内容
                 visContent.style.maxHeight = null;
