@@ -369,7 +369,8 @@
 .vis-content {
     display: none;
     overflow: hidden;
-    transition: display 0.5s ease-out;
+    transform: scale(0);
+    transition: transform 0.5s ease-out;
     padding: 0.5em;
     margin: 0.5em 0;
     background: #cc88aa33;
