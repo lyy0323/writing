@@ -29,11 +29,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e1108593-cb63-4cf8-9894-877d9ad19767" name="Default" comment="style.css">
-      <change afterPath="$PROJECT_DIR$/assets/js/yuye.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_layouts/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/_layouts/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/about.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/css/yuye.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/yuye.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
