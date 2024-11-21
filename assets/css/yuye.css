@@ -374,7 +374,8 @@
     padding: 0 0.5em;
     margin: 0 0;
     background: #cc88aa33;
-    border-left: 0.5em solid #c8a
+    border-left: 0.5em solid #c8a;
+    width: calc(100% - 1.5em)
 }
 
 .hub-post{
