@@ -2,8 +2,8 @@
 layout: post
 title: "WLB Companies in Shanghai"
 date: 2024-12-03
-categories: [诗集]
-tags: []
+categories: [信息与资源]
+tags: [Companies]
 content-created: 2024-11-30
 archive-created: 2024-12-03
 ---
