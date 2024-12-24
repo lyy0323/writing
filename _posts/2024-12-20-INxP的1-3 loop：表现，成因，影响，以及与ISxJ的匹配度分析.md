@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "INxP的1-3 loop：表现，成因，影响，以及与ISxJ的匹配度分析"
-date: 2024-11-15
+date: 2024-12-20
 categories: [椰子壳外]
 tags: []
 content-created: 2024-12-20
