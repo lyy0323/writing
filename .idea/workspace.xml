@@ -31,7 +31,6 @@
     <list default="true" id="e1108593-cb63-4cf8-9894-877d9ad19767" name="Default" comment="style.css">
       <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2024-12-20-INxP的1-3 loop：表现，成因，影响，以及与ISxJ的匹配度分析.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2024-12-20-INxP的1-3 loop：表现，成因，影响，以及与ISxJ的匹配度分析.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_posts/2024-12-21-钟鼓和声-次韵花桐减字木兰花五首若干组.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2024-12-21-钟鼓和声-次韵花桐减字木兰花五首若干组.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -90,7 +89,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/13072/my-awesome-site/oukohou/_posts&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
   <component name="RecentsManager">
