@@ -28,7 +28,15 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e1108593-cb63-4cf8-9894-877d9ad19767" name="Default" comment="style.css" />
+    <list default="true" id="e1108593-cb63-4cf8-9894-877d9ad19767" name="Default" comment="style.css">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2024-07-01-雨鱼集.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2024-07-01-雨鱼集.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2024-10-01-轨边集.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2024-10-01-轨边集.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2024-11-01-小猫集.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2024-11-01-小猫集.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2024-11-20-中洲集.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2024-11-20-中洲集.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2024-12-21-钟鼓和声-次韵花桐减字木兰花五首若干组.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2024-12-21-钟鼓和声-次韵花桐减字木兰花五首若干组.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
