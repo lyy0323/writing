@@ -29,13 +29,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e1108593-cb63-4cf8-9894-877d9ad19767" name="Default" comment="style.css">
+      <change afterPath="$PROJECT_DIR$/_posts/2025-01-01-林雨夜2024年度统计报告（1-2）.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/imgs/report/2024/1-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/imgs/report/2024/2-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/imgs/report/2024/2-2.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2024-07-01-雨鱼集.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2024-07-01-雨鱼集.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2024-10-01-轨边集.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2024-10-01-轨边集.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2024-11-01-小猫集.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2024-11-01-小猫集.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2024-11-20-中洲集.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2024-11-20-中洲集.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2024-12-21-钟鼓和声-次韵花桐减字木兰花五首若干组.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2024-12-21-钟鼓和声-次韵花桐减字木兰花五首若干组.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,25 +85,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/13072/my-awesome-site/oukohou/_posts&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/13072/my-awesome-site/oukohou/assets/imgs/report/2024",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\13072\my-awesome-site\oukohou\assets\imgs\report\2024" />
       <recent name="C:\Users\13072\my-awesome-site\oukohou\_posts" />
       <recent name="C:\Users\13072\my-awesome-site\oukohou\assets\imgs\design" />
       <recent name="C:\Users\13072\my-awesome-site\oukohou\assets\imgs\capture" />
       <recent name="C:\Users\13072\my-awesome-site\oukohou\assets\fonts" />
-      <recent name="C:\Users\13072\my-awesome-site\oukohou\_includes\fonts" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\13072\my-awesome-site\oukohou\assets\imgs\report\2024" />
       <recent name="$PROJECT_DIR$/assets" />
       <recent name="$PROJECT_DIR$/server" />
     </key>
