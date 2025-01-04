@@ -29,13 +29,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e1108593-cb63-4cf8-9894-877d9ad19767" name="Default" comment="style.css">
-      <change afterPath="$PROJECT_DIR$/_posts/2025-01-02-林雨夜2024年度统计报告（3-4）.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/imgs/report/2024/3-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/imgs/report/2024/3-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/imgs/report/2024/3-3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/imgs/report/2024/3-4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/imgs/report/2024/3-5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_posts/2025-01-02-林雨夜2024年度统计报告（5-8）.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2025-01-02-林雨夜2024年度统计报告（3-4）.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2025-01-02-林雨夜2024年度统计报告（3-4）.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,14 +88,14 @@
     "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/13072/my-awesome-site/oukohou/assets/imgs/report/2024",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+    "last_opened_file_path": "C:/Users/13072/my-awesome-site/oukohou/_posts",
+    "settings.editor.selected.configurable": "configurable.group.editor"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\13072\my-awesome-site\oukohou\assets\imgs\report\2024" />
       <recent name="C:\Users\13072\my-awesome-site\oukohou\_posts" />
+      <recent name="C:\Users\13072\my-awesome-site\oukohou\assets\imgs\report\2024" />
       <recent name="C:\Users\13072\my-awesome-site\oukohou\assets\imgs\design" />
       <recent name="C:\Users\13072\my-awesome-site\oukohou\assets\imgs\capture" />
       <recent name="C:\Users\13072\my-awesome-site\oukohou\assets\fonts" />
