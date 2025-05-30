@@ -83,6 +83,14 @@ Yet no award for you……
     <meta name="baidu-site-verification" content="fjE6fa4d3J"/>
     <meta name="author" content="{{ site.author }}">
 
+    <!-- Open Graph Meta Tags for Social Sharing -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="{{ page.title }}">
+    <meta property="og:description" content="{{ page.description }}">
+    <meta property="og:url" content="{{ page.url | absolute_url }}">
+    <meta property="og:image" content="{{ page.cover | absolute_url }}">
+
+
     <link rel="Shortcut Icon" type="image/x-icon" href="{{ site.baseurl }}/favicon.png">
     <link rel="apple-touch-icon" href="{{ site.baseurl }}/favicon.png">
     <link rel="apple-touch-icon-precomposed" href="{{ site.baseurl }}/favicon.png">
