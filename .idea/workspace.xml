@@ -29,14 +29,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e1108593-cb63-4cf8-9894-877d9ad19767" name="Default" comment="style.css">
-      <change afterPath="$PROJECT_DIR$/assets/imgs/share/default.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/widgets/personlized_signature" beforeDir="false" afterPath="$PROJECT_DIR$/_includes/widgets/personlized_signature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/widgets/star_post_list" beforeDir="false" afterPath="$PROJECT_DIR$/_includes/widgets/star_post_list" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_layouts/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/_layouts/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2024-11-01-小猫集.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2024-11-01-小猫集.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2024-11-20-中洲集.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2024-11-20-中洲集.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/about.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -88,16 +81,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/13072/my-awesome-site/oukohou/assets/imgs/share",
-    "settings.editor.selected.configurable": "configurable.group.editor"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/13072/my-awesome-site/oukohou/assets/imgs/share&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.editor&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\13072\my-awesome-site\oukohou\assets\imgs\share" />
