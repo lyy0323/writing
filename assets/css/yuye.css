@@ -158,6 +158,10 @@
     padding-right: 4.5em; /* 增加的额外宽度 */
 }
 
+.authorspan.guanghanjushi20 {
+    padding-right: 5.5em; /* 增加的额外宽度 */
+}
+
 .huatong8 {
     border-color: #cadbce;
 }
@@ -172,6 +176,10 @@
 
 .linyuye0 {
     border-color: #d2d2e3;
+}
+
+.guanghanjushi20 {
+    border-color: #b0f4e3;
 }
 
 .authorspan.huatong8::after {
@@ -192,6 +200,11 @@
 .authorspan.linyuye0::after {
     content: "林雨夜";
     background-color: #d2d2e3;
+}
+
+.authorspan.guanghanjushi20::after {
+    content: "广寒居士";
+    background-color: #b0f4e3;
 }
 
 /* pride flags background */
