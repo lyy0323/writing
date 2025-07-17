@@ -162,6 +162,10 @@
     padding-right: 5.5em; /* 增加的额外宽度 */
 }
 
+.authorspan.xizhi896 {
+    padding-right: 3.5em; /* 增加的额外宽度 */
+}
+
 .huatong8 {
     border-color: #cadbce;
 }
@@ -180,6 +184,10 @@
 
 .guanghanjushi20 {
     border-color: #b0f4e3;
+}
+
+.xizhi896 {
+    border-color: #115533
 }
 
 .authorspan.huatong8::after {
