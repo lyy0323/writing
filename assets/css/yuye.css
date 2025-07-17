@@ -215,6 +215,12 @@
     background-color: #b0f4e3;
 }
 
+.authorspan.xizhi896::after {
+    content: "希之";
+    background-color: #115533;
+    color: #eee
+}
+
 /* pride flags background */
 
 .pride-rainbow {
