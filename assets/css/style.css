@@ -1037,23 +1037,26 @@ figure {
 /* Literal.Number.Integer.Long */
 
 /* icomoon icon fonts*/
+
 @font-face {
     font-family: 'icomoon';
-    src: url('../fonts/icomoon.eot?jhbhm');
-    src: url('../fonts/icomoon.eot?jhbhm#iefix') format('embedded-opentype'),
-    url('../fonts/icomoon.ttf?jhbhm') format('truetype'),
-    url('../fonts/icomoon.woff?jhbhm') format('woff'),
-    url('../fonts/icomoon.svg?jhbhm#icomoon') format('svg');
+    src: url('https://cdn.jsdelivr.net/gh/lyy0323/lyy0323.github.io@main/static/icomoon.eot?jhbhm');
+    src: url('https://cdn.jsdelivr.net/gh/lyy0323/lyy0323.github.io@main/static/icomoon.eot?jhbhm#iefix') format('embedded-opentype'),
+    url('https://cdn.jsdelivr.net/gh/lyy0323/lyy0323.github.io@main/static/icomoon.ttf?jhbhm') format('truetype'),
+    url('https://cdn.jsdelivr.net/gh/lyy0323/lyy0323.github.io@main/static/icomoon.woff?jhbhm') format('woff'),
+    url('https://cdn.jsdelivr.net/gh/lyy0323/lyy0323.github.io@main/static/icomoon.svg?jhbhm#icomoon') format('svg');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'lxgw';
-    src: url('../fonts/lxgw.woff') format('woff'),
-    url('../fonts/lxgw.ttf') format('ttf');
+    src: url('https://cdn.jsdelivr.net/gh/lyy0323/lyy0323.github.io@main/static/lxgw.woff') format('woff'),
+    url('https://cdn.jsdelivr.net/gh/lyy0323/lyy0323.github.io@main/static/lxgw.ttf') format('ttf');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
 [class^="icon-"], [class*=" icon-"] {
