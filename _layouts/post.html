@@ -76,7 +76,15 @@ layout: base
     <style>
 
         .player-container {
-            margin-bottom: 2em;
+            width: 100%;
+            max-width: 400px;
+            background-color: #fcf8fa;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            padding: 24px;
+            text-align: center;
+            transition: all 0.3s ease;
+            margin: 2rem auto; /* 居中显示，与内容保持距离 */
         }
         
         /* 专辑封面 */
@@ -149,7 +157,7 @@ layout: base
             background: none;
             border: none;
             cursor: pointer;
-            color: #1c1917;
+            color: #1c1917; /* 默认颜色 */
             padding: 10px;
             font-size: 1.5rem;
             transition: color 0.2s ease, transform 0.2s ease;
@@ -430,7 +438,7 @@ layout: base
         function toggleRepeatMode() {
             if (isRepeating === 'list') {
                 isRepeating = 'song';
-                repeatBtn.innerHTML = '<i class="fas fa-repeat-1"></i>';
+                repeatBtn.innerHTML = '<i class="fas fa-redo"></i>';
                 repeatBtn.classList.add('active');
             } else if (isRepeating === 'song') {
                 isRepeating = 'off';
