@@ -300,7 +300,7 @@ layout: base
             album.push({
                 title: "{{ song.title }}",
                 artist: "{{ song.artist }}",
-                cover: "{{ song.cover }}",
+                cover: "{{ song.cover | prepend: site.baseurl }}",
                 src: "{{ song.src | prepend: site.baseurl }}"
             });
         {% endfor %}
