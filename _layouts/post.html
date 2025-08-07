@@ -285,8 +285,17 @@ layout: base
         const durationEl = document.getElementById('duration');
         const playlistUl = document.getElementById('playlist-ul');
 
-        // Jekyll Jekyll 页面中的歌曲数据，通过 Liquid `jsonify` 过滤器转换为 JSON 字符串
-        const album = JSON.parse('{{ page.songs | jsonify }}');
+        // Jekyll 模板中动态构建专辑数据
+        const album = [];
+        {% for song in page.songs %}
+            // Liquid 变量会在 Jekyll 渲染时被解析
+            album.push({
+                title: "{{ song.title }}",
+                artist: "{{ song.artist }}",
+                cover: "{{ song.cover }}",
+                src: "{{ song.src | prepend: site.baseurl }}"
+            });
+        {% endfor %}
 
         // 播放器状态变量
         let currentSongIndex = 0;
