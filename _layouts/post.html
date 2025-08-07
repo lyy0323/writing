@@ -67,10 +67,6 @@ layout: base
 
     </header>
 
-    <div class="post-content" itemprop="articleBody">
-        {{ content }}
-    </div>
-
     <!-- 条件渲染的音乐播放器 -->
     {% if page.songs %}
     <style>
@@ -521,6 +517,10 @@ layout: base
 
     </script>
     {% endif %}
+
+    <div class="post-content" itemprop="articleBody">
+        {{ content }}
+    </div>
 
     <div id="donate" >
         <a href="{{ '/donate/' | prepend: site.baseurl }}" style="text-decoration: none" title="donation" >
