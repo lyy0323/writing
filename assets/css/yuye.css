@@ -411,6 +411,27 @@
     color: #c8a
 }
 
+.inline-annotation{
+    color: #999;
+    font-size: 0.8em
+}
+
+.annotation {
+    text-indent: 1em;
+    position: relative;
+    color: #999;
+    font-size: 1em
+}
+
+.annotation::before {
+    content: "> ";
+    position: absolute;
+    left: 0;
+    color: #999;
+    font-size: 1em;
+    font-family: inherit;
+}
+
 .hub-post{
     margin: 0 0 2em 0;
     border: 1px solid #936;
