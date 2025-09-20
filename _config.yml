@@ -72,7 +72,9 @@ links: # 友情链接
   # - title: Jekyll blog system
   #   url: http://jekyllcn.com/
   - title: 上海交大国学社社员诗歌
-    url: http://139.224.229.170/
+    url: http://sjtuguoxue.space/
+  - title: 凌川的小站
+    url: https://oscillater.github.io/
 
 
 # Google Analytics
