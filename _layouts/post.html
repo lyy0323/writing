@@ -117,14 +117,14 @@ layout: base
             .song-info h2 {
                 font-size: 1.5rem;
                 font-weight: 600;
-                margin: 0 0 4px;
+                margin: 0 0 4px !important; /* 强制 margin */
                 line-height: 1.2;
             }
 
             .song-info p {
                 font-size: 1rem;
                 color: #57534e;
-                margin: 0;
+                margin: 0 !important; /* 强制 margin */
             }
 
             /* 播放进度条 */
@@ -146,20 +146,37 @@ layout: base
                 transition: width 0.1s linear;
             }
 
-            .time-display {
-                display: flex;
-                justify-content: space-between;
+            /* 控件布局容器 (整合时间与按钮) */
+            .controls-layout {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-areas: 
+                    "time-start time-end"
+                    "ctrls ctrls";
+                gap: 12px 0;
+                margin-top: 8px;
+            }
+
+            #current-time {
+                grid-area: time-start;
+                text-align: left;
                 font-size: 0.875rem;
                 color: #57534e;
-                margin-bottom: 8px;
+            }
+
+            #duration {
+                grid-area: time-end;
+                text-align: right;
+                font-size: 0.875rem;
+                color: #57534e;
             }
 
             /* 控制按钮 */
             .controls {
+                grid-area: ctrls;
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                margin-top: 16px;
             }
 
             .controls button {
@@ -279,20 +296,34 @@ layout: base
                 .song-info h2 {
                     font-size: 1.75rem;
                 }
+                
+                .progress-container {
+                    margin: 16px 0 8px;
+                }
+
+                /* 桌面端控件布局：水平排列 */
+                .controls-layout {
+                    display: flex;
+                    align-items: center;
+                    gap: 24px;
+                    margin-top: 4px; /* 紧凑一点 */
+                }
 
                 .controls {
-                    justify-content: center; /* 改为居中对齐 */
-                    gap: 32px; /* 使用 gap 控制间距，增加间距使布局更透气 */
-                    margin-top: 10px;
+                    flex: 1; /* 占据剩余空间 */
+                    justify-content: center; /* 居中对齐 */
+                    gap: 32px; /* 按钮之间宽松一点 */
                 }
                 
                 .controls button {
                     padding: 5px 0;
-                    margin-right: 0; /* 移除右边距，确保完美居中 */
+                    margin: 0;
                 }
-                
-                .progress-container {
-                    margin: 16px 0 8px;
+
+                /* 防止时间文字换行 */
+                #current-time, #duration {
+                    white-space: nowrap;
+                    flex-shrink: 0;
                 }
 
                 .playlist {
@@ -328,23 +359,26 @@ layout: base
                     <div class="progress-container" id="progress-container">
                         <div class="progress-bar" id="progress-bar"></div>
                     </div>
-                    <div class="time-display">
-                        <span id="current-time">0:00</span>
-                        <span id="duration">0:00</span>
-                    </div>
 
-                    <!-- 控制按钮 -->
-                    <div class="controls">
-                        <!-- 随机播放按钮 -->
-                        <button id="shuffle-btn" title="随机播放"><i class="fas fa-random"></i></button>
-                        <!-- 上一曲按钮 -->
-                        <button id="prev-btn" title="上一曲"><i class="fas fa-backward-step"></i></button>
-                        <!-- 播放/暂停按钮 -->
-                        <button id="play-pause-btn" class="main-play-btn" title="播放/暂停"><i class="fas fa-play"></i></button>
-                        <!-- 下一曲按钮 -->
-                        <button id="next-btn" title="下一曲"><i class="fas fa-forward-step"></i></button>
-                        <!-- 循环模式按钮 -->
-                        <button id="repeat-btn" title="循环模式"><i class="fas fa-repeat"></i></button>
+                    <!-- 控件区域：包含时间、控制按钮 -->
+                    <div class="controls-layout">
+                        <span id="current-time">0:00</span>
+                        
+                        <!-- 控制按钮 -->
+                        <div class="controls">
+                            <!-- 随机播放按钮 -->
+                            <button id="shuffle-btn" title="随机播放"><i class="fas fa-random"></i></button>
+                            <!-- 上一曲按钮 -->
+                            <button id="prev-btn" title="上一曲"><i class="fas fa-backward-step"></i></button>
+                            <!-- 播放/暂停按钮 -->
+                            <button id="play-pause-btn" class="main-play-btn" title="播放/暂停"><i class="fas fa-play"></i></button>
+                            <!-- 下一曲按钮 -->
+                            <button id="next-btn" title="下一曲"><i class="fas fa-forward-step"></i></button>
+                            <!-- 循环模式按钮 -->
+                            <button id="repeat-btn" title="循环模式"><i class="fas fa-repeat"></i></button>
+                        </div>
+
+                        <span id="duration">0:00</span>
                     </div>
                 </div>
             </div>
