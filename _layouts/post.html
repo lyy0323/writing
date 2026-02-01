@@ -73,22 +73,28 @@ layout: base
         <style>
             .player-container {
                 width: 100%;
-                max-width: 400px;
+                max-width: 400px; /* 默认移动端宽度限制 */
                 background-color: #fcf8fa;
                 border-radius: 12px;
                 box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
                 padding: 24px;
                 text-align: center;
                 transition: all 0.2s ease;
-                margin: 2rem auto; /* 居中显示，与内容保持距离 */
+                margin: 2rem auto;
             }
             
+            /* 顶部区域容器 (用于桌面端布局) */
+            .player-top-section {
+                width: 100%;
+            }
+
             /* 专辑封面 */
             .album-cover {
                 width: 100%;
-                padding-bottom: 100%;
+                padding-bottom: 100%; /* 保持正方形 */
                 position: relative;
                 margin-bottom: 24px;
+                flex-shrink: 0;
             }
 
             .album-cover img {
@@ -102,11 +108,17 @@ layout: base
                 box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             }
 
+            /* 右侧面板 (用于桌面端布局) */
+            .player-right-panel {
+                width: 100%;
+            }
+
             /* 歌曲信息 */
             .song-info h2 {
                 font-size: 1.5rem;
                 font-weight: 600;
                 margin: 0 0 4px;
+                line-height: 1.2;
             }
 
             .song-info p {
@@ -122,7 +134,7 @@ layout: base
                 background-color: #e7e5e4;
                 border-radius: 4px;
                 cursor: pointer;
-                margin: 24px 0 12px;
+                margin: 24px 0 8px; /* 稍微调整下边距 */
                 position: relative;
             }
 
@@ -139,6 +151,7 @@ layout: base
                 justify-content: space-between;
                 font-size: 0.875rem;
                 color: #57534e;
+                margin-bottom: 8px;
             }
 
             /* 控制按钮 */
@@ -146,7 +159,7 @@ layout: base
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                margin-top: 24px;
+                margin-top: 16px;
             }
 
             .controls button {
@@ -155,7 +168,7 @@ layout: base
                 cursor: pointer;
                 color: #1c1917; /* 默认颜色 */
                 padding: 10px;
-                font-size: 1.5rem;
+                font-size: 1.25rem; /* 稍微调小一点默认图标 */
                 transition: color 0.2s ease, transform 0.2s ease;
             }
 
@@ -176,12 +189,15 @@ layout: base
             .playlist {
                 text-align: left;
                 margin-top: 32px;
+                border-top: 1px solid rgba(0,0,0,0.05); /* 添加一点分割线感 */
+                padding-top: 16px;
             }
             
             .playlist-title {
-                font-size: 1.25rem;
+                font-size: 1.1rem;
                 font-weight: 600;
                 margin-bottom: 12px;
+                color: #444;
             }
 
             .playlist ul {
@@ -194,10 +210,11 @@ layout: base
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                padding: 10px 12px;
+                padding: 8px 12px;
                 border-radius: 6px;
                 cursor: pointer;
                 transition: background-color 0.2s ease;
+                font-size: 0.95rem;
             }
             
             .playlist li:hover {
@@ -215,15 +232,74 @@ layout: base
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
+                margin-right: 10px;
             }
             
             .playlist-item-artist {
-                font-size: 0.875rem;
+                font-size: 0.8rem;
                 color: #57534e;
+                margin-left: 8px;
             }
             
             .playlist li.active .playlist-item-artist {
                 color: #1c1917;
+            }
+
+            /* === 桌面端响应式样式 === */
+            @media (min-width: 768px) {
+                .player-container {
+                    max-width: 100%; /* 全宽 */
+                    padding: 30px;
+                    text-align: left; /* 左对齐 */
+                }
+
+                .player-top-section {
+                    display: flex;
+                    align-items: center; /* 垂直居中 */
+                    gap: 32px; /* 图片和右侧内容的间距 */
+                    margin-bottom: 10px;
+                }
+
+                .album-cover {
+                    width: 160px; /* 固定宽度 */
+                    height: 160px; /* 固定高度 */
+                    padding-bottom: 0; /* 取消 padding hack */
+                    margin-bottom: 0; /* 取消下边距 */
+                    border-radius: 8px;
+                    overflow: hidden;
+                }
+
+                .player-right-panel {
+                    flex: 1; /* 占据剩余空间 */
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                }
+
+                .song-info h2 {
+                    font-size: 1.75rem;
+                }
+
+                .controls {
+                    justify-content: center; /* 改为居中对齐 */
+                    gap: 32px; /* 使用 gap 控制间距，增加间距使布局更透气 */
+                    margin-top: 10px;
+                }
+                
+                .controls button {
+                    padding: 5px 0;
+                    margin-right: 0; /* 移除右边距，确保完美居中 */
+                }
+                
+                .progress-container {
+                    margin: 16px 0 8px;
+                }
+
+                .playlist {
+                    margin-top: 20px;
+                    max-height: 300px;
+                    overflow-y: auto; /* 如果列表太长可以滚动 */
+                }
             }
         </style>
         <!-- 引入Font Awesome图标库 -->
@@ -233,43 +309,49 @@ layout: base
             <!-- HTML5音频播放器，不可见 -->
             <audio id="audio-player"></audio>
 
-            <!-- 专辑封面 -->
-            <div class="album-cover">
-                <img id="cover-image" src="" alt="专辑封面">
-            </div>
+            <!-- 顶部区域：包含封面和右侧信息 -->
+            <div class="player-top-section">
+                <!-- 专辑封面 -->
+                <div class="album-cover">
+                    <img id="cover-image" src="" alt="专辑封面">
+                </div>
 
-            <!-- 歌曲信息 -->
-            <div class="song-info">
-                <h2 id="song-title"></h2>
-                <p id="song-artist"></p>
-            </div>
+                <!-- 右侧面板：信息、进度、控制 -->
+                <div class="player-right-panel">
+                    <!-- 歌曲信息 -->
+                    <div class="song-info">
+                        <h2 id="song-title"></h2>
+                        <p id="song-artist"></p>
+                    </div>
 
-            <!-- 播放进度条 -->
-            <div class="progress-container" id="progress-container">
-                <div class="progress-bar" id="progress-bar"></div>
-            </div>
-            <div class="time-display">
-                <span id="current-time">0:00</span>
-                <span id="duration">0:00</span>
-            </div>
+                    <!-- 播放进度条 -->
+                    <div class="progress-container" id="progress-container">
+                        <div class="progress-bar" id="progress-bar"></div>
+                    </div>
+                    <div class="time-display">
+                        <span id="current-time">0:00</span>
+                        <span id="duration">0:00</span>
+                    </div>
 
-            <!-- 控制按钮 -->
-            <div class="controls">
-                <!-- 随机播放按钮 -->
-                <button id="shuffle-btn"><i class="fas fa-random"></i></button>
-                <!-- 上一曲按钮 -->
-                <button id="prev-btn"><i class="fas fa-backward-step"></i></button>
-                <!-- 播放/暂停按钮 -->
-                <button id="play-pause-btn" class="main-play-btn"><i class="fas fa-play"></i></button>
-                <!-- 下一曲按钮 -->
-                <button id="next-btn"><i class="fas fa-forward-step"></i></button>
-                <!-- 循环模式按钮 -->
-                <button id="repeat-btn"><i class="fas fa-repeat"></i></button>
+                    <!-- 控制按钮 -->
+                    <div class="controls">
+                        <!-- 随机播放按钮 -->
+                        <button id="shuffle-btn" title="随机播放"><i class="fas fa-random"></i></button>
+                        <!-- 上一曲按钮 -->
+                        <button id="prev-btn" title="上一曲"><i class="fas fa-backward-step"></i></button>
+                        <!-- 播放/暂停按钮 -->
+                        <button id="play-pause-btn" class="main-play-btn" title="播放/暂停"><i class="fas fa-play"></i></button>
+                        <!-- 下一曲按钮 -->
+                        <button id="next-btn" title="下一曲"><i class="fas fa-forward-step"></i></button>
+                        <!-- 循环模式按钮 -->
+                        <button id="repeat-btn" title="循环模式"><i class="fas fa-repeat"></i></button>
+                    </div>
+                </div>
             </div>
             
             <!-- 播放列表 -->
             <div class="playlist">
-                <div class="playlist-title">播放列表</div>
+                <!-- <div class="playlist-title">播放列表</div> -->
                 <ul id="playlist-ul">
                     <!-- 播放列表项将由JS动态生成 -->
                 </ul>
@@ -403,8 +485,8 @@ layout: base
                     const li = document.createElement('li');
                     li.innerHTML = `
                         <div class="playlist-item-info">
-                            <div>${index + 1}. ${song.title}</div>
-                            <div class="playlist-item-artist">${song.artist}</div>
+                            <span>${index + 1}. ${song.title}</span>
+                            <span class="playlist-item-artist">- ${song.artist}</span>
                         </div>
                         <i class="fas fa-play-circle playlist-play-icon" data-index="${index}"></i>
                     `;
