@@ -154,7 +154,7 @@ layout: base
                     "time-start time-end"
                     "ctrls ctrls";
                 gap: 12px 0;
-                margin-top: 8px;
+                margin-top: 0px;
             }
 
             #current-time {
@@ -263,7 +263,7 @@ layout: base
             }
 
             /* === 桌面端响应式样式 === */
-            @media (min-width: 768px) {
+            @media (min-width: 960px) {
                 .player-container {
                     max-width: 100%; /* 全宽 */
                     padding: 30px;
@@ -278,11 +278,11 @@ layout: base
                 }
 
                 .album-cover {
-                    width: 160px; /* 固定宽度 */
-                    height: 160px; /* 固定高度 */
+                    width: 180px; /* 固定宽度 */
+                    height: 180px; /* 固定高度 */
                     padding-bottom: 0; /* 取消 padding hack */
                     margin-bottom: 0; /* 取消下边距 */
-                    border-radius: 8px;
+                    border-radius: 8px 8px 8px 8px;
                     overflow: hidden;
                 }
 
@@ -316,7 +316,7 @@ layout: base
                 }
                 
                 .controls button {
-                    padding: 5px 0;
+                    padding: 0;
                     margin: 0;
                 }
 
