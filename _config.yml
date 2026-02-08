@@ -11,7 +11,7 @@ author: lyy0323
 email: lyy_0323@outlook.com
 
 # Build settings
-permalink: /:year/:month/:day/:title/
+permalink: /:title/
 exclude: ["README.md", "changelog.md", "server", "tools", "Pipfile"]
 plugins_dir:
   - jekyll-paginate
