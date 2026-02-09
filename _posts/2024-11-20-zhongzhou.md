@@ -8,6 +8,33 @@ content-created: 2021-04-28
 content-updated: 2025-12-18
 archive-created: 2024-11-01
 archive-updated: 2026-01-18
+windbell:
+  position: bottom
+  items:
+    - label: "中洲集"
+      url: /zhongzhou/
+      color: "#cc9966"
+    - label: "晚枫集"
+      url: /wanfeng/
+      color: "#339933"
+    - label: "沐雨集"
+      url: /muyu/
+      color: "#3399cc"
+    - label: "雨鱼集"
+      url: /yuyu/
+      color: "#ff66cc"
+    - label: "缘溪集"
+      url: /yuanxi/
+      color: "#ddddbb"
+    - label: "海风集"
+      url: /haifeng/
+      color: "#006666"
+    - label: "轨边集"
+      url: /guibian/
+      color: "#bbbbc3"
+    - label: "小猫集"
+      url: /xiaomao/
+      color: "#cccc66"
 ---
 
 > 星河桥下春草晚，和梦长在水中洲。

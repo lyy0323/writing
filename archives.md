@@ -5,6 +5,9 @@ permalink: /archives/
 windbell:
   position: top
   items:
+    - label: "中洲集"
+      url: /zhongzhou/
+      color: "#cc9966"
     - label: "晚枫集"
       url: /wanfeng/
       color: "#339933"
@@ -20,6 +23,9 @@ windbell:
     - label: "海风集"
       url: /haifeng/
       color: "#006666"
+    - label: "轨边集"
+      url: /guibian/
+      color: "#bbbbc3"
     - label: "小猫集"
       url: /xiaomao/
       color: "#cccc66"
