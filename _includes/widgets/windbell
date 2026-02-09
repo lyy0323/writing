@@ -119,11 +119,11 @@
         margin: 0 auto;
     }
 
-    /* 铃舌珠子 */
+    /* 铃舌珠子 - 颜色通过内联 --wb-clapper-color 自定义，默认红色 */
     .windbell-container .wb-clapper {
         width: 12px;
         height: 12px;
-        background: #d63031;
+        background: var(--wb-clapper-color, #d63031);
         border-radius: 50%;
         margin: -2px auto 0;
     }
@@ -206,7 +206,7 @@
     <!-- 风铃展示架 -->
     <div class="wb-chime-gallery">
         {% for item in page.windbell.items %}
-        <div class="wb-chime-wrapper" data-url="{{ item.url | prepend: site.baseurl }}">
+        <div class="wb-chime-wrapper" data-url="{{ item.url | prepend: site.baseurl }}"{% if item.color %} style="--wb-clapper-color: {{ item.color }}"{% endif %}>
             <div class="wb-string"></div>
             <div class="wb-bell-body"></div>
             <div class="wb-clapper-string"></div>
