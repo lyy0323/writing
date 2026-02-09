@@ -1,0 +1,375 @@
+<!-- 唱片索引组件 -->
+<!-- 数据来源：include.component.items (label, url, album, cover) -->
+
+<style>
+    .record-container {
+        --rec-bg-color: #F8F2F5;
+        --rec-active-color: #DDD4ED;
+        --rec-text-color: #1c1917;
+        --rec-sleeve-bg: #fff;
+        --rec-vinyl-black: #1a1a1a;
+
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 1.5em 0;
+        padding: 20px 0;
+        box-sizing: border-box;
+    }
+
+    /* 网格布局：6列桌面端 */
+    .record-container .rec-grid {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 40px 0;
+        width: 100%;
+        padding: 0 10px;
+        justify-items: center;
+        box-sizing: border-box;
+    }
+
+    /* 唱片单元 */
+    .record-container .rec-item {
+        position: relative;
+        width: 110px;
+        height: 110px;
+        cursor: pointer;
+        /* 预留唱片滑出空间 */
+        padding-right: 40px;
+        box-sizing: content-box;
+    }
+
+    /* 黑胶唱片 - 在封套下层 */
+    .record-container .rec-vinyl {
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-color: var(--rec-vinyl-black);
+        background-image: repeating-radial-gradient(
+            #1a1a1a 0, #1a1a1a 2px, #2a2a2a 3px, #1a1a1a 4px
+        );
+        box-shadow: 2px 0 10px rgba(0,0,0,0.3);
+        z-index: 1;
+        transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* 唱片反光 */
+    .record-container .rec-vinyl::after {
+        content: '';
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        border-radius: 50%;
+        background: linear-gradient(45deg, transparent 40%, rgba(255,255,255,0.1) 50%, transparent 60%),
+                    linear-gradient(-45deg, transparent 40%, rgba(255,255,255,0.1) 50%, transparent 60%);
+        pointer-events: none;
+    }
+
+    /* 唱片中心贴纸 */
+    .record-container .rec-label {
+        width: 40px;
+        height: 40px;
+        background: var(--rec-active-color);
+        border-radius: 50%;
+        border: 2px solid #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        box-shadow: inset 0 0 8px rgba(0,0,0,0.1);
+        position: relative;
+    }
+
+    /* 唱片中心孔 */
+    .record-container .rec-label::after {
+        content: '';
+        position: absolute;
+        width: 5px;
+        height: 5px;
+        background: #fff;
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    /* 中心序号 */
+    .record-container .rec-id {
+        font-family: monospace;
+        font-size: 0.7rem;
+        font-weight: bold;
+        color: #4a148c;
+        line-height: 1;
+        position: relative;
+        z-index: 1;
+    }
+
+    /* 封套 - 最上层 */
+    .record-container .rec-sleeve {
+        position: relative;
+        width: 110px;
+        height: 110px;
+        background: var(--rec-sleeve-bg);
+        z-index: 10;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1), inset 0 0 20px rgba(0,0,0,0.02);
+        padding: 10px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        transition: transform 0.3s ease;
+        overflow: hidden;
+        /* 纸张纹理 */
+        background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.05'/%3E%3C/svg%3E");
+    }
+
+    /* 有封面图片的封套 */
+    .record-container .rec-sleeve.has-cover {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    /* 封套开口阴影 */
+    .record-container .rec-sleeve::before {
+        content: '';
+        position: absolute;
+        right: -2px;
+        top: 10%;
+        height: 80%;
+        width: 4px;
+        background: rgba(0,0,0,0.05);
+        border-radius: 50%;
+        filter: blur(1px);
+    }
+
+    /* 封套文字区域 */
+    .record-container .rec-sleeve-text {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    /* 有封面时的文字背景 */
+    .record-container .rec-sleeve.has-cover .rec-sleeve-text {
+        background: rgba(0, 0, 0, 0.45);
+        border-radius: 4px;
+        padding: 6px 4px;
+        backdrop-filter: blur(2px);
+    }
+
+    /* 歌名 */
+    .record-container .rec-title {
+        font-family: inherit;
+        font-weight: 700;
+        font-size: 0.85rem;
+        line-height: 1.3;
+        color: #333;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .record-container .rec-sleeve.has-cover .rec-title {
+        color: #fff;
+        text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    }
+
+    /* 专辑名 */
+    .record-container .rec-album {
+        margin-top: 4px;
+        font-family: inherit;
+        font-size: 0.6rem;
+        color: #999;
+        letter-spacing: 1px;
+    }
+
+    .record-container .rec-sleeve.has-cover .rec-album {
+        color: rgba(255,255,255,0.85);
+        text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+    }
+
+    /* Hover：封套歪一点，唱片滑出旋转 */
+    .record-container .rec-item:hover .rec-sleeve {
+        transform: rotate(-2deg);
+    }
+
+    .record-container .rec-item:hover .rec-vinyl {
+        transform: translateX(55px) rotate(180deg);
+    }
+
+    /* 进场动画 */
+    .record-container .rec-item {
+        animation: rec-slide-in 0.5s ease backwards;
+    }
+
+    .record-container .rec-item:nth-child(1) { animation-delay: 0.05s; }
+    .record-container .rec-item:nth-child(2) { animation-delay: 0.1s; }
+    .record-container .rec-item:nth-child(3) { animation-delay: 0.15s; }
+    .record-container .rec-item:nth-child(4) { animation-delay: 0.2s; }
+    .record-container .rec-item:nth-child(5) { animation-delay: 0.25s; }
+    .record-container .rec-item:nth-child(6) { animation-delay: 0.3s; }
+    .record-container .rec-item:nth-child(7) { animation-delay: 0.35s; }
+    .record-container .rec-item:nth-child(8) { animation-delay: 0.4s; }
+    .record-container .rec-item:nth-child(9) { animation-delay: 0.45s; }
+    .record-container .rec-item:nth-child(10) { animation-delay: 0.5s; }
+    .record-container .rec-item:nth-child(11) { animation-delay: 0.55s; }
+    .record-container .rec-item:nth-child(12) { animation-delay: 0.6s; }
+    .record-container .rec-item:nth-child(n+13) { animation-delay: 0.65s; }
+
+    @keyframes rec-slide-in {
+        0% { opacity: 0; transform: translateY(20px); }
+        100% { opacity: 1; transform: translateY(0); }
+    }
+
+    /* 移动端：4列，更小尺寸 */
+    @media (max-width: 600px) {
+        .record-container .rec-grid {
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px 0;
+        }
+        .record-container .rec-item {
+            width: 76px;
+            height: 76px;
+            padding-right: 28px;
+        }
+        .record-container .rec-vinyl {
+            width: 68px;
+            height: 68px;
+            top: 4px;
+            left: 4px;
+        }
+        .record-container .rec-label {
+            width: 28px;
+            height: 28px;
+        }
+        .record-container .rec-label::after {
+            width: 4px;
+            height: 4px;
+        }
+        .record-container .rec-id {
+            font-size: 0.55rem;
+        }
+        .record-container .rec-sleeve {
+            width: 76px;
+            height: 76px;
+            padding: 6px;
+        }
+        .record-container .rec-title {
+            font-size: 0.7rem;
+            -webkit-line-clamp: 2;
+        }
+        .record-container .rec-album {
+            font-size: 0.5rem;
+            margin-top: 2px;
+        }
+        .record-container .rec-item:hover .rec-vinyl {
+            transform: translateX(38px) rotate(180deg);
+        }
+    }
+</style>
+
+<div class="record-container">
+    <div class="rec-grid">
+        {% for item in include.component.items %}
+        <div class="rec-item" data-url="{{ item.url | prepend: site.baseurl }}">
+            <div class="rec-vinyl">
+                <div class="rec-label">
+                    {% if item.id %}<span class="rec-id">{{ item.id }}</span>{% endif %}
+                </div>
+            </div>
+            <div class="rec-sleeve{% if item.cover %} has-cover{% endif %}"{% if item.cover %} style="background-image: url('{{ item.cover | prepend: site.baseurl }}')"{% endif %}>
+                <div class="rec-sleeve-text">
+                    <span class="rec-title">{{ item.label }}</span>
+                    {% if item.album %}<span class="rec-album">{{ item.album }}</span>{% endif %}
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<script>
+(function() {
+    // 唱针落下音效（Web Audio API 合成）
+    var recAudioCtx = null;
+
+    function getRecAudioCtx() {
+        if (!recAudioCtx) {
+            recAudioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        }
+        return recAudioCtx;
+    }
+
+    function playNeedleSound() {
+        var ctx = getRecAudioCtx();
+        if (ctx.state === 'suspended') {
+            ctx.resume();
+        }
+        var now = ctx.currentTime;
+
+        // 短促爆裂声
+        var bufferSize = ctx.sampleRate * 0.1;
+        var buffer = ctx.createBuffer(1, bufferSize, ctx.sampleRate);
+        var data = buffer.getChannelData(0);
+        for (var i = 0; i < bufferSize; i++) {
+            data[i] = (Math.random() * 2 - 1) * 0.5;
+        }
+        var noise = ctx.createBufferSource();
+        noise.buffer = buffer;
+        var noiseGain = ctx.createGain();
+        noiseGain.gain.setValueAtTime(0.8, now);
+        noiseGain.gain.exponentialRampToValueAtTime(0.01, now + 0.1);
+        noise.connect(noiseGain);
+        noiseGain.connect(ctx.destination);
+        noise.start(now);
+
+        // 低频底噪
+        var lfo = ctx.createOscillator();
+        lfo.type = 'triangle';
+        lfo.frequency.value = 50;
+        var lfoGain = ctx.createGain();
+        lfoGain.gain.setValueAtTime(0.05, now);
+        lfoGain.gain.linearRampToValueAtTime(0, now + 0.5);
+        lfo.connect(lfoGain).connect(ctx.destination);
+        lfo.start(now);
+        lfo.stop(now + 0.5);
+    }
+
+    function clickRecord(item) {
+        var url = item.getAttribute('data-url');
+        playNeedleSound();
+        setTimeout(function() {
+            if (url) {
+                window.location.href = url;
+            }
+        }, 600);
+    }
+
+    // 事件委托
+    var containers = document.querySelectorAll('.record-container');
+    for (var i = 0; i < containers.length; i++) {
+        containers[i].addEventListener('click', function(e) {
+            var item = e.target.closest('.rec-item');
+            if (item) {
+                clickRecord(item);
+            }
+        });
+    }
+})();
+</script>
