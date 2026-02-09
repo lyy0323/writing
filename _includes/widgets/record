@@ -3,9 +3,9 @@
 
 <style>
     .record-container {
-        --rec-bg-color: #F8F2F5;
+        /* 核心尺寸变量：所有元素按比例缩放 */
+        --rec-size: 88px;
         --rec-active-color: #DDD4ED;
-        --rec-text-color: #1c1917;
         --rec-sleeve-bg: #fff;
         --rec-vinyl-black: #1a1a1a;
 
@@ -20,35 +20,35 @@
         box-sizing: border-box;
     }
 
-    /* 网格布局：6列桌面端 */
+    /* 网格布局：默认 6 列 */
     .record-container .rec-grid {
         display: grid;
         grid-template-columns: repeat(6, 1fr);
-        gap: 40px 0;
+        gap: 36px 0;
         width: 100%;
         padding: 0 10px;
         justify-items: center;
         box-sizing: border-box;
     }
 
-    /* 唱片单元 */
+    /* 唱片单元 - 所有尺寸由 --rec-size 驱动 */
     .record-container .rec-item {
         position: relative;
-        width: 110px;
-        height: 110px;
+        width: var(--rec-size);
+        height: var(--rec-size);
         cursor: pointer;
-        /* 预留唱片滑出空间 */
-        padding-right: 40px;
+        /* 预留唱片滑出空间：60% */
+        padding-right: calc(var(--rec-size) * 0.6);
         box-sizing: content-box;
     }
 
     /* 黑胶唱片 - 在封套下层 */
     .record-container .rec-vinyl {
         position: absolute;
-        top: 5px;
-        left: 5px;
-        width: 100px;
-        height: 100px;
+        top: calc(var(--rec-size) * 0.045);
+        left: calc(var(--rec-size) * 0.045);
+        width: calc(var(--rec-size) * 0.91);
+        height: calc(var(--rec-size) * 0.91);
         border-radius: 50%;
         background-color: var(--rec-vinyl-black);
         background-image: repeating-radial-gradient(
@@ -75,8 +75,8 @@
 
     /* 唱片中心贴纸 */
     .record-container .rec-label {
-        width: 40px;
-        height: 40px;
+        width: calc(var(--rec-size) * 0.38);
+        height: calc(var(--rec-size) * 0.38);
         background: var(--rec-active-color);
         border-radius: 50%;
         border: 2px solid #fff;
@@ -92,8 +92,8 @@
     .record-container .rec-label::after {
         content: '';
         position: absolute;
-        width: 5px;
-        height: 5px;
+        width: calc(var(--rec-size) * 0.055);
+        height: calc(var(--rec-size) * 0.055);
         background: #fff;
         border-radius: 50%;
         top: 50%;
@@ -115,12 +115,12 @@
     /* 封套 - 最上层 */
     .record-container .rec-sleeve {
         position: relative;
-        width: 110px;
-        height: 110px;
+        width: var(--rec-size);
+        height: var(--rec-size);
         background: var(--rec-sleeve-bg);
         z-index: 10;
         box-shadow: 0 5px 15px rgba(0,0,0,0.1), inset 0 0 20px rgba(0,0,0,0.02);
-        padding: 10px;
+        padding: calc(var(--rec-size) * 0.1);
         box-sizing: border-box;
         display: flex;
         flex-direction: column;
@@ -176,7 +176,7 @@
     .record-container .rec-title {
         font-family: inherit;
         font-weight: 700;
-        font-size: 0.85rem;
+        font-size: 0.8rem;
         line-height: 1.3;
         color: #333;
         display: -webkit-box;
@@ -192,9 +192,9 @@
 
     /* 专辑名 */
     .record-container .rec-album {
-        margin-top: 4px;
+        margin-top: 3px;
         font-family: inherit;
-        font-size: 0.6rem;
+        font-size: 0.55rem;
         color: #999;
         letter-spacing: 1px;
     }
@@ -204,13 +204,13 @@
         text-shadow: 0 1px 2px rgba(0,0,0,0.5);
     }
 
-    /* Hover：封套歪一点，唱片滑出旋转 */
+    /* Hover：封套歪一点，唱片滑出 60% 旋转 */
     .record-container .rec-item:hover .rec-sleeve {
         transform: rotate(-2deg);
     }
 
     .record-container .rec-item:hover .rec-vinyl {
-        transform: translateX(55px) rotate(180deg);
+        transform: translateX(calc(var(--rec-size) * 0.6)) rotate(180deg);
     }
 
     /* 进场动画 */
@@ -237,49 +237,44 @@
         100% { opacity: 1; transform: translateY(0); }
     }
 
-    /* 移动端：4列，更小尺寸 */
-    @media (max-width: 600px) {
+    /* 中等桌面端 & 平板：4 列，稍小 */
+    @media (max-width: 1100px) {
         .record-container .rec-grid {
             grid-template-columns: repeat(4, 1fr);
-            gap: 30px 0;
         }
-        .record-container .rec-item {
-            width: 76px;
-            height: 76px;
-            padding-right: 28px;
+        .record-container {
+            --rec-size: 80px;
         }
-        .record-container .rec-vinyl {
-            width: 68px;
-            height: 68px;
-            top: 4px;
-            left: 4px;
+    }
+
+    /* 移动端：4 列，更小 */
+    @media (max-width: 600px) {
+        .record-container {
+            --rec-size: 60px;
         }
-        .record-container .rec-label {
-            width: 28px;
-            height: 28px;
-        }
-        .record-container .rec-label::after {
-            width: 4px;
-            height: 4px;
-        }
-        .record-container .rec-id {
-            font-size: 0.55rem;
-        }
-        .record-container .rec-sleeve {
-            width: 76px;
-            height: 76px;
-            padding: 6px;
+        .record-container .rec-grid {
+            gap: 28px 0;
         }
         .record-container .rec-title {
-            font-size: 0.7rem;
+            font-size: 0.65rem;
             -webkit-line-clamp: 2;
         }
         .record-container .rec-album {
-            font-size: 0.5rem;
+            font-size: 0.45rem;
             margin-top: 2px;
         }
-        .record-container .rec-item:hover .rec-vinyl {
-            transform: translateX(38px) rotate(180deg);
+        .record-container .rec-id {
+            font-size: 0.5rem;
+        }
+    }
+
+    /* 小屏移动端：3 列 */
+    @media (max-width: 420px) {
+        .record-container {
+            --rec-size: 64px;
+        }
+        .record-container .rec-grid {
+            grid-template-columns: repeat(3, 1fr);
         }
     }
 </style>
@@ -324,7 +319,7 @@
         var now = ctx.currentTime;
 
         // 短促爆裂声
-        var bufferSize = ctx.sampleRate * 0.1;
+        var bufferSize = Math.floor(ctx.sampleRate * 0.1);
         var buffer = ctx.createBuffer(1, bufferSize, ctx.sampleRate);
         var data = buffer.getChannelData(0);
         for (var i = 0; i < bufferSize; i++) {
