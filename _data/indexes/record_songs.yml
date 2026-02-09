@@ -76,6 +76,7 @@ items:
     url: /anyuan/
     id: 169
     album: "安远"
+    cover: "/assets/imgs/cover/安远.jpeg"
   - label: "虬江"
     url: /qiujiang/
     id: 170
