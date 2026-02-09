@@ -32,20 +32,13 @@
         z-index: 10;
     }
 
-    /* 提示文字 */
-    .windbell-container .wb-instruction {
-        margin-top: 12px;
-        text-align: center;
-        color: #888;
-        font-size: 0.85em;
-    }
-
     /* 风铃展示区域 */
     .windbell-container .wb-chime-gallery {
         display: flex;
         justify-content: center;
         gap: 50px;
-        padding: 10px 20px 20px;
+        padding: 0 20px 20px;
+        margin-top: 0;
         flex-wrap: wrap;
     }
 
@@ -194,10 +187,6 @@
     <!-- 顶部木架 -->
     <div class="wb-wooden-frame"></div>
 
-    <div class="wb-instruction">
-        <p>请打开音量，试着拉动风铃...</p>
-    </div>
-
     <!-- 风铃展示架 -->
     <div class="wb-chime-gallery">
         {% for item in page.windbell.items %}
@@ -214,50 +203,14 @@
 
 <script>
 (function() {
-    // 延迟创建 AudioContext，避免浏览器自动播放策略限制
-    var wbAudioCtx = null;
-
-    function getAudioCtx() {
-        if (!wbAudioCtx) {
-            wbAudioCtx = new (window.AudioContext || window.webkitAudioContext)();
-        }
-        return wbAudioCtx;
-    }
+    // 风铃音效：使用预切分的 mp3 文件
+    var wbChimeAudio = new Audio('{{ "/assets/static/music/windbell-chime.mp3" | prepend: site.baseurl }}');
+    wbChimeAudio.preload = 'auto';
 
     function playBellSound() {
-        var ctx = getAudioCtx();
-        if (ctx.state === 'suspended') {
-            ctx.resume();
-        }
-
-        var now = ctx.currentTime;
-
-        // 主振荡器
-        var osc = ctx.createOscillator();
-        var gainNode = ctx.createGain();
-        osc.type = 'sine';
-        var frequency = 2800 + Math.random() * 500;
-        osc.frequency.setValueAtTime(frequency, now);
-        gainNode.gain.setValueAtTime(0, now);
-        gainNode.gain.linearRampToValueAtTime(0.3, now + 0.01);
-        gainNode.gain.exponentialRampToValueAtTime(0.001, now + 1.5);
-
-        // 泛音振荡器
-        var osc2 = ctx.createOscillator();
-        var gain2 = ctx.createGain();
-        osc2.type = 'sine';
-        osc2.frequency.setValueAtTime(frequency * 1.5, now);
-        gain2.gain.setValueAtTime(0, now);
-        gain2.gain.linearRampToValueAtTime(0.1, now + 0.01);
-        gain2.gain.exponentialRampToValueAtTime(0.001, now + 1.0);
-
-        osc.connect(gainNode).connect(ctx.destination);
-        osc2.connect(gain2).connect(ctx.destination);
-
-        osc.start(now);
-        osc.stop(now + 1.5);
-        osc2.start(now);
-        osc2.stop(now + 1.5);
+        // 每次点击重新从头播放，支持快速连续触发
+        wbChimeAudio.currentTime = 0;
+        wbChimeAudio.play().catch(function() {});
     }
 
     function triggerChime(element) {
