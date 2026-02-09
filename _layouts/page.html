@@ -2,12 +2,28 @@
 layout: base
 ---
 
-{% if page.windbell and page.windbell.position == "top" %}
-    {% include widgets/windbell %}
+{% if page.index %}
+    {% for component in page.index %}
+        {% if component.position == "top" %}
+            {% if component.type == "windbell" %}
+                {% include widgets/windbell component=component %}
+            {% elsif component.type == "coconut" %}
+                {% include widgets/coconut component=component %}
+            {% endif %}
+        {% endif %}
+    {% endfor %}
 {% endif %}
 
 {{ content }}
 
-{% if page.windbell and page.windbell.position == "bottom" %}
-    {% include widgets/windbell %}
+{% if page.index %}
+    {% for component in page.index %}
+        {% if component.position == "bottom" %}
+            {% if component.type == "windbell" %}
+                {% include widgets/windbell component=component %}
+            {% elsif component.type == "coconut" %}
+                {% include widgets/coconut component=component %}
+            {% endif %}
+        {% endif %}
+    {% endfor %}
 {% endif %}
