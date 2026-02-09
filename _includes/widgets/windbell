@@ -200,7 +200,12 @@
 
         <!-- 风铃展示架 -->
         <div class="wb-chime-gallery">
-            {% for item in include.component.items %}
+            {% if include.component.ref %}
+                {% assign wb_items = site.data.indexes[include.component.ref].items %}
+            {% else %}
+                {% assign wb_items = include.component.items %}
+            {% endif %}
+            {% for item in wb_items %}
             <div class="wb-chime-wrapper" data-url="{{ item.url | prepend: site.baseurl }}"{% if item.color %} style="--wb-clapper-color: {{ item.color }}"{% endif %}>
                 <div class="wb-string"></div>
                 <div class="wb-bell-body"></div>
