@@ -15,13 +15,22 @@
         --wb-paper-bg: #fffbf0;
 
         width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
         margin: 1.5em 0;
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
     }
 
-    /* 顶部木架 - 相对定位，融入文档流 */
+    /* 内层包裹：木架和风铃作为整体，宽度随内容扩展 */
+    .windbell-container .wb-inner {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        min-width: 100%;
+        width: max-content;
+    }
+
+    /* 顶部木架 - 自动撑满内层宽度 */
     .windbell-container .wb-wooden-frame {
         position: relative;
         width: 100%;
@@ -33,12 +42,6 @@
     }
 
     /* 风铃展示区域 - gap 由 JS 根据风铃数量动态设置 --wb-gap */
-    .windbell-container {
-        overflow-x: auto;
-        overflow-y: hidden;
-        -webkit-overflow-scrolling: touch;
-    }
-
     .windbell-container .wb-chime-gallery {
         display: flex;
         flex-wrap: nowrap;
@@ -46,7 +49,6 @@
         gap: var(--wb-gap, 30px);
         padding: 0 24px 20px;
         margin-top: 0;
-        min-width: max-content;
     }
 
     /* 风铃组件核心 */
@@ -192,20 +194,22 @@
 </style>
 
 <div class="windbell-container">
-    <!-- 顶部木架 -->
-    <div class="wb-wooden-frame"></div>
+    <div class="wb-inner">
+        <!-- 顶部木架 -->
+        <div class="wb-wooden-frame"></div>
 
-    <!-- 风铃展示架 -->
-    <div class="wb-chime-gallery">
-        {% for item in page.windbell.items %}
-        <div class="wb-chime-wrapper" data-url="{{ item.url | prepend: site.baseurl }}"{% if item.color %} style="--wb-clapper-color: {{ item.color }}"{% endif %}>
-            <div class="wb-string"></div>
-            <div class="wb-bell-body"></div>
-            <div class="wb-clapper-string"></div>
-            <div class="wb-clapper"></div>
-            <div class="wb-paper-strip">{{ item.label }}</div>
+        <!-- 风铃展示架 -->
+        <div class="wb-chime-gallery">
+            {% for item in page.windbell.items %}
+            <div class="wb-chime-wrapper" data-url="{{ item.url | prepend: site.baseurl }}"{% if item.color %} style="--wb-clapper-color: {{ item.color }}"{% endif %}>
+                <div class="wb-string"></div>
+                <div class="wb-bell-body"></div>
+                <div class="wb-clapper-string"></div>
+                <div class="wb-clapper"></div>
+                <div class="wb-paper-strip">{{ item.label }}</div>
+            </div>
+            {% endfor %}
         </div>
-        {% endfor %}
     </div>
 </div>
 
