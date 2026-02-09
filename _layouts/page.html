@@ -2,4 +2,12 @@
 layout: base
 ---
 
+{% if page.windbell and page.windbell.position == "top" %}
+    {% include widgets/windbell %}
+{% endif %}
+
 {{ content }}
+
+{% if page.windbell and page.windbell.position == "bottom" %}
+    {% include widgets/windbell %}
+{% endif %}
