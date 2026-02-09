@@ -2,6 +2,15 @@
 layout: page
 title: 归档
 permalink: /archives/
+windbell:
+  position: top
+  items:
+    - label: "晚枫"
+      url: /wanfeng/
+    - label: "雨鱼"
+      url: /yuyu/
+    - label: "海风"
+      url: /haifeng/
 ---
 
 <div class="post">
