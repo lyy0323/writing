@@ -5,12 +5,24 @@ permalink: /archives/
 windbell:
   position: top
   items:
-    - label: "晚枫"
+    - label: "晚枫集"
       url: /wanfeng/
-    - label: "雨鱼"
+      color: "#339933"
+    - label: "沐雨集"
+      url: /muyu/
+      color: "#3399cc"
+    - label: "雨鱼集"
       url: /yuyu/
-    - label: "海风"
+      color: "#ff66cc"
+    - label: "缘溪集"
+      url: /yuanxi/
+      color: "#ddddbb"
+    - label: "海风集"
       url: /haifeng/
+      color: "#006666"
+    - label: "小猫集"
+      url: /xiaomao/
+      color: "#cccc66"
 ---
 
 <div class="post">
