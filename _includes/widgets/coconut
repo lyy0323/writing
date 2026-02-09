@@ -155,7 +155,12 @@
 
 <div class="coconut-container">
     <div class="coco-grid">
-        {% for item in include.component.items %}
+        {% if include.component.ref %}
+            {% assign coco_items = site.data.indexes[include.component.ref].items %}
+        {% else %}
+            {% assign coco_items = include.component.items %}
+        {% endif %}
+        {% for item in coco_items %}
         <div class="coco-item" data-url="{{ item.url | prepend: site.baseurl }}">
             <div class="coco-emoji">🥥</div>
             <div class="coco-tag">{{ item.label }}</div>

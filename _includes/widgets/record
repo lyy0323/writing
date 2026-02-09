@@ -266,7 +266,12 @@
 
 <div class="record-container">
     <div class="rec-grid">
-        {% for item in include.component.items %}
+        {% if include.component.ref %}
+            {% assign rec_items = site.data.indexes[include.component.ref].items %}
+        {% else %}
+            {% assign rec_items = include.component.items %}
+        {% endif %}
+        {% for item in rec_items %}
         <div class="rec-item" data-url="{{ item.url | prepend: site.baseurl }}">
             <div class="rec-vinyl">
                 <div class="rec-label">

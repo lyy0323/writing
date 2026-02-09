@@ -634,12 +634,18 @@ layout: base
         {% endif %}
         {% if page.index %}
             {% for component in page.index %}
+                {% if component.ref %}
+                    {% assign resolved = site.data.indexes[component.ref] %}
+                    {% assign comp_type = resolved.type %}
+                {% else %}
+                    {% assign comp_type = component.type %}
+                {% endif %}
                 {% if component.position == "top" %}
-                    {% if component.type == "windbell" %}
+                    {% if comp_type == "windbell" %}
                         {% include widgets/windbell component=component %}
-                    {% elsif component.type == "coconut" %}
+                    {% elsif comp_type == "coconut" %}
                         {% include widgets/coconut component=component %}
-                    {% elsif component.type == "record" %}
+                    {% elsif comp_type == "record" %}
                         {% include widgets/record component=component %}
                     {% endif %}
                 {% endif %}
@@ -648,12 +654,18 @@ layout: base
         {{ content }}
         {% if page.index %}
             {% for component in page.index %}
+                {% if component.ref %}
+                    {% assign resolved = site.data.indexes[component.ref] %}
+                    {% assign comp_type = resolved.type %}
+                {% else %}
+                    {% assign comp_type = component.type %}
+                {% endif %}
                 {% if component.position == "bottom" %}
-                    {% if component.type == "windbell" %}
+                    {% if comp_type == "windbell" %}
                         {% include widgets/windbell component=component %}
-                    {% elsif component.type == "coconut" %}
+                    {% elsif comp_type == "coconut" %}
                         {% include widgets/coconut component=component %}
-                    {% elsif component.type == "record" %}
+                    {% elsif comp_type == "record" %}
                         {% include widgets/record component=component %}
                     {% endif %}
                 {% endif %}
