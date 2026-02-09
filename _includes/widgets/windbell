@@ -32,29 +32,21 @@
         z-index: 10;
     }
 
-    /* 风铃展示区域 */
-    .windbell-container .wb-chime-gallery {
-        display: flex;
-        justify-content: center;
-        gap: 30px;
-        padding: 0 20px 20px;
-        margin-top: 0;
-        flex-wrap: wrap;
+    /* 风铃展示区域 - gap 由 JS 根据风铃数量动态设置 --wb-gap */
+    .windbell-container {
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
     }
 
-    /* 移动端：不换行，允许横向滚动 */
-    @media (max-width: 768px) {
-        .windbell-container {
-            overflow-x: auto;
-            overflow-y: hidden;
-            -webkit-overflow-scrolling: touch;
-        }
-        .windbell-container .wb-chime-gallery {
-            flex-wrap: nowrap;
-            justify-content: flex-start;
-            min-width: max-content;
-            padding: 0 24px 20px;
-        }
+    .windbell-container .wb-chime-gallery {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        gap: var(--wb-gap, 30px);
+        padding: 0 24px 20px;
+        margin-top: 0;
+        min-width: max-content;
     }
 
     /* 风铃组件核心 */
@@ -141,7 +133,7 @@
         justify-content: center;
         writing-mode: vertical-rl;
         text-orientation: upright;
-        font-size: 14px;
+        font-size: 18px;
         letter-spacing: 4px;
         color: #555;
         transition: background-color 0.3s;
@@ -258,9 +250,21 @@
         }, 300);
     }
 
-    // 事件委托：监听所有风铃点击
+    // 动态计算 gap：2个风铃时50px，6+个时10px，线性插值
+    function calcGap(count) {
+        if (count <= 2) return 50;
+        if (count >= 6) return 10;
+        return Math.round(50 - (count - 2) * 10);
+    }
+
+    // 事件委托 + 动态 gap
     var containers = document.querySelectorAll('.windbell-container');
     for (var i = 0; i < containers.length; i++) {
+        var gallery = containers[i].querySelector('.wb-chime-gallery');
+        if (gallery) {
+            var count = gallery.querySelectorAll('.wb-chime-wrapper').length;
+            gallery.style.setProperty('--wb-gap', calcGap(count) + 'px');
+        }
         containers[i].addEventListener('click', function(e) {
             var chime = e.target.closest('.wb-chime-wrapper');
             if (chime) {
