@@ -149,14 +149,14 @@
         animation: wb-gentle-breeze 1s infinite ease-in-out alternate;
     }
 
-    /* 点击下拉 */
+    /* 点击拉动 - 向一侧倾斜，模拟抓住风铃拉扯 */
     .windbell-container .wb-chime-wrapper.wb-pulling {
-        animation: wb-pull-down 0.4s ease-out forwards;
+        animation: wb-pull-swing 0.4s ease-out forwards;
     }
 
-    /* 释放摇晃 */
+    /* 释放后的钟摆式摇晃 */
     .windbell-container .wb-chime-wrapper.wb-released {
-        animation: wb-crazy-shake 0.8s ease-in-out;
+        animation: wb-pendulum 1s ease-in-out;
     }
 
     /* 关键帧 - 微风 */
@@ -165,21 +165,22 @@
         100% { transform: rotate(3deg); }
     }
 
-    /* 关键帧 - 下拉 */
-    @keyframes wb-pull-down {
-        0% { transform: translateY(0) rotate(0); }
-        50% { transform: translateY(20px) rotate(0); }
-        100% { transform: translateY(20px) rotate(0); }
+    /* 关键帧 - 拉动（围绕顶部挂点旋转，不脱离木架） */
+    @keyframes wb-pull-swing {
+        0% { transform: rotate(0); }
+        100% { transform: rotate(12deg); }
     }
 
-    /* 关键帧 - 剧烈摇晃 */
-    @keyframes wb-crazy-shake {
-        0% { transform: translateY(20px) rotate(0); }
-        20% { transform: translateY(-5px) rotate(-10deg); }
-        40% { transform: translateY(0) rotate(8deg); }
-        60% { transform: translateY(0) rotate(-6deg); }
-        80% { transform: translateY(0) rotate(4deg); }
-        100% { transform: translateY(0) rotate(0); }
+    /* 关键帧 - 钟摆回弹（自然衰减的左右摆动） */
+    @keyframes wb-pendulum {
+        0% { transform: rotate(12deg); }
+        14% { transform: rotate(-14deg); }
+        28% { transform: rotate(10deg); }
+        42% { transform: rotate(-8deg); }
+        56% { transform: rotate(5deg); }
+        70% { transform: rotate(-3deg); }
+        85% { transform: rotate(1.5deg); }
+        100% { transform: rotate(0); }
     }
 </style>
 
