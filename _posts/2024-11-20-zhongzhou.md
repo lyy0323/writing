@@ -8,6 +8,8 @@ content-created: 2021-04-28
 content-updated: 2025-12-18
 archive-created: 2024-11-01
 archive-updated: 2026-01-18
+description: "凝眸暗想橱窗里，一束芳华初剪成。"
+cover: "/assets/imgs/share/default.png"
 windbell:
   position: bottom
   items:
@@ -37,7 +39,7 @@ windbell:
       color: "#cccc66"
 ---
 
-> 星河桥下春草晚，和梦长在水中洲。
+> 凝眸暗想橱窗里，一束芳华初剪成。
 
 ## 卷一
 
