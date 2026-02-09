@@ -323,16 +323,40 @@
         width: 100%;
     }
 
-    /* CD 盒内文字：右移避开脊，便签纸贴条效果 */
+    /* CD 盒内文字：便签纸贴条（斑驳 + 卷角） */
     .record-container .rec-sleeve.has-cover .rec-sleeve-text {
         margin-left: calc(var(--rec-size) * 0.06);
-        background: rgba(255, 252, 240, 0.88);
-        border-radius: 1px;
+        border-radius: 0;
         padding: 4px 5px;
+        border-left: 2px solid rgba(195, 165, 120, 0.5);
+        /* 旧纸底色 + 茶渍斑点 + 纤维噪点 */
+        background-color: rgba(255, 250, 238, 0.92);
+        background-image:
+            radial-gradient(ellipse at 80% 20%, rgba(175, 155, 115, 0.12) 0%, transparent 60%),
+            radial-gradient(ellipse at 10% 90%, rgba(160, 140, 100, 0.09) 0%, transparent 50%),
+            radial-gradient(ellipse at 50% 50%, rgba(185, 170, 140, 0.06) 0%, transparent 70%),
+            url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.07'/%3E%3C/svg%3E");
+        /* 边缘泛黄 + 纸张投影 */
         box-shadow:
-            1px 1px 3px rgba(0, 0, 0, 0.15),
-            inset 0 0 6px rgba(0, 0, 0, 0.03);
-        border-left: 2px solid rgba(210, 180, 140, 0.5);
+            1px 1px 2px rgba(0, 0, 0, 0.12),
+            0 0 1px rgba(0, 0, 0, 0.08),
+            inset 0 0 8px rgba(155, 135, 95, 0.1);
+    }
+
+    /* 卷角（右下） */
+    .record-container .rec-sleeve.has-cover .rec-sleeve-text::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 5px;
+        height: 5px;
+        background: linear-gradient(
+            315deg,
+            rgba(205, 195, 175, 0.95) 50%,
+            transparent 50%
+        );
+        filter: drop-shadow(-0.5px -0.5px 0.5px rgba(0, 0, 0, 0.12));
     }
 
     /* 歌名 */
