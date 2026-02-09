@@ -4,7 +4,7 @@
 <style>
     .record-container {
         /* 核心尺寸变量：所有元素按比例缩放 */
-        --rec-size: 88px;
+        --rec-size: 80px;
         --rec-active-color: #DDD4ED;
         --rec-sleeve-bg: #fff;
         --rec-vinyl-black: #1a1a1a;
@@ -20,26 +20,24 @@
         box-sizing: border-box;
     }
 
-    /* 网格布局：默认 6 列 */
+    /* 网格布局：默认 6 列，与椰子一致 */
     .record-container .rec-grid {
         display: grid;
         grid-template-columns: repeat(6, 1fr);
         gap: 36px 0;
         width: 100%;
+        max-width: 100%;
         padding: 0 10px;
         justify-items: center;
         box-sizing: border-box;
     }
 
-    /* 唱片单元 - 所有尺寸由 --rec-size 驱动 */
+    /* 唱片单元 - 不预留 padding，黑胶 hover 时滑到相邻封套下方 */
     .record-container .rec-item {
         position: relative;
         width: var(--rec-size);
         height: var(--rec-size);
         cursor: pointer;
-        /* 预留唱片滑出空间：60% */
-        padding-right: calc(var(--rec-size) * 0.6);
-        box-sizing: content-box;
     }
 
     /* 黑胶唱片 - 在封套下层 */
@@ -237,22 +235,13 @@
         100% { opacity: 1; transform: translateY(0); }
     }
 
-    /* 中等桌面端 & 平板：4 列，稍小 */
-    @media (max-width: 1100px) {
-        .record-container .rec-grid {
-            grid-template-columns: repeat(4, 1fr);
-        }
-        .record-container {
-            --rec-size: 80px;
-        }
-    }
-
-    /* 移动端：4 列，更小 */
+    /* 移动端：4 列，与椰子一致 */
     @media (max-width: 600px) {
         .record-container {
-            --rec-size: 60px;
+            --rec-size: 64px;
         }
         .record-container .rec-grid {
+            grid-template-columns: repeat(4, 1fr);
             gap: 28px 0;
         }
         .record-container .rec-title {
@@ -265,16 +254,6 @@
         }
         .record-container .rec-id {
             font-size: 0.5rem;
-        }
-    }
-
-    /* 小屏移动端：3 列 */
-    @media (max-width: 420px) {
-        .record-container {
-            --rec-size: 64px;
-        }
-        .record-container .rec-grid {
-            grid-template-columns: repeat(3, 1fr);
         }
     }
 </style>
