@@ -639,6 +639,8 @@ layout: base
                         {% include widgets/windbell component=component %}
                     {% elsif component.type == "coconut" %}
                         {% include widgets/coconut component=component %}
+                    {% elsif component.type == "record" %}
+                        {% include widgets/record component=component %}
                     {% endif %}
                 {% endif %}
             {% endfor %}
@@ -651,6 +653,8 @@ layout: base
                         {% include widgets/windbell component=component %}
                     {% elsif component.type == "coconut" %}
                         {% include widgets/coconut component=component %}
+                    {% elsif component.type == "record" %}
+                        {% include widgets/record component=component %}
                     {% endif %}
                 {% endif %}
             {% endfor %}
