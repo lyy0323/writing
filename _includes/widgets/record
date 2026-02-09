@@ -145,18 +145,17 @@
         background-repeat: no-repeat;
         background-blend-mode: normal;
         overflow: visible;
-        /* 塑料边框：带色调的半透明光泽，非纯白 */
-        border: 1px solid rgba(190, 200, 215, 0.18);
+        /* 塑料边框：匹配左脊深色调，窄版 */
+        border: 1.5px solid rgba(55, 60, 68, 0.32);
         border-left: none;
-        border-top-color: rgba(200, 215, 235, 0.22);
-        border-bottom-color: rgba(160, 170, 185, 0.14);
         border-radius: 1px;
-        /* CD 盒立体阴影 */
+        /* CD 盒阴影 + 三边内侧高光（模拟脊的亮-暗渐变） */
         box-shadow:
             0 3px 12px rgba(0, 0, 0, 0.28),
             0 1px 3px rgba(0, 0, 0, 0.18),
-            inset 0 1px 0 rgba(255, 255, 255, 0.12),
-            inset 0 -1px 0 rgba(0, 0, 0, 0.06);
+            inset 0 1px 0 rgba(255, 255, 255, 0.1),
+            inset -1px 0 0 rgba(255, 255, 255, 0.08),
+            inset 0 -1px 0 rgba(255, 255, 255, 0.06);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
@@ -247,7 +246,7 @@
         overflow: visible;
     }
 
-    /* 上月牙 ×2：左起 20% + box-shadow 复制到 80% */
+    /* 上月牙 ×2：左起 20% + box-shadow 复制到 80%（含 border 环） */
     .record-container .rec-cd-hinge::before {
         content: '';
         position: absolute;
@@ -260,10 +259,13 @@
         background: rgba(195, 205, 220, 0.18);
         border: 0.5px solid rgba(200, 215, 235, 0.22);
         border-top: none;
-        box-shadow: calc(var(--rec-size) * 0.6) 0 0 0 rgba(195, 205, 220, 0.18);
+        /* 外层 spread=0.5px 模拟 border，内层 spread=0 填充 */
+        box-shadow:
+            calc(var(--rec-size) * 0.6) 0 0 0.5px rgba(200, 215, 235, 0.22),
+            calc(var(--rec-size) * 0.6) 0 0 0 rgba(195, 205, 220, 0.18);
     }
 
-    /* 下月牙 ×2：左起 20% + box-shadow 复制到 80% */
+    /* 下月牙 ×2：左起 20% + box-shadow 复制到 80%（含 border 环） */
     .record-container .rec-cd-hinge::after {
         content: '';
         position: absolute;
@@ -276,7 +278,10 @@
         background: rgba(195, 205, 220, 0.18);
         border: 0.5px solid rgba(200, 215, 235, 0.22);
         border-bottom: none;
-        box-shadow: calc(var(--rec-size) * 0.6) 0 0 0 rgba(195, 205, 220, 0.18);
+        /* 外层 spread=0.5px 模拟 border，内层 spread=0 填充 */
+        box-shadow:
+            calc(var(--rec-size) * 0.6) 0 0 0.5px rgba(200, 215, 235, 0.22),
+            calc(var(--rec-size) * 0.6) 0 0 0 rgba(195, 205, 220, 0.18);
     }
 
     /* --- 右侧卡扣 --- */
@@ -372,8 +377,9 @@
         box-shadow:
             0 5px 18px rgba(0, 0, 0, 0.35),
             0 2px 5px rgba(0, 0, 0, 0.2),
-            inset 0 1px 0 rgba(255, 255, 255, 0.16),
-            inset 0 -1px 0 rgba(0, 0, 0, 0.08);
+            inset 0 1px 0 rgba(255, 255, 255, 0.14),
+            inset -1px 0 0 rgba(255, 255, 255, 0.1),
+            inset 0 -1px 0 rgba(255, 255, 255, 0.08);
     }
 
     .record-container .rec-item:hover .rec-vinyl {
