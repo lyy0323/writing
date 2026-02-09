@@ -332,9 +332,9 @@
         /* 旧纸底色 + 茶渍斑点 + 纤维噪点 */
         background-color: rgba(255, 250, 238, 0.92);
         background-image:
-            radial-gradient(ellipse at 80% 20%, rgba(175, 155, 115, 0.12) 0%, transparent 60%),
-            radial-gradient(ellipse at 10% 90%, rgba(160, 140, 100, 0.09) 0%, transparent 50%),
-            radial-gradient(ellipse at 50% 50%, rgba(185, 170, 140, 0.06) 0%, transparent 70%),
+            radial-gradient(ellipse at 80% 20%, rgba(165, 140, 90, 0.28) 0%, transparent 55%),
+            radial-gradient(ellipse at 10% 85%, rgba(150, 125, 75, 0.22) 0%, transparent 45%),
+            radial-gradient(ellipse at 45% 55%, rgba(175, 155, 110, 0.16) 0%, transparent 60%),
             url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.07'/%3E%3C/svg%3E");
         /* 边缘泛黄 + 纸张投影 */
         box-shadow:
@@ -343,20 +343,26 @@
             inset 0 0 8px rgba(155, 135, 95, 0.1);
     }
 
-    /* 卷角（右下） */
+    /* 卷角（右下）：翻起部分 < 整体，符合物理规律 */
     .record-container .rec-sleeve.has-cover .rec-sleeve-text::after {
         content: '';
         position: absolute;
         right: 0;
         bottom: 0;
-        width: 5px;
-        height: 5px;
+        width: 7px;
+        height: 7px;
         background: linear-gradient(
             315deg,
-            rgba(205, 195, 175, 0.95) 50%,
-            transparent 50%
+            /* 纸张背面（翻起的小三角） */
+            rgba(215, 205, 182, 0.95) 0%,
+            rgba(225, 215, 195, 0.85) 28%,
+            /* 折痕阴影线 */
+            rgba(0, 0, 0, 0.13) 28%,
+            rgba(0, 0, 0, 0.03) 38%,
+            /* 透明：露出主纸面 */
+            transparent 38%
         );
-        filter: drop-shadow(-0.5px -0.5px 0.5px rgba(0, 0, 0, 0.12));
+        filter: drop-shadow(-0.5px -0.5px 0.5px rgba(0, 0, 0, 0.1));
     }
 
     /* 歌名 */
