@@ -1,5 +1,5 @@
 <!-- 风铃拟物导航组件 -->
-<!-- 数据来源：page.windbell.items (label, url) -->
+<!-- 数据来源：include.component.items (label, url, color) -->
 
 <style>
     /* 所有样式限定在 .windbell-container 作用域内 */
@@ -200,7 +200,7 @@
 
         <!-- 风铃展示架 -->
         <div class="wb-chime-gallery">
-            {% for item in page.windbell.items %}
+            {% for item in include.component.items %}
             <div class="wb-chime-wrapper" data-url="{{ item.url | prepend: site.baseurl }}"{% if item.color %} style="--wb-clapper-color: {{ item.color }}"{% endif %}>
                 <div class="wb-string"></div>
                 <div class="wb-bell-body"></div>

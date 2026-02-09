@@ -10,33 +10,34 @@ archive-created: 2024-11-01
 archive-updated: 2026-01-18
 description: "凝眸暗想橱窗里，一束芳华初剪成。"
 cover: "/assets/imgs/share/default.png"
-windbell:
-  position: bottom
-  items:
-    - label: "中洲集"
-      url: /zhongzhou/
-      color: "#cc9966"
-    - label: "晚枫集"
-      url: /wanfeng/
-      color: "#339933"
-    - label: "沐雨集"
-      url: /muyu/
-      color: "#3399cc"
-    - label: "雨鱼集"
-      url: /yuyu/
-      color: "#ff66cc"
-    - label: "缘溪集"
-      url: /yuanxi/
-      color: "#ddddbb"
-    - label: "海风集"
-      url: /haifeng/
-      color: "#006666"
-    - label: "轨边集"
-      url: /guibian/
-      color: "#bbbbc3"
-    - label: "小猫集"
-      url: /xiaomao/
-      color: "#cccc66"
+index:
+  - type: windbell
+    position: bottom
+    items:
+      - label: "中洲集"
+        url: /zhongzhou/
+        color: "#cc9966"
+      - label: "晚枫集"
+        url: /wanfeng/
+        color: "#339933"
+      - label: "沐雨集"
+        url: /muyu/
+        color: "#3399cc"
+      - label: "雨鱼集"
+        url: /yuyu/
+        color: "#ff66cc"
+      - label: "缘溪集"
+        url: /yuanxi/
+        color: "#ddddbb"
+      - label: "海风集"
+        url: /haifeng/
+        color: "#006666"
+      - label: "轨边集"
+        url: /guibian/
+        color: "#bbbbc3"
+      - label: "小猫集"
+        url: /xiaomao/
+        color: "#cccc66"
 ---
 
 > 凝眸暗想橱窗里，一束芳华初剪成。
