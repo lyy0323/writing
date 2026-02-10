@@ -178,18 +178,18 @@
     /* 关键帧 - 拉动（围绕顶部挂点旋转，不脱离木架） */
     @keyframes wb-pull-swing {
         0% { transform: rotate(0); }
-        100% { transform: rotate(12deg); }
+        100% { transform: rotate(6deg); }
     }
 
     /* 关键帧 - 钟摆回弹（自然衰减的左右摆动） */
     @keyframes wb-pendulum {
-        0% { transform: rotate(12deg); }
-        14% { transform: rotate(-14deg); }
-        28% { transform: rotate(10deg); }
-        42% { transform: rotate(-8deg); }
-        56% { transform: rotate(5deg); }
-        70% { transform: rotate(-3deg); }
-        85% { transform: rotate(1.5deg); }
+        0% { transform: rotate(6deg); }
+        14% { transform: rotate(-7deg); }
+        28% { transform: rotate(5deg); }
+        42% { transform: rotate(-4deg); }
+        56% { transform: rotate(2.5deg); }
+        70% { transform: rotate(-1.5deg); }
+        85% { transform: rotate(0.8deg); }
         100% { transform: rotate(0); }
     }
 </style>
