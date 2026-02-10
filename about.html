@@ -67,7 +67,7 @@ permalink: /about/
             height: 140px;
             position: relative;
             transform: rotate(3deg);
-            border-radius: 4px;
+            border-radius: 0;
             /* 玻璃边框 */
             border: 2.5px solid rgba(200, 210, 220, 0.5);
             /* 阴影层次：投影 + 底部重影 */
@@ -87,13 +87,19 @@ permalink: /about/
             object-fit: cover;
         }
 
-        /* 玻璃表面光泽层 */
+        /* 玻璃表面光泽层 + 打光光圈 */
         .glass-frame::after {
             content: '';
             position: absolute;
             inset: 0;
-            border-radius: 2px;
             background:
+                /* 打光光圈：偏左上的椭圆柔光 */
+                radial-gradient(
+                    ellipse at 30% 25%,
+                    rgba(255, 255, 255, 0.35) 0%,
+                    rgba(255, 255, 255, 0.12) 25%,
+                    transparent 55%
+                ),
                 /* 主对角高光带 */
                 linear-gradient(
                     135deg,
@@ -110,12 +116,6 @@ permalink: /about/
                     to bottom,
                     rgba(255, 255, 255, 0.15) 0%,
                     transparent 30%
-                ),
-                /* 左上角聚光 */
-                radial-gradient(
-                    ellipse at 15% 10%,
-                    rgba(255, 255, 255, 0.18) 0%,
-                    transparent 50%
                 );
             pointer-events: none;
             z-index: 2;
@@ -126,7 +126,6 @@ permalink: /about/
             content: '';
             position: absolute;
             inset: 0;
-            border-radius: 2px;
             border-top: 1px solid rgba(255, 255, 255, 0.35);
             border-left: 1px solid rgba(255, 255, 255, 0.2);
             border-right: 1px solid rgba(0, 0, 0, 0.04);
