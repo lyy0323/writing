@@ -1,0 +1,37 @@
+<!-- index-section 包装器样式（居中标题 + 两侧装饰线） -->
+<style>
+    .index-section {
+        margin: 1.5em 0;
+    }
+
+    .index-section-header {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 4px;
+    }
+
+    .index-section-header::before,
+    .index-section-header::after {
+        content: '';
+        flex: 1;
+        height: 1px;
+        background: rgba(0, 0, 0, 0.08);
+    }
+
+    .index-section-title {
+        font-family: 'lxgw', sans-serif;
+        font-size: 0.85rem;
+        color: #999;
+        white-space: nowrap;
+        letter-spacing: 1px;
+    }
+
+    /* 组件本体：去除子组件自带的外边距，由 section 统一管理 */
+    .index-section-body .windbell-container,
+    .index-section-body .coconut-container,
+    .index-section-body .record-container {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+</style>
