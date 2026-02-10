@@ -268,55 +268,86 @@
     }
 
     // ===== 鼠标划过驱动风铃摆动 =====
-    var SWIPE_FACTOR = 0.12;    // 速度→角度系数
-    var MAX_ANGLE = 25;         // 最大摆幅（度）
-    var DAMPING = 0.94;         // 每帧衰减系数
-    var STOP_THRESHOLD = 0.3;   // 低于此角度恢复 CSS 动画
-    var swipeStates = new WeakMap(); // 每个风铃的摆动状态
+    var SWIPE_FACTOR = 0.035;   // 速度→角度系数（柔和）
+    var MAX_ANGLE = 14;         // 最大摆幅（度）
+    var DAMPING = 0.96;         // 每帧衰减系数
+    var RESTORE = 0.06;         // 回复力系数
+    var STOP_THRESHOLD = 0.4;   // 低于此角度恢复 CSS 动画
+    var CSS_START_ANGLE = -3;   // CSS 微风动画起始角度
+    var swipeStates = new WeakMap();
 
     function getSwipeState(el) {
         if (!swipeStates.has(el)) {
-            swipeStates.set(el, { angle: 0, velocity: 0, rafId: null, jsControlled: false });
+            swipeStates.set(el, { angle: 0, velocity: 0, rafId: null, jsControlled: false, recovering: false });
         }
         return swipeStates.get(el);
     }
 
+    // 从 computedStyle 的 transform matrix 中提取当前旋转角度
+    function getCurrentAngle(el) {
+        var st = window.getComputedStyle(el);
+        var t = st.transform;
+        if (!t || t === 'none') return 0;
+        var v = t.split('(')[1].split(')')[0].split(',');
+        return Math.atan2(parseFloat(v[1]), parseFloat(v[0])) * (180 / Math.PI);
+    }
+
     function startJsControl(el) {
         var state = getSwipeState(el);
+        if (state.recovering) {
+            // 中断恢复过程，重新接管
+            state.recovering = false;
+        }
         if (state.jsControlled) return;
+        // 捕获 CSS 动画当前的真实角度，无缝接管
+        state.angle = getCurrentAngle(el);
         state.jsControlled = true;
         el.style.animation = 'none';
         el.style.transition = 'none';
+        el.style.transform = 'rotate(' + state.angle + 'deg)';
     }
 
     function stopJsControl(el) {
         var state = getSwipeState(el);
-        state.jsControlled = false;
-        state.angle = 0;
-        state.velocity = 0;
         if (state.rafId) {
             cancelAnimationFrame(state.rafId);
             state.rafId = null;
         }
-        // 恢复 CSS 动画
-        el.style.animation = '';
-        el.style.transition = '';
-        el.style.transform = '';
+        state.velocity = 0;
+        state.recovering = true;
+        // 平滑过渡到 CSS 动画起始角度，再交还控制权
+        el.style.transition = 'transform 0.4s ease-out';
+        el.style.transform = 'rotate(' + CSS_START_ANGLE + 'deg)';
+        setTimeout(function() {
+            // 过渡结束后，如果没有被重新接管，恢复 CSS 动画
+            if (!state.recovering) return;
+            state.recovering = false;
+            state.jsControlled = false;
+            state.angle = 0;
+            el.style.animation = '';
+            el.style.transition = '';
+            el.style.transform = '';
+        }, 420);
     }
 
     function decayLoop(el) {
         var state = getSwipeState(el);
-        // 如果被点击交互接管，立即退出
         if (el.classList.contains('wb-pulling') || el.classList.contains('wb-released')) {
-            stopJsControl(el);
+            state.jsControlled = false;
+            state.angle = 0;
+            state.velocity = 0;
+            if (state.rafId) { cancelAnimationFrame(state.rafId); state.rafId = null; }
+            el.style.animation = '';
+            el.style.transition = '';
+            el.style.transform = '';
             return;
         }
-        // 简单钟摆：角度驱动回复力，叠加阻尼
-        state.velocity += -state.angle * 0.08; // 回复力
+        // 钟摆物理：回复力 + 阻尼
+        state.velocity += -state.angle * RESTORE;
         state.velocity *= DAMPING;
         state.angle += state.velocity;
 
-        if (Math.abs(state.angle) < STOP_THRESHOLD && Math.abs(state.velocity) < 0.1) {
+        if (Math.abs(state.angle) < STOP_THRESHOLD && Math.abs(state.velocity) < 0.08) {
             stopJsControl(el);
             return;
         }
@@ -325,18 +356,14 @@
     }
 
     function applySwipeImpulse(el, vx) {
-        // 点击交互优先
         if (el.classList.contains('wb-pulling') || el.classList.contains('wb-released')) return;
         var state = getSwipeState(el);
         startJsControl(el);
-        // 叠加速度脉冲
-        var impulse = vx * SWIPE_FACTOR;
+        // 渐入：限制单次脉冲幅度，多次叠加自然增大
+        var impulse = Math.max(-1.2, Math.min(1.2, vx * SWIPE_FACTOR));
         state.velocity += impulse;
-        // clamp 角度
-        if (Math.abs(state.angle + state.velocity) > MAX_ANGLE) {
-            state.velocity = (state.velocity > 0 ? MAX_ANGLE - state.angle : -MAX_ANGLE - state.angle) * 0.5;
-        }
-        // 如果衰减循环未运行，启动它
+        // clamp 总速度
+        state.velocity = Math.max(-2, Math.min(2, state.velocity));
         if (!state.rafId) {
             state.rafId = requestAnimationFrame(function() { decayLoop(el); });
         }
@@ -350,8 +377,8 @@
         var now = performance.now();
         if (lastMouseX !== null && lastMouseTime !== null) {
             var dt = now - lastMouseTime;
-            if (dt > 0 && dt < 100) { // 忽略过大时间间隔
-                var vx = (e.clientX - lastMouseX) / dt * 16; // 归一化到 ~16ms 帧
+            if (dt > 0 && dt < 100) {
+                var vx = (e.clientX - lastMouseX) / dt * 16;
                 var chime = e.target.closest('.wb-chime-wrapper');
                 if (chime && Math.abs(vx) > 0.5) {
                     applySwipeImpulse(chime, vx);
