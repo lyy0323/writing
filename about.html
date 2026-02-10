@@ -93,12 +93,24 @@ permalink: /about/
             position: absolute;
             inset: 0;
             background:
-                /* 打光光圈：偏左上的椭圆柔光 */
+                /* 打光光圈：偏左上的强椭圆柔光 */
                 radial-gradient(
-                    ellipse at 30% 25%,
-                    rgba(255, 255, 255, 0.35) 0%,
-                    rgba(255, 255, 255, 0.12) 25%,
-                    transparent 55%
+                    ellipse at 28% 22%,
+                    rgba(255, 255, 255, 0.5) 0%,
+                    rgba(255, 255, 255, 0.2) 20%,
+                    rgba(255, 255, 255, 0.06) 40%,
+                    transparent 58%
+                ),
+                /* 彩虹色散：光圈边缘的棱镜折射弧 */
+                radial-gradient(
+                    ellipse at 32% 26%,
+                    transparent 28%,
+                    rgba(255, 120, 120, 0.12) 32%,
+                    rgba(255, 200, 100, 0.10) 35%,
+                    rgba(200, 255, 130, 0.08) 38%,
+                    rgba(100, 220, 255, 0.10) 41%,
+                    rgba(160, 130, 255, 0.12) 44%,
+                    transparent 50%
                 ),
                 /* 主对角高光带 */
                 linear-gradient(
@@ -106,15 +118,26 @@ permalink: /about/
                     transparent 0%,
                     transparent 28%,
                     rgba(255, 255, 255, 0.06) 34%,
-                    rgba(255, 255, 255, 0.22) 42%,
+                    rgba(255, 255, 255, 0.24) 42%,
                     rgba(255, 255, 255, 0.06) 50%,
                     transparent 56%,
+                    transparent 100%
+                ),
+                /* 对角高光带上的微彩虹 */
+                linear-gradient(
+                    135deg,
+                    transparent 0%,
+                    transparent 36%,
+                    rgba(255, 180, 180, 0.08) 39%,
+                    rgba(180, 255, 200, 0.06) 42%,
+                    rgba(180, 200, 255, 0.08) 45%,
+                    transparent 48%,
                     transparent 100%
                 ),
                 /* 顶部边缘微光 */
                 linear-gradient(
                     to bottom,
-                    rgba(255, 255, 255, 0.15) 0%,
+                    rgba(255, 255, 255, 0.18) 0%,
                     transparent 30%
                 );
             pointer-events: none;
