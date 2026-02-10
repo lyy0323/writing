@@ -58,8 +58,9 @@
         height: 200px;
         cursor: pointer;
         transform-origin: top center;
+        transform: rotate(-3deg);
         transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        animation: wb-gentle-breeze 3s infinite ease-in-out alternate;
+        animation: wb-gentle-breeze 3s infinite ease-in-out alternate backwards;
     }
 
     /* 不同风铃的动画延迟 */
@@ -266,6 +267,106 @@
         return Math.round(33 - (count - 2) * 6.5);
     }
 
+    // ===== 鼠标划过驱动风铃摆动 =====
+    var SWIPE_FACTOR = 0.12;    // 速度→角度系数
+    var MAX_ANGLE = 25;         // 最大摆幅（度）
+    var DAMPING = 0.94;         // 每帧衰减系数
+    var STOP_THRESHOLD = 0.3;   // 低于此角度恢复 CSS 动画
+    var swipeStates = new WeakMap(); // 每个风铃的摆动状态
+
+    function getSwipeState(el) {
+        if (!swipeStates.has(el)) {
+            swipeStates.set(el, { angle: 0, velocity: 0, rafId: null, jsControlled: false });
+        }
+        return swipeStates.get(el);
+    }
+
+    function startJsControl(el) {
+        var state = getSwipeState(el);
+        if (state.jsControlled) return;
+        state.jsControlled = true;
+        el.style.animation = 'none';
+        el.style.transition = 'none';
+    }
+
+    function stopJsControl(el) {
+        var state = getSwipeState(el);
+        state.jsControlled = false;
+        state.angle = 0;
+        state.velocity = 0;
+        if (state.rafId) {
+            cancelAnimationFrame(state.rafId);
+            state.rafId = null;
+        }
+        // 恢复 CSS 动画
+        el.style.animation = '';
+        el.style.transition = '';
+        el.style.transform = '';
+    }
+
+    function decayLoop(el) {
+        var state = getSwipeState(el);
+        // 如果被点击交互接管，立即退出
+        if (el.classList.contains('wb-pulling') || el.classList.contains('wb-released')) {
+            stopJsControl(el);
+            return;
+        }
+        // 简单钟摆：角度驱动回复力，叠加阻尼
+        state.velocity += -state.angle * 0.08; // 回复力
+        state.velocity *= DAMPING;
+        state.angle += state.velocity;
+
+        if (Math.abs(state.angle) < STOP_THRESHOLD && Math.abs(state.velocity) < 0.1) {
+            stopJsControl(el);
+            return;
+        }
+        el.style.transform = 'rotate(' + state.angle + 'deg)';
+        state.rafId = requestAnimationFrame(function() { decayLoop(el); });
+    }
+
+    function applySwipeImpulse(el, vx) {
+        // 点击交互优先
+        if (el.classList.contains('wb-pulling') || el.classList.contains('wb-released')) return;
+        var state = getSwipeState(el);
+        startJsControl(el);
+        // 叠加速度脉冲
+        var impulse = vx * SWIPE_FACTOR;
+        state.velocity += impulse;
+        // clamp 角度
+        if (Math.abs(state.angle + state.velocity) > MAX_ANGLE) {
+            state.velocity = (state.velocity > 0 ? MAX_ANGLE - state.angle : -MAX_ANGLE - state.angle) * 0.5;
+        }
+        // 如果衰减循环未运行，启动它
+        if (!state.rafId) {
+            state.rafId = requestAnimationFrame(function() { decayLoop(el); });
+        }
+    }
+
+    // 鼠标速度追踪
+    var lastMouseX = null;
+    var lastMouseTime = null;
+
+    function handleGalleryMouseMove(e) {
+        var now = performance.now();
+        if (lastMouseX !== null && lastMouseTime !== null) {
+            var dt = now - lastMouseTime;
+            if (dt > 0 && dt < 100) { // 忽略过大时间间隔
+                var vx = (e.clientX - lastMouseX) / dt * 16; // 归一化到 ~16ms 帧
+                var chime = e.target.closest('.wb-chime-wrapper');
+                if (chime && Math.abs(vx) > 0.5) {
+                    applySwipeImpulse(chime, vx);
+                }
+            }
+        }
+        lastMouseX = e.clientX;
+        lastMouseTime = now;
+    }
+
+    function handleGalleryMouseLeave() {
+        lastMouseX = null;
+        lastMouseTime = null;
+    }
+
     // 事件委托 + 动态 gap
     var containers = document.querySelectorAll('.windbell-container');
     for (var i = 0; i < containers.length; i++) {
@@ -273,6 +374,9 @@
         if (gallery) {
             var count = gallery.querySelectorAll('.wb-chime-wrapper').length;
             gallery.style.setProperty('--wb-gap', calcGap(count) + 'px');
+            // 鼠标划过监听
+            gallery.addEventListener('mousemove', handleGalleryMouseMove);
+            gallery.addEventListener('mouseleave', handleGalleryMouseLeave);
         }
         containers[i].addEventListener('click', function(e) {
             var chime = e.target.closest('.wb-chime-wrapper');
