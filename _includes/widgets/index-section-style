@@ -1,22 +1,26 @@
-<!-- index-section 包装器样式（居中标题 + 两侧装饰线） -->
+<!-- index-section 包装器样式（居中标题 + 四周装饰线 + 半透明背景） -->
 <style>
     .index-section {
         margin: 1.5em 0;
+        border: 1px solid rgba(0, 0, 0, 0.08);
+        border-radius: 6px;
+        background: rgba(255, 255, 255, 0.1);
+        padding: 0 12px 12px;
     }
 
     .index-section-header {
         display: flex;
         align-items: center;
-        gap: 12px;
-        margin-bottom: 4px;
+        justify-content: center;
+        position: relative;
+        top: -0.55em;
+        margin-bottom: -0.55em;
     }
 
     .index-section-header::before,
     .index-section-header::after {
         content: '';
         flex: 1;
-        height: 1px;
-        background: rgba(0, 0, 0, 0.08);
     }
 
     .index-section-title {
@@ -25,6 +29,9 @@
         color: #999;
         white-space: nowrap;
         letter-spacing: 1px;
+        background: #F8F2F5;
+        padding: 0 10px;
+        line-height: 1.1;
     }
 
     /* 组件本体：去除子组件自带的外边距，由 section 统一管理 */
