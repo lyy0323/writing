@@ -268,7 +268,7 @@
     }
 
     // ===== 鼠标划过驱动风铃摆动 =====
-    var SWIPE_FACTOR = 0.035;   // 速度→角度系数（柔和）
+    var SWIPE_FACTOR = -0.035;   // 速度→角度系数（柔和）
     var MAX_ANGLE = 14;         // 最大摆幅（度）
     var DAMPING = 0.96;         // 每帧衰减系数
     var RESTORE = 0.06;         // 回复力系数
