@@ -8,6 +8,10 @@
         padding: 0 12px 12px;
     }
 
+    .index-section + .index-section {
+        margin-top: 2em;
+    }
+
     .index-section-header {
         display: flex;
         align-items: center;
@@ -40,5 +44,10 @@
     .index-section-body .record-container {
         margin-top: 0;
         margin-bottom: 0;
+    }
+
+    /* 风铃架子与标题之间留出间距 */
+    .index-section-body .windbell-container {
+        padding-top: 10px;
     }
 </style>
