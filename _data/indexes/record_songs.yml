@@ -35,6 +35,7 @@ items:
     url: /xuefeng/
     id: 139
     album: "雪风"
+    cover: "/assets/imgs/cover/雪风.jpg"
   - label: "画蝶"
     url: /huadie/
     id: 149
