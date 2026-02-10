@@ -15,7 +15,7 @@
         --wb-paper-bg: #fffbf0;
 
         width: 100%;
-        margin: 1.5em 0;
+        margin: 1em 0;
         overflow-x: auto;
         overflow-y: hidden;
         -webkit-overflow-scrolling: touch;
@@ -34,10 +34,10 @@
     .windbell-container .wb-wooden-frame {
         position: relative;
         width: 100%;
-        height: 30px;
+        height: 20px;
         background: linear-gradient(to bottom, var(--wb-wood-dark), var(--wb-wood-light) 40%, var(--wb-wood-dark));
-        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-        border-radius: 4px;
+        box-shadow: 0 3px 7px rgba(0,0,0,0.2);
+        border-radius: 3px;
         z-index: 10;
     }
 
@@ -46,16 +46,16 @@
         display: flex;
         flex-wrap: nowrap;
         justify-content: center;
-        gap: var(--wb-gap, 30px);
-        padding: 0 24px 20px;
+        gap: var(--wb-gap, 20px);
+        padding: 0 16px 13px;
         margin-top: 0;
     }
 
     /* 风铃组件核心 */
     .windbell-container .wb-chime-wrapper {
         position: relative;
-        width: 80px;
-        height: 300px;
+        width: 53px;
+        height: 200px;
         cursor: pointer;
         transform-origin: top center;
         transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -71,8 +71,8 @@
 
     /* 挂绳 */
     .windbell-container .wb-string {
-        width: 2px;
-        height: 60px;
+        width: 1.5px;
+        height: 40px;
         background: var(--wb-string-color);
         margin: 0 auto;
         position: relative;
@@ -80,13 +80,13 @@
 
     /* 玻璃风铃本体 */
     .windbell-container .wb-bell-body {
-        width: 70px;
-        height: 60px;
-        margin: -5px auto 0;
+        width: 47px;
+        height: 40px;
+        margin: -3px auto 0;
         background: radial-gradient(circle at 30% 30%, var(--wb-glass-reflection), rgba(255, 255, 255, 0.1) 60%, rgba(100, 181, 246, 0.2) 100%);
         border: 1px solid var(--wb-glass-border);
         border-radius: 50% 50% 10% 10%;
-        box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.5), 0 10px 15px rgba(0,0,0,0.05);
+        box-shadow: inset 0 0 7px rgba(255, 255, 255, 0.5), 0 7px 10px rgba(0,0,0,0.05);
         position: relative;
         backdrop-filter: blur(2px);
         z-index: 10;
@@ -96,10 +96,10 @@
     .windbell-container .wb-bell-body::after {
         content: '';
         position: absolute;
-        top: 10px;
-        left: 10px;
-        width: 20px;
-        height: 10px;
+        top: 7px;
+        left: 7px;
+        width: 13px;
+        height: 7px;
         background: rgba(255, 255, 255, 0.8);
         border-radius: 50%;
         transform: rotate(-45deg);
@@ -107,43 +107,43 @@
 
     /* 铃舌绳 */
     .windbell-container .wb-clapper-string {
-        width: 2px;
-        height: 30px;
+        width: 1.5px;
+        height: 20px;
         background: var(--wb-string-color);
         margin: 0 auto;
     }
 
     /* 铃舌珠子 - 颜色通过内联 --wb-clapper-color 自定义，默认红色 */
     .windbell-container .wb-clapper {
-        width: 12px;
-        height: 12px;
+        width: 8px;
+        height: 8px;
         background: var(--wb-clapper-color, #d63031);
         border-radius: 50%;
-        margin: -2px auto 0;
+        margin: -1px auto 0;
     }
 
     /* 短册（纸条） */
     .windbell-container .wb-paper-strip {
-        width: 50px;
-        height: 140px;
+        width: 33px;
+        height: 93px;
         background: var(--wb-paper-bg);
         margin: 0 auto;
-        border-top: 2px solid var(--wb-string-color);
-        box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+        border-top: 1.5px solid var(--wb-string-color);
+        box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
         display: flex;
         align-items: center;
         justify-content: center;
         writing-mode: vertical-rl;
         text-orientation: upright;
-        font-size: 18px;
-        letter-spacing: 4px;
+        font-size: 12px;
+        letter-spacing: 3px;
         color: #555;
         transition: background-color 0.3s;
         position: relative;
-        top: -5px;
+        top: -3px;
         z-index: 5;
         background-image: linear-gradient(var(--wb-paper-bg) 95%, #e0e0e0 100%);
-        background-size: 100% 20px;
+        background-size: 100% 13px;
     }
 
     /* 悬停：纸条变色 */
@@ -259,11 +259,11 @@
         }, 300);
     }
 
-    // 动态计算 gap：2个风铃时50px，6+个时10px，线性插值
+    // 动态计算 gap：2个风铃时33px，6+个时7px，线性插值
     function calcGap(count) {
-        if (count <= 2) return 50;
-        if (count >= 6) return 10;
-        return Math.round(50 - (count - 2) * 10);
+        if (count <= 2) return 33;
+        if (count >= 6) return 7;
+        return Math.round(33 - (count - 2) * 6.5);
     }
 
     // 事件委托 + 动态 gap
