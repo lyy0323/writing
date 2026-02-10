@@ -633,14 +633,24 @@ layout: base
         </script>
         {% endif %}
         {% if page.index %}
+            {% include widgets/index-section-style %}
             {% for component in page.index %}
                 {% if component.ref %}
                     {% assign resolved = site.data.indexes[component.ref] %}
                     {% assign comp_type = resolved.type %}
+                    {% assign comp_title = resolved.title %}
                 {% else %}
                     {% assign comp_type = component.type %}
+                    {% assign comp_title = component.title %}
                 {% endif %}
                 {% if component.position == "top" %}
+                <div class="index-section">
+                    {% if comp_title %}
+                    <div class="index-section-header">
+                        <span class="index-section-title">{{ comp_title }}</span>
+                    </div>
+                    {% endif %}
+                    <div class="index-section-body">
                     {% if comp_type == "windbell" %}
                         {% include widgets/windbell component=component %}
                     {% elsif comp_type == "coconut" %}
@@ -648,6 +658,8 @@ layout: base
                     {% elsif comp_type == "record" %}
                         {% include widgets/record component=component %}
                     {% endif %}
+                    </div>
+                </div>
                 {% endif %}
             {% endfor %}
         {% endif %}
@@ -657,10 +669,19 @@ layout: base
                 {% if component.ref %}
                     {% assign resolved = site.data.indexes[component.ref] %}
                     {% assign comp_type = resolved.type %}
+                    {% assign comp_title = resolved.title %}
                 {% else %}
                     {% assign comp_type = component.type %}
+                    {% assign comp_title = component.title %}
                 {% endif %}
                 {% if component.position == "bottom" %}
+                <div class="index-section">
+                    {% if comp_title %}
+                    <div class="index-section-header">
+                        <span class="index-section-title">{{ comp_title }}</span>
+                    </div>
+                    {% endif %}
+                    <div class="index-section-body">
                     {% if comp_type == "windbell" %}
                         {% include widgets/windbell component=component %}
                     {% elsif comp_type == "coconut" %}
@@ -668,6 +689,8 @@ layout: base
                     {% elsif comp_type == "record" %}
                         {% include widgets/record component=component %}
                     {% endif %}
+                    </div>
+                </div>
                 {% endif %}
             {% endfor %}
         {% endif %}
