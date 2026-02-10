@@ -5,26 +5,32 @@ items:
     url: /yueyuan/
     id: 58
     album: "星与月"
+    cover: "/assets/imgs/cover/星与月.jpg"
   - label: "星望"
     url: /xingwang/
     id: 94
     album: "星与月"
+    cover: "/assets/imgs/cover/星与月.jpg"
   - label: "玉蝴蝶·秋梦"
     url: /yuhudie_qiumeng/
     id: 101
     album: "和诗以歌"
+    cover: "/assets/imgs/cover/和诗以歌.jpg"
   - label: "等桂花开"
     url: /dengguihuakai/
     id: 102
     album: "二〇一九"
+    cover: "/assets/imgs/cover/二〇一九.jpg"
   - label: "不等"
     url: /budeng/
     id: 135
     album: "二〇一九"
+    cover: "/assets/imgs/cover/二〇一九.jpg"
   - label: "落叶说"
     url: /luoyeshuo/
     id: 136
     album: "二〇一九"
+    cover: "/assets/imgs/cover/二〇一九.jpg"
   - label: "雪风"
     url: /xuefeng/
     id: 139
@@ -33,46 +39,57 @@ items:
     url: /huadie/
     id: 149
     album: "画蝶"
+    cover: "/assets/imgs/cover/画蝶.jpg"
   - label: "星夜谣"
     url: /xingyeyao/
     id: 151
     album: "星与月"
+    cover: "/assets/imgs/cover/星与月.jpg"
   - label: "溯流沙"
     url: /suliusha/
     id: 156
     album: "和诗以歌"
+    cover: "/assets/imgs/cover/和诗以歌.jpg"
   - label: "心桥"
     url: /xinqiao/
     id: 158
     album: "雨温"
+    cover: "/assets/imgs/cover/雨温.jpg"
   - label: "雨暮离别"
     url: /yumulibie/
     id: 159
     album: "雨温"
+    cover: "/assets/imgs/cover/雨温.jpg"
   - label: "大东"
     url: /dadong/
     id: 162
     album: "和诗以歌"
+    cover: "/assets/imgs/cover/和诗以歌.jpg"
   - label: "他乡雨"
     url: /taxiangyu/
     id: 163
     album: "雨温"
+    cover: "/assets/imgs/cover/雨温.jpg"
   - label: "未解忆长安"
     url: /weijieyichangan/
     id: 164
     album: "和诗以歌"
+    cover: "/assets/imgs/cover/和诗以歌.jpg"
   - label: "来春可拟共兰舟"
     url: /laichunkenigonglanzhou/
     id: 165
     album: "和诗以歌"
+    cover: "/assets/imgs/cover/和诗以歌.jpg"
   - label: "三潭印月笺"
     url: /santanyinyuejian/
     id: 166
     album: "ue0c"
+    cover: "/assets/imgs/cover/ue0c.jpg"
   - label: "聚少趁江南"
     url: /jushaochenjiangnan/
     id: 168
     album: "和诗以歌"
+    cover: "/assets/imgs/cover/和诗以歌.jpg"
   - label: "安远"
     url: /anyuan/
     id: 169
