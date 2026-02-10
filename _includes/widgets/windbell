@@ -278,7 +278,7 @@
 
     function getSwipeState(el) {
         if (!swipeStates.has(el)) {
-            swipeStates.set(el, { angle: 0, velocity: 0, rafId: null, jsControlled: false, recovering: false });
+            swipeStates.set(el, { angle: 0, velocity: 0, origin: 0, rafId: null, jsControlled: false, recovering: false });
         }
         return swipeStates.get(el);
     }
@@ -300,7 +300,10 @@
         }
         if (state.jsControlled) return;
         // 捕获 CSS 动画当前的真实角度，无缝接管
-        state.angle = getCurrentAngle(el);
+        var currentAngle = getCurrentAngle(el);
+        state.angle = currentAngle;
+        state.origin = currentAngle; // 平衡点从当前位置开始，逐帧归零
+        state.velocity = 0;
         state.jsControlled = true;
         el.style.animation = 'none';
         el.style.transition = 'none';
@@ -342,8 +345,10 @@
             el.style.transform = '';
             return;
         }
-        // 钟摆物理：回复力 + 阻尼
-        state.velocity += -state.angle * RESTORE;
+        // 平衡点逐帧衰减归零（避免接管瞬间 CSS 偏移干扰方向）
+        state.origin *= 0.94;
+        // 钟摆物理：回复力朝平衡点拉 + 阻尼
+        state.velocity += -(state.angle - state.origin) * RESTORE;
         state.velocity *= DAMPING;
         state.angle += state.velocity;
 
