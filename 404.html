@@ -1,14 +1,67 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-<meta name="keywords" content="个人主页, oukohou, 网址导航"/>
-<meta name="description" content="oukohou，个人主页"/>
-<meta name="author" content="Huoty"/>
-<title>oukohou's blog</title>
-<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
-</head>
-<body>
-    <script type="text/javascript" src="http://www.qq.com/404/search_children.js" charset="utf-8" homePageUrl="http://blog.konghy.cn/" homePageName="回到首页"></script>
-</body>
-</html>
+---
+layout: base
+title: 404
+permalink: /404.html
+---
+
+<style>
+    .page-404 {
+        text-align: center;
+        padding: 3em 1em;
+    }
+    .page-404 .emoji-404 {
+        font-size: 80px;
+        line-height: 1;
+        margin-bottom: 16px;
+        animation: float-404 3s ease-in-out infinite alternate;
+    }
+    .page-404 h2 {
+        font-size: 1.6rem;
+        color: #555;
+        margin: 0 0 8px;
+    }
+    .page-404 p {
+        color: #999;
+        font-size: 0.95rem;
+        margin: 4px 0;
+    }
+    .page-404 .nav-links {
+        margin-top: 2em;
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+        flex-wrap: wrap;
+    }
+    .page-404 .nav-links a {
+        display: inline-block;
+        padding: 8px 20px;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 6px;
+        color: #555;
+        text-decoration: none;
+        font-size: 0.9rem;
+        transition: all 0.2s ease;
+    }
+    .page-404 .nav-links a:hover {
+        background: #DDD4ED;
+        border-color: #DDD4ED;
+        color: #333;
+    }
+    @keyframes float-404 {
+        0% { transform: translateY(0); }
+        100% { transform: translateY(-12px); }
+    }
+</style>
+
+<div class="page-404">
+    <div class="emoji-404">🥥</div>
+    <h2>这里什么都没有呀</h2>
+    <p>你访问的页面不存在，可能已经搬走了 ~</p>
+    <p style="color: #bbb; font-size: 0.85rem; margin-top: 12px;">404 Not Found</p>
+    <div class="nav-links">
+        <a href="{{ site.baseurl }}/">首页</a>
+        <a href="{{ site.baseurl }}/archives/">归档</a>
+        <a href="{{ site.baseurl }}/tags/">标签</a>
+        <a href="{{ site.baseurl }}/about/">关于</a>
+    </div>
+</div>
