@@ -54,7 +54,7 @@ Yet no award for you……
     <!-- End Google Tag Manager -->
 
 
-    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="yes" name="apple-mobile-web-app-capable">
     <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
     <meta content="telephone=no" name="format-detection">
@@ -84,11 +84,16 @@ Yet no award for you……
     <meta name="author" content="{{ site.author }}">
 
     <!-- Open Graph Meta Tags for Social Sharing -->
-    <meta property="og:type" content="article">
-    <meta property="og:title" content="{{ page.title }}">
-    <meta property="og:description" content="{{ page.description }}">
+    <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
+    <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+    <meta property="og:description" content="{% if page.description %}{{ page.description }}{% elsif page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
     <meta property="og:url" content="{{ page.url | absolute_url }}">
-    <meta property="og:image" content="{{ page.cover | absolute_url }}">
+    <meta property="og:image" content="{% if page.cover %}{{ page.cover | absolute_url }}{% else %}{{ '/assets/imgs/share/default.png' | prepend: site.baseurl | absolute_url }}{% endif %}">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+    <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% elsif page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+    <meta name="twitter:image" content="{% if page.cover %}{{ page.cover | absolute_url }}{% else %}{{ '/assets/imgs/share/default.png' | prepend: site.baseurl | absolute_url }}{% endif %}">
 
 
     <link rel="Shortcut Icon" type="image/x-icon" href="{{ site.baseurl }}/favicon.png">
@@ -123,6 +128,97 @@ Yet no award for you……
     <script type="text/javascript" src="{{site.baseurl}}/assets/js/tongji.baidu.js"></script>
     <script type="text/javascript" src="{{site.baseurl}}/assets/js/yuye.js"></script>
 
+    <!-- 移动端搜索样式 -->
+    <style>
+        /* 搜索按钮：仅移动端显示 */
+        .mobile-search-toggle {
+            display: none !important;
+        }
+        @media screen and (max-width: 48em) {
+            .mobile-search-toggle {
+                display: inline-block !important;
+                cursor: pointer;
+                font-style: normal;
+                text-decoration: none;
+                border-bottom: none !important;
+            }
+        }
+
+        /* 搜索面板 */
+        .mobile-search-panel {
+            display: none;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 100%;
+            background: #F8F2F5;
+            border-bottom: 1px solid #C2C2C2;
+            padding: 12px 20px;
+            z-index: 100;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+        .mobile-search-panel.active {
+            display: block;
+        }
+
+        /* 搜索输入框 */
+        .mobile-search-form {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .mobile-search-form input {
+            flex: 1;
+            padding: 8px 12px;
+            border: 1px solid #bbb;
+            border-radius: 4px;
+            font-size: 14px;
+            font-family: 'lxgw', sans-serif;
+            background: #fff;
+            outline: none;
+        }
+        .mobile-search-form input:focus {
+            border-color: #DDD4ED;
+        }
+        .mobile-search-close {
+            background: none;
+            border: none;
+            font-size: 22px;
+            color: #999;
+            cursor: pointer;
+            padding: 0 4px;
+            line-height: 1;
+        }
+
+        /* 搜索结果 */
+        .mobile-search-results {
+            max-height: 60vh;
+            overflow-y: auto;
+            margin-top: 8px;
+        }
+        .mobile-search-results a {
+            display: block;
+            padding: 10px 4px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            color: #444;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .mobile-search-results a:hover {
+            background: rgba(221, 212, 237, 0.3);
+        }
+        .mobile-search-results a .ms-date {
+            font-size: 12px;
+            color: #999;
+            margin-left: 8px;
+        }
+        .mobile-search-results .ms-empty {
+            padding: 12px 4px;
+            color: #999;
+            font-size: 14px;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -146,6 +242,15 @@ Yet no award for you……
             {% for menu in site.menu %}
             <a href="{{ site.baseurl }}/{{ menu.directory }}"><i class="{{ menu.icon }}"> {{ menu.page }}</i></a>
             {% endfor %}
+            <a href="javascript:void(0)" id="mobile-search-btn" class="mobile-search-toggle" title="搜索">🔍</a>
+        </div>
+        <!-- 移动端搜索面板 -->
+        <div id="mobile-search-panel" class="mobile-search-panel">
+            <form id="mobile-search-form" class="mobile-search-form">
+                <input id="mobile-query" type="text" placeholder="搜索文章标题或关键词…" autocomplete="off">
+                <button type="button" id="mobile-search-close" class="mobile-search-close">&times;</button>
+            </form>
+            <div id="mobile-search-results" class="mobile-search-results"></div>
         </div>
         <script type="text/javascript">
             var menus = document.getElementById('nav-menu');
@@ -211,6 +316,83 @@ Yet no award for you……
 
 <!--{% include plugins/baidu_push %}-->
 
+<!-- 移动端搜索逻辑 -->
+<script>
+(function() {
+    var btn = document.getElementById('mobile-search-btn');
+    var panel = document.getElementById('mobile-search-panel');
+    var input = document.getElementById('mobile-query');
+    var closeBtn = document.getElementById('mobile-search-close');
+    var resultsDiv = document.getElementById('mobile-search-results');
+    var form = document.getElementById('mobile-search-form');
+    var postsData = null;
+
+    if (!btn || !panel) return;
+
+    btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        panel.classList.toggle('active');
+        if (panel.classList.contains('active')) {
+            input.focus();
+        }
+    });
+
+    closeBtn.addEventListener('click', function() {
+        panel.classList.remove('active');
+        input.value = '';
+        resultsDiv.innerHTML = '';
+    });
+
+    function loadPosts(callback) {
+        if (postsData) { callback(postsData); return; }
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', '{{ site.baseurl }}/assets/data/posts.json');
+        xhr.onload = function() {
+            if (xhr.status === 200) {
+                postsData = JSON.parse(xhr.responseText);
+                callback(postsData);
+            }
+        };
+        xhr.send();
+    }
+
+    function doSearch() {
+        var query = input.value.trim();
+        if (!query) { resultsDiv.innerHTML = ''; return; }
+        loadPosts(function(data) {
+            var words = query.split(/\s+/);
+            var matched = [];
+            data.forEach(function(post) {
+                var content = (post.title || '') + ' ' + (post.keywords || '');
+                var hit = words.some(function(w) {
+                    return w && content.match(new RegExp(w, 'i'));
+                });
+                if (hit) matched.push(post);
+            });
+            if (matched.length === 0) {
+                resultsDiv.innerHTML = '<div class="ms-empty">没有找到相关文章 ~</div>';
+            } else {
+                var html = '';
+                matched.forEach(function(p) {
+                    html += '<a href="' + p.url + '">' + p.title + '<span class="ms-date">' + p.date + '</span></a>';
+                });
+                resultsDiv.innerHTML = html;
+            }
+        });
+    }
+
+    var debounceTimer;
+    input.addEventListener('input', function() {
+        clearTimeout(debounceTimer);
+        debounceTimer = setTimeout(doSearch, 200);
+    });
+
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        doSearch();
+    });
+})();
+</script>
 
 </body>
 
