@@ -46,16 +46,16 @@ menu:
     icon: icon-home
   - page: 归档
     directory: archives/
-    icon: icon-archive
+    icon: icon-list-alt
   - page: 标签
     directory: tags/
     icon: icon-tags
   - page: 留言
     directory: guestbook/
-    icon: icon-guestbook
+    icon: icon-comments
   - page: 关于
     directory: about/
-    icon: icon-about
+    icon: icon-user
 #  - page: 订阅
 #    directory: feed.xml
 #    icon: icon-rss

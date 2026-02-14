@@ -7,18 +7,18 @@ layout: base
         <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
         <p class="post-meta">
             <!-- <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-                <i class="icon-post-date">{{ page.date | date: "%Y-%m-%d" }}</i>
+                <i class="icon-calendar">{{ page.date | date: "%Y-%m-%d" }}</i>
             </time> -->
             {% if page.categories.size > 0 %}
             <span class="post-category">
-            <i class="icon-post-category">
+            <i class="icon-folder-open">
             {% for page_category in page.categories %}
                 <a href="{{ site.baseurl }}/category/#{{ page_category }}">{{ page_category }}</a>
             {% endfor %}
             </i>
         </span> {% endif %} {% if page.tags.size > 0 %} |
             <span class="post-tag">
-            <i class="icon-post-tag">
+            <i class="icon-tag">
             {% for page_tag in page.tags %}
                 <a href="{{ site.baseurl }}/tags/#{{ page_tag }}">{{ page_tag }}</a>
             {% endfor %}
@@ -27,7 +27,7 @@ layout: base
 
         {% if page.content-created %}
         <br>
-        <i class="icon-post-date"></i>
+        <i class="icon-calendar"></i>
         <time datetime="{{ page.content-created | date_to_xmlschema }}" >
             内容创建于 {{ page.content-created | date: "%Y-%m-%d" }}
         </time>
@@ -35,7 +35,7 @@ layout: base
 
         {% if page.content-updated %}
         <br>
-        <i class="icon-post-date"></i>
+        <i class="icon-calendar"></i>
         <time datetime="{{ page.content-updated | date_to_xmlschema }}" >
             内容更新于 {{ page.content-updated | date: "%Y-%m-%d" }}
         </time>
@@ -43,7 +43,7 @@ layout: base
 
         {% if page.archive-created %}
         <br>
-        <i class="icon-post-date"></i>
+        <i class="icon-calendar"></i>
         <time datetime="{{ page.archive-created | date_to_xmlschema }}" >
             页面创建于 {{ page.archive-created | date: "%Y-%m-%d" }}
         </time>
@@ -51,7 +51,7 @@ layout: base
 
         {% if page.archive-updated %}
         <br>
-        <i class="icon-post-date"></i>
+        <i class="icon-calendar"></i>
         <time datetime="{{ page.archive-updated | date_to_xmlschema }}" >
             页面更新于 {{ page.archive-updated | date: "%Y-%m-%d" }}
         </time>
@@ -705,11 +705,11 @@ layout: base
 
     <div class="post-nav">
         {% if page.previous %}
-        <a href="{{ page.previous.url | prepend: site.baseurl }}" class="pre"><i class="icon-post-pre"> {{
+        <a href="{{ page.previous.url | prepend: site.baseurl }}" class="pre"><i class="icon-chevron-left"> {{
             page.previous.title }}</i></a>
         {% endif %} {% if page.next %}
         <a href="{{ page.next.url | prepend: site.baseurl }}" class="next">{{ page.next.title }} <i
-                class="icon-post-next"></i></a>
+                class="icon-chevron-right"></i></a>
         {% endif %}
     </div>
 
