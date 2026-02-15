@@ -144,23 +144,6 @@ Yet no award for you……
             }
         }
 
-        /* 搜索面板 */
-        .mobile-search-panel {
-            display: none;
-            position: absolute;
-            left: 0;
-            right: 0;
-            top: 100%;
-            background: #F8F2F5;
-            border-bottom: 1px solid #C2C2C2;
-            padding: 12px 20px;
-            z-index: 1001;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18), 0 2px 8px rgba(0, 0, 0, 0.10);
-        }
-        .mobile-search-panel.active {
-            display: block;
-        }
-
         /* 搜索激活时的毛玻璃遮罩 */
         .mobile-search-overlay {
             display: none;
@@ -169,71 +152,123 @@ Yet no award for you……
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(255, 255, 255, 0.45);
-            backdrop-filter: blur(6px);
-            -webkit-backdrop-filter: blur(6px);
+            background: rgba(0, 0, 0, 0.25);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
             z-index: 999;
-            transition: opacity 0.2s ease;
+            opacity: 0;
+            transition: opacity 0.25s ease;
         }
         .mobile-search-overlay.active {
             display: block;
+            opacity: 1;
+        }
+
+        /* 搜索面板 */
+        .mobile-search-panel {
+            display: none;
+            position: fixed;
+            left: 12px;
+            right: 12px;
+            top: 60px;
+            background: #fff;
+            border-radius: 16px;
+            padding: 16px;
+            z-index: 1001;
+            box-sizing: border-box;
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(0, 0, 0, 0.04);
+            transform: translateY(-12px);
+            opacity: 0;
+            transition: transform 0.25s ease, opacity 0.25s ease;
+        }
+        .mobile-search-panel.active {
+            display: block;
+            transform: translateY(0);
+            opacity: 1;
         }
 
         /* 搜索输入框 */
         .mobile-search-form {
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 10px;
+            background: #f5f0f3;
+            border-radius: 12px;
+            padding: 4px 6px 4px 14px;
         }
         .mobile-search-form input {
             flex: 1;
-            padding: 8px 12px;
-            border: 1px solid #bbb;
-            border-radius: 4px;
-            font-size: 14px;
+            min-width: 0;
+            padding: 10px 0;
+            border: none;
+            font-size: 15px;
             font-family: 'lxgw', sans-serif;
-            background: #fff;
+            background: transparent;
             outline: none;
+            color: #333;
         }
-        .mobile-search-form input:focus {
-            border-color: #DDD4ED;
+        .mobile-search-form input::placeholder {
+            color: #aaa;
         }
         .mobile-search-close {
-            background: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            background: rgba(0, 0, 0, 0.06);
             border: none;
-            font-size: 22px;
-            color: #999;
+            border-radius: 50%;
+            font-size: 18px;
+            color: #888;
             cursor: pointer;
-            padding: 0 4px;
-            line-height: 1;
+            flex-shrink: 0;
+            transition: background 0.15s ease;
+        }
+        .mobile-search-close:hover {
+            background: rgba(0, 0, 0, 0.12);
         }
 
         /* 搜索结果 */
         .mobile-search-results {
-            max-height: 60vh;
+            max-height: 55vh;
             overflow-y: auto;
-            margin-top: 8px;
+            margin-top: 12px;
+            -webkit-overflow-scrolling: touch;
         }
         .mobile-search-results a {
-            display: block;
-            padding: 10px 4px;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-            color: #444;
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            gap: 8px;
+            padding: 12px 10px;
+            border-radius: 10px;
+            color: #333;
             text-decoration: none;
             font-size: 14px;
+            transition: background 0.15s ease;
         }
-        .mobile-search-results a:hover {
-            background: rgba(221, 212, 237, 0.3);
+        .mobile-search-results a:hover,
+        .mobile-search-results a:active {
+            background: #f5f0f3;
+        }
+        .mobile-search-results a .ms-title {
+            flex: 1;
+            min-width: 0;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
         }
         .mobile-search-results a .ms-date {
-            font-size: 12px;
-            color: #999;
-            margin-left: 8px;
+            font-size: 11px;
+            color: #aaa;
+            flex-shrink: 0;
         }
         .mobile-search-results .ms-empty {
-            padding: 12px 4px;
-            color: #999;
+            padding: 20px 10px;
+            color: #aaa;
             font-size: 14px;
+            text-align: center;
         }
     </style>
 
@@ -406,7 +441,7 @@ Yet no award for you……
             } else {
                 var html = '';
                 matched.forEach(function(p) {
-                    html += '<a href="' + p.url + '">' + p.title + '<span class="ms-date">' + p.date + '</span></a>';
+                    html += '<a href="' + p.url + '"><span class="ms-title">' + p.title + '</span><span class="ms-date">' + p.date + '</span></a>';
                 });
                 resultsDiv.innerHTML = html;
             }
