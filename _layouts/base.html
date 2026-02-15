@@ -136,7 +136,7 @@ Yet no award for you……
         }
         @media screen and (max-width: 48em) {
             .mobile-search-toggle {
-                display: inline-block !important;
+                display: flex !important;
                 cursor: pointer;
                 font-style: normal;
                 text-decoration: none;
@@ -154,10 +154,28 @@ Yet no award for you……
             background: #F8F2F5;
             border-bottom: 1px solid #C2C2C2;
             padding: 12px 20px;
-            z-index: 100;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            z-index: 1001;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18), 0 2px 8px rgba(0, 0, 0, 0.10);
         }
         .mobile-search-panel.active {
+            display: block;
+        }
+
+        /* 搜索激活时的毛玻璃遮罩 */
+        .mobile-search-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.45);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+            z-index: 999;
+            transition: opacity 0.2s ease;
+        }
+        .mobile-search-overlay.active {
             display: block;
         }
 
@@ -231,6 +249,7 @@ Yet no award for you……
 <!-- End Google Tag Manager (noscript) -->
 
 
+<div id="mobile-search-overlay" class="mobile-search-overlay"></div>
 <div class="body_container">
     <div id="header">
         <div class="site-name">
@@ -325,23 +344,36 @@ Yet no award for you……
     var closeBtn = document.getElementById('mobile-search-close');
     var resultsDiv = document.getElementById('mobile-search-results');
     var form = document.getElementById('mobile-search-form');
+    var overlay = document.getElementById('mobile-search-overlay');
     var postsData = null;
 
     if (!btn || !panel) return;
 
+    function openSearch() {
+        panel.classList.add('active');
+        overlay.classList.add('active');
+        input.focus();
+    }
+
+    function closeSearch() {
+        panel.classList.remove('active');
+        overlay.classList.remove('active');
+        input.value = '';
+        resultsDiv.innerHTML = '';
+    }
+
     btn.addEventListener('click', function(e) {
         e.preventDefault();
-        panel.classList.toggle('active');
         if (panel.classList.contains('active')) {
-            input.focus();
+            closeSearch();
+        } else {
+            openSearch();
         }
     });
 
-    closeBtn.addEventListener('click', function() {
-        panel.classList.remove('active');
-        input.value = '';
-        resultsDiv.innerHTML = '';
-    });
+    closeBtn.addEventListener('click', closeSearch);
+
+    overlay.addEventListener('click', closeSearch);
 
     function loadPosts(callback) {
         if (postsData) { callback(postsData); return; }
