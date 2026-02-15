@@ -481,15 +481,61 @@ a:focus {
     }
 
     #header .site-name {
-        margin-bottom: 60px;
+        margin-bottom: 20px;
         text-align: center;
     }
 
+    #header {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
+    #header #nav-menu {
+        position: static;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        border-top: 1px solid #DDD4ED;
+        border-bottom: 1px solid #DDD4ED;
+    }
+
     #header #nav-menu a {
-        padding: 0 15px;
-        line-height: 27px;
-        height: 27px;
-        font-size: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 1;
+        padding: 10px 0;
+        line-height: 1;
+        font-size: 13px;
+        color: #666;
+        border: none;
+        position: relative;
+        transition: color 0.2s ease;
+    }
+
+    #header #nav-menu a:hover {
+        border-bottom: none;
+        color: #8b6fad;
+    }
+
+    #header #nav-menu a.current {
+        border: none;
+        background: none;
+        color: #8b6fad;
+        font-weight: 600;
+    }
+
+    #header #nav-menu a.current::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 25%;
+        right: 25%;
+        height: 2px;
+        background: #8b6fad;
+        border-radius: 1px;
     }
 }
 
