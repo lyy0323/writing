@@ -34,7 +34,7 @@ $(document).ready(function() {
                 html += '<h2 class="post-title">';
                 html += '<a href="' + post.url + '">' + post.title + '</a>';
                 html += '</h2>';
-                html += '<div class="post-meta"><i class="icon-post-date">';
+                html += '<div class="post-meta"><i class="icon-calendar">';
                 html += ' ' + post.date;
                 html += '</i></div>';
                 html += '<div class="post-content">' + post.summary + '</div>';
