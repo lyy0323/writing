@@ -171,52 +171,26 @@
 
 <script>
 (function() {
-    // 敲击椰子音效（Web Audio API 合成）
-    var cocoAudioCtx = null;
+    var baseUrl = '{{ site.baseurl }}';
 
-    function getCocoAudioCtx() {
-        if (!cocoAudioCtx) {
-            cocoAudioCtx = new (window.AudioContext || window.webkitAudioContext)();
-        }
-        return cocoAudioCtx;
-    }
+    // 预加载音效
+    var hoverSound = new Audio(baseUrl + '/assets/static/music/wood_click.ogg');
+    var clickSound = new Audio(baseUrl + '/assets/static/music/open_bottle.mp3');
+    hoverSound.preload = 'auto';
+    clickSound.preload = 'auto';
 
-    function playCocoSound() {
-        var ctx = getCocoAudioCtx();
-        if (ctx.state === 'suspended') {
-            ctx.resume();
-        }
-        var now = ctx.currentTime;
-
-        var osc = ctx.createOscillator();
-        var gain = ctx.createGain();
-
-        osc.type = 'triangle';
-        osc.frequency.setValueAtTime(300, now);
-        osc.frequency.exponentialRampToValueAtTime(50, now + 0.1);
-
-        gain.gain.setValueAtTime(0, now);
-        gain.gain.linearRampToValueAtTime(0.8, now + 0.01);
-        gain.gain.exponentialRampToValueAtTime(0.01, now + 0.15);
-
-        var filter = ctx.createBiquadFilter();
-        filter.type = 'lowpass';
-        filter.frequency.value = 800;
-
-        osc.connect(filter);
-        filter.connect(gain);
-        gain.connect(ctx.destination);
-
-        osc.start(now);
-        osc.stop(now + 0.2);
+    function playSound(audio) {
+        // 每次从头播放，支持快速重复触发
+        audio.currentTime = 0;
+        audio.play().catch(function() {});
     }
 
     function knockCoconut(item) {
         var url = item.getAttribute('data-url');
         var emojiDiv = item.querySelector('.coco-emoji');
 
-        // 播放敲击音效
-        playCocoSound();
+        // 播放开瓶音效
+        playSound(clickSound);
 
         // 椰子变饮料彩蛋
         var originalEmoji = emojiDiv.innerText;
@@ -234,6 +208,15 @@
     // 事件委托
     var containers = document.querySelectorAll('.coconut-container');
     for (var i = 0; i < containers.length; i++) {
+        // hover 音效
+        containers[i].addEventListener('mouseenter', function(e) {
+            var item = e.target.closest('.coco-item');
+            if (item) {
+                playSound(hoverSound);
+            }
+        }, true);
+
+        // 点击音效 + 跳转
         containers[i].addEventListener('click', function(e) {
             var item = e.target.closest('.coco-item');
             if (item) {
