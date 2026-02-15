@@ -1,5 +1,5 @@
 <div class="widget post-toc hide">
-    <div class="widget-title"><i class="icon-post-toc"> 文章目录</i></div><ul></ul>
+    <div class="widget-title"><i class="icon-file-o"> 文章目录</i></div><ul></ul>
 </div>
 <script type="text/javascript">
 function TOCize(toc, content, matchHeightTo) {
