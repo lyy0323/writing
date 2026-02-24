@@ -69,7 +69,7 @@ Yet no award for you……
         "pluginModelPath": "assets/",
         "tagMode": false,
         "debug": false,
-        "model": {"jsonPath": "/assets/live2dw/assets/unitychan.model.json"},
+        "model": {"jsonPath": "{{site.baseurl}}/assets/live2dw/assets/unitychan.model.json"},
         "display": {"position": "right", "width": 130, "height": 180, "hOffset": 60, "vOffset": -10,},
         "mobile": {"show": true, "scale": 1,},
         "log": false
@@ -430,7 +430,7 @@ Yet no award for you……
             var words = query.split(/\s+/);
             var matched = [];
             data.forEach(function(post) {
-                var content = (post.title || '') + ' ' + (post.keywords || '');
+                var content = (post.title || '') + ' ' + (post.keywords || '') + ' ' + (post.body || '');
                 var hit = words.some(function(w) {
                     return w && content.match(new RegExp(w, 'i'));
                 });

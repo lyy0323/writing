@@ -6,6 +6,11 @@ items:
     id: 58
     album: "星与月"
     cover: "/assets/imgs/cover/星与月.jpg"
+  - label: "等你在冬天"
+    url: /dengnizaidongtian/
+    id: 64
+    album: "寒碧温黄"
+    cover: "/assets/imgs/cover/寒碧温黄.jpg"
   - label: "星望"
     url: /xingwang/
     id: 94
