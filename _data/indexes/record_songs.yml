@@ -16,6 +16,11 @@ items:
     id: 94
     album: "星与月"
     cover: "/assets/imgs/cover/星与月.jpg"
+  - label: "杉林晚"
+    url: /shanlinwan/
+    id: 98
+    album: "二〇一九"
+    cover: "/assets/imgs/cover/二〇一九.jpg"
   - label: "玉蝴蝶·秋梦"
     url: /yuhudie_qiumeng/
     id: 101
