@@ -71,10 +71,16 @@ links: # 友情链接
 #    url: http://jekyllcn.com/
   # - title: Jekyll blog system
   #   url: http://jekyllcn.com/
-  - title: 上海交大国学社社员诗歌
-    url: http://sjtuguoxue.space/
+  - title: 南洋吟游 - 国学社社员与社友诗歌
+    url: https://sjtuguoxue.space/
+  - title: 方寸 - 诗词创作平台
+    url: https://write.sjtuguoxue.space/
   - title: 凌川的小站
     url: https://oscillater.github.io/
+  - title: Squirrel's Gallery
+    url: https://squirrel.qaq.ac.cn/
+  - title: 山花园
+    url: http://www.lisanwaier.cn/
 
 
 # Google Analytics
