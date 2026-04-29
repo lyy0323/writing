@@ -9,8 +9,6 @@ content-updated: 2026-04-29
 archive-created: 2026-04-29
 ---
 
-### <span class="authorspan linyuye0">过期糖果三十首</span>
-
 <span><font color="#6cefd5">▌</font></span>铁锈栏杆绕小亭。白岩菌盖草深青。晨风夜露都无恙，春鸟秋虫各有灵。一夕幽怀随我老，两行清泪感君听。算来情窦初开日，拟作江南泛梗萍。
 
 <span><font color="#ef866c">▌</font></span>疏枝红白正横斜。每共风荷据<u>丽娃</u>。偶约相携同一室，无猜曾聚在君家。真因底事羁高塔，信有<u>笑猫</u>衔晚霞。惟恨沙滩楼阁梦，海潮摧罢各天涯。
