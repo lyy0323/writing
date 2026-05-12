@@ -71,6 +71,8 @@ links: # 友情链接
 #    url: http://jekyllcn.com/
   # - title: Jekyll blog system
   #   url: http://jekyllcn.com/
+  - title: 椰椰（主站）
+    url: https://lyy0323.space/
   - title: 南洋吟游 - 国学社社员与社友诗歌
     url: https://sjtuguoxue.space/
   - title: 方寸 - 诗词创作平台
@@ -81,6 +83,8 @@ links: # 友情链接
     url: https://squirrel.qaq.ac.cn/
   - title: 山花园
     url: http://www.lisanwaier.cn/
+  - title: 木猫的窝
+    url: https://www.mumoiscat.site/
 
 
 # Google Analytics
