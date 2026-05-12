@@ -79,12 +79,19 @@ links: # 友情链接
     url: https://write.sjtuguoxue.space/
   - title: 凌川的小站
     url: https://oscillater.github.io/
+    feeds:
+      - https://oscillater.github.io/lit-blog/rss.xml
+      - https://oscillater.github.io/tech-notes/rss.xml
   - title: Squirrel's Gallery
     url: https://squirrel.qaq.ac.cn/
   - title: 山花园
     url: http://www.lisanwaier.cn/
+    # feed: http://www.lisanwaier.cn/feed.xml
   - title: 木猫的窝
     url: https://www.mumoiscat.site/
+    # feed: https://www.mumoiscat.site/atom.xml
+  - title: 抱木的棱镜
+    url: https://huaiqi.site/
 
 
 # Google Analytics

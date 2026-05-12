@@ -1,0 +1,91 @@
+<div class="widget" id="friend-updates-widget" style="display:none;">
+  <div class="widget-title"><i class="icon-rss"> 友人动态</i></div>
+  <ul class="post-list" id="friend-updates-list">
+  </ul>
+</div>
+
+<script>
+(function() {
+  var feeds = [
+    {% for link in site.links %}{% if link.feed %}
+    { title: {{ link.title | jsonify }}, feed: {{ link.feed | jsonify }} },
+    {% endif %}{% if link.feeds %}{% for f in link.feeds %}
+    { title: {{ link.title | jsonify }}, feed: {{ f | jsonify }} },
+    {% endfor %}{% endif %}{% endfor %}
+  ];
+
+  if (!feeds.length) return;
+
+  var CACHE_KEY = 'friend_updates_cache';
+  var CACHE_TTL = 10 * 60 * 1000;
+  var API = 'https://api.rss2json.com/v1/api.json?rss_url=';
+
+  function relativeDate(dateStr) {
+    var diff = Date.now() - new Date(dateStr).getTime();
+    var days = Math.floor(diff / 86400000);
+    if (days < 1) return '今天';
+    if (days === 1) return '昨天';
+    if (days < 7) return days + '天前';
+    if (days < 30) return Math.floor(days / 7) + '周前';
+    if (days < 365) return Math.floor(days / 30) + '月前';
+    return Math.floor(days / 365) + '年前';
+  }
+
+  function render(items) {
+    if (!items.length) return;
+    var list = document.getElementById('friend-updates-list');
+    var widget = document.getElementById('friend-updates-widget');
+    items.sort(function(a, b) { return new Date(b.pubDate) - new Date(a.pubDate); });
+    items = items.slice(0, 5);
+    var html = '';
+    for (var i = 0; i < items.length; i++) {
+      var item = items[i];
+      var li = document.createElement('li');
+      li.className = 'post-list-item';
+      var a = document.createElement('a');
+      a.className = 'post-list-link';
+      a.href = item.link;
+      a.target = '_blank';
+      a.textContent = item.title;
+      var span = document.createElement('span');
+      span.style.cssText = 'color:#999;font-size:12px;margin-left:6px;';
+      span.textContent = item.friend + ' · ' + relativeDate(item.pubDate);
+      li.appendChild(a);
+      li.appendChild(span);
+      list.appendChild(li);
+    }
+    widget.style.display = '';
+  }
+
+  var cached = sessionStorage.getItem(CACHE_KEY);
+  if (cached) {
+    try {
+      var data = JSON.parse(cached);
+      if (Date.now() - data.ts < CACHE_TTL) { render(data.items); return; }
+    } catch(e) {}
+  }
+
+  var allItems = [];
+  var done = 0;
+  feeds.forEach(function(f) {
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', API + encodeURIComponent(f.feed));
+    xhr.onload = function() {
+      try {
+        var res = JSON.parse(xhr.responseText);
+        if (res.status === 'ok' && res.items) {
+          res.items.forEach(function(item) {
+            allItems.push({ title: item.title, link: item.link, pubDate: item.pubDate, friend: f.title });
+          });
+        }
+      } catch(e) {}
+      if (++done === feeds.length) {
+        sessionStorage.setItem(CACHE_KEY, JSON.stringify({ ts: Date.now(), items: allItems }));
+        render(allItems);
+      }
+    };
+    xhr.onerror = function() { if (++done === feeds.length) render(allItems); };
+    xhr.send();
+  });
+})();
+</script>
