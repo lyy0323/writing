@@ -88,8 +88,8 @@
       a.href = item.link;
       a.target = '_blank';
       a.textContent = item.title;
-      var meta = document.createElement('span');
-      meta.style.cssText = 'color:#999;font-size:12px;margin-left:6px;';
+      var meta = document.createElement('div');
+      meta.style.cssText = 'color:#999;font-size:12px;margin-top:2px;';
       meta.textContent = item.friend + ' · ' + relativeDate(item.pubDate);
       li.appendChild(a);
       li.appendChild(meta);
