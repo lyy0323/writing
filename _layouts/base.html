@@ -168,7 +168,7 @@ Yet no award for you……
             position: fixed;
             left: 12px; right: 12px; top: 60px;
             background: #fff;
-            border-radius: 16px;
+            border-radius: 7px;
             z-index: 1001;
             box-sizing: border-box;
             box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(0, 0, 0, 0.04);
@@ -195,7 +195,7 @@ Yet no award for you……
             position: sticky;
             top: 0;
             background: #fff;
-            border-radius: 16px 16px 0 0;
+            border-radius: 7px 7px 0 0;
             z-index: 1;
         }
         .mobile-sidebar-header span {
@@ -204,20 +204,16 @@ Yet no award for you……
             color: #333;
         }
         .mobile-sidebar-close {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 32px; height: 32px;
-            background: rgba(0, 0, 0, 0.06);
+            background: none;
             border: none;
-            border-radius: 50%;
-            font-size: 18px;
-            color: #888;
+            font-size: 16px;
+            color: #999;
             cursor: pointer;
-            transition: background 0.15s ease;
+            padding: 4px;
+            transition: color 0.15s ease;
         }
         .mobile-sidebar-close:hover {
-            background: rgba(0, 0, 0, 0.12);
+            color: #666;
         }
 
         /* 可折叠 section */
@@ -269,7 +265,7 @@ Yet no award for you……
             align-items: center;
             gap: 10px;
             background: #f5f0f3;
-            border-radius: 12px;
+            border-radius: 5px;
             padding: 4px 6px 4px 14px;
             margin: 12px 16px;
         }
@@ -288,21 +284,16 @@ Yet no award for you……
             color: #aaa;
         }
         .mobile-search-clear {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 28px; height: 28px;
-            background: rgba(0, 0, 0, 0.06);
+            background: none;
             border: none;
-            border-radius: 50%;
             font-size: 14px;
-            color: #888;
+            color: #999;
             cursor: pointer;
-            flex-shrink: 0;
-            transition: background 0.15s ease;
+            padding: 4px;
+            transition: color 0.15s ease;
         }
         .mobile-search-clear:hover {
-            background: rgba(0, 0, 0, 0.12);
+            color: #666;
         }
         .mobile-search-results {
             max-height: 40vh;
@@ -316,7 +307,7 @@ Yet no award for you……
             justify-content: space-between;
             gap: 8px;
             padding: 12px 10px;
-            border-radius: 10px;
+            border-radius: 3px;
             color: #333;
             text-decoration: none;
             font-size: 14px;
@@ -376,7 +367,7 @@ Yet no award for you……
         <div id="mobile-sidebar-panel" class="mobile-sidebar-panel">
             <div class="mobile-sidebar-header">
                 <span>侧栏</span>
-                <button type="button" id="mobile-sidebar-close" class="mobile-sidebar-close">&times;</button>
+                <button type="button" id="mobile-sidebar-close" class="mobile-sidebar-close"><i class="icon-times"></i></button>
             </div>
             <!-- 搜索 section -->
             <div class="mobile-section active" data-builtin="search">
@@ -384,7 +375,7 @@ Yet no award for you……
                 <div class="mobile-section-content">
                     <form id="mobile-search-form" class="mobile-search-form">
                         <input id="mobile-query" type="text" placeholder="搜索文章标题或关键词…" autocomplete="off">
-                        <button type="button" class="mobile-search-clear">&times;</button>
+                        <button type="button" class="mobile-search-clear"><i class="icon-times"></i></button>
                     </form>
                     <div id="mobile-search-results" class="mobile-search-results"></div>
                 </div>
@@ -492,6 +483,7 @@ Yet no award for you……
             var w = widgets[i];
             var titleEl = w.querySelector('.widget-title');
             if (!titleEl) continue;
+            if (w.classList.contains('post-toc')) continue;
             var section = document.createElement('div');
             section.className = 'mobile-section';
             var header = document.createElement('div');

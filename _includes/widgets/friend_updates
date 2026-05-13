@@ -1,8 +1,6 @@
 <div class="widget" id="friend-updates-widget" style="display:none;">
-  <div class="widget-title">
-    <i class="icon-rss"> 友人动态</i>
-    <a href="javascript:void(0)" id="friend-updates-refresh" style="float:right;font-size:12px;font-weight:normal;color:#999;cursor:pointer;">换一换</a>
-  </div>
+  <div class="widget-title"><i class="icon-rss"> 友人动态</i></div>
+  <a href="javascript:void(0)" id="friend-updates-refresh" style="display:inline-block;font-size:12px;color:#999;cursor:pointer;margin-bottom:6px;"><i class="icon-refresh"></i> 换一换</a>
   <ul class="post-list" id="friend-updates-list">
   </ul>
 </div>
