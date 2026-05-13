@@ -129,14 +129,14 @@ Yet no award for you……
     <script type="text/javascript" src="{{site.baseurl}}/assets/js/tongji.baidu.js"></script>
     <script type="text/javascript" src="{{site.baseurl}}/assets/js/yuye.js"></script>
 
-    <!-- 移动端搜索样式 -->
+    <!-- 移动端侧边栏面板样式 -->
     <style>
-        /* 搜索按钮：仅移动端显示 */
-        .mobile-search-toggle {
+        /* 更多按钮：仅移动端显示 */
+        .mobile-sidebar-toggle {
             display: none !important;
         }
         @media screen and (max-width: 48em) {
-            .mobile-search-toggle {
+            .mobile-sidebar-toggle {
                 display: flex !important;
                 cursor: pointer;
                 font-style: normal;
@@ -145,14 +145,11 @@ Yet no award for you……
             }
         }
 
-        /* 搜索激活时的毛玻璃遮罩 */
-        .mobile-search-overlay {
+        /* 毛玻璃遮罩 */
+        .mobile-sidebar-overlay {
             display: none;
             position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
+            top: 0; left: 0; right: 0; bottom: 0;
             background: rgba(0, 0, 0, 0.25);
             backdrop-filter: blur(8px);
             -webkit-backdrop-filter: blur(8px);
@@ -160,35 +157,113 @@ Yet no award for you……
             opacity: 0;
             transition: opacity 0.25s ease;
         }
-        .mobile-search-overlay.active {
+        .mobile-sidebar-overlay.active {
             display: block;
             opacity: 1;
         }
 
-        /* 搜索面板 */
-        .mobile-search-panel {
+        /* 面板 */
+        .mobile-sidebar-panel {
             display: none;
             position: fixed;
-            left: 12px;
-            right: 12px;
-            top: 60px;
+            left: 12px; right: 12px; top: 60px;
             background: #fff;
             border-radius: 16px;
-            padding: 16px;
             z-index: 1001;
             box-sizing: border-box;
             box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(0, 0, 0, 0.04);
             transform: translateY(-12px);
             opacity: 0;
             transition: transform 0.25s ease, opacity 0.25s ease;
+            max-height: 75vh;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
         }
-        .mobile-search-panel.active {
+        .mobile-sidebar-panel.active {
             display: block;
             transform: translateY(0);
             opacity: 1;
         }
 
-        /* 搜索输入框 */
+        /* 面板头部 */
+        .mobile-sidebar-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 14px 16px;
+            border-bottom: 1px solid #f0ebee;
+            position: sticky;
+            top: 0;
+            background: #fff;
+            border-radius: 16px 16px 0 0;
+            z-index: 1;
+        }
+        .mobile-sidebar-header span {
+            font-size: 15px;
+            font-weight: 600;
+            color: #333;
+        }
+        .mobile-sidebar-close {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px; height: 32px;
+            background: rgba(0, 0, 0, 0.06);
+            border: none;
+            border-radius: 50%;
+            font-size: 18px;
+            color: #888;
+            cursor: pointer;
+            transition: background 0.15s ease;
+        }
+        .mobile-sidebar-close:hover {
+            background: rgba(0, 0, 0, 0.12);
+        }
+
+        /* 可折叠 section */
+        .mobile-section-title {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 16px;
+            cursor: pointer;
+            font-size: 14px;
+            color: #555;
+            border-bottom: 1px solid #f5f0f3;
+            user-select: none;
+            -webkit-user-select: none;
+            transition: color 0.15s ease;
+        }
+        .mobile-section-title:active {
+            color: #8b6fad;
+        }
+        .mobile-section-title::after {
+            content: '▸';
+            font-size: 12px;
+            color: #bbb;
+            transition: transform 0.25s ease;
+        }
+        .mobile-section.active .mobile-section-title::after {
+            transform: rotate(90deg);
+        }
+        .mobile-section-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        .mobile-section.active .mobile-section-content {
+            max-height: 2000px;
+        }
+        .mobile-section-content .widget {
+            border: none;
+            margin: 0;
+            padding: 8px 16px 12px;
+        }
+        .mobile-section-content .widget .widget-title {
+            display: none;
+        }
+
+        /* 搜索表单 */
         .mobile-search-form {
             display: flex;
             align-items: center;
@@ -196,6 +271,7 @@ Yet no award for you……
             background: #f5f0f3;
             border-radius: 12px;
             padding: 4px 6px 4px 14px;
+            margin: 12px 16px;
         }
         .mobile-search-form input {
             flex: 1;
@@ -211,30 +287,27 @@ Yet no award for you……
         .mobile-search-form input::placeholder {
             color: #aaa;
         }
-        .mobile-search-close {
+        .mobile-search-clear {
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 32px;
-            height: 32px;
+            width: 28px; height: 28px;
             background: rgba(0, 0, 0, 0.06);
             border: none;
             border-radius: 50%;
-            font-size: 18px;
+            font-size: 14px;
             color: #888;
             cursor: pointer;
             flex-shrink: 0;
             transition: background 0.15s ease;
         }
-        .mobile-search-close:hover {
+        .mobile-search-clear:hover {
             background: rgba(0, 0, 0, 0.12);
         }
-
-        /* 搜索结果 */
         .mobile-search-results {
-            max-height: 55vh;
+            max-height: 40vh;
             overflow-y: auto;
-            margin-top: 12px;
+            margin: 0 16px;
             -webkit-overflow-scrolling: touch;
         }
         .mobile-search-results a {
@@ -285,7 +358,7 @@ Yet no award for you……
 <!-- End Google Tag Manager (noscript) -->
 
 
-<div id="mobile-search-overlay" class="mobile-search-overlay"></div>
+<div id="mobile-sidebar-overlay" class="mobile-sidebar-overlay"></div>
 <div class="body_container">
     <div id="header">
         <div class="site-name">
@@ -297,15 +370,27 @@ Yet no award for you……
             {% for menu in site.menu %}
             <a href="{{ site.baseurl }}/{{ menu.directory }}"><i class="{{ menu.icon }}"> {{ menu.page }}</i></a>
             {% endfor %}
-            <a href="javascript:void(0)" id="mobile-search-btn" class="mobile-search-toggle" title="搜索"><i class="icon-search"> 搜索</i></a>
+            <a href="javascript:void(0)" id="mobile-sidebar-btn" class="mobile-sidebar-toggle" title="更多"><i class="icon-bars"> 更多</i></a>
         </div>
-        <!-- 移动端搜索面板 -->
-        <div id="mobile-search-panel" class="mobile-search-panel">
-            <form id="mobile-search-form" class="mobile-search-form">
-                <input id="mobile-query" type="text" placeholder="搜索文章标题或关键词…" autocomplete="off">
-                <button type="button" id="mobile-search-close" class="mobile-search-close">&times;</button>
-            </form>
-            <div id="mobile-search-results" class="mobile-search-results"></div>
+        <!-- 移动端侧边栏面板 -->
+        <div id="mobile-sidebar-panel" class="mobile-sidebar-panel">
+            <div class="mobile-sidebar-header">
+                <span>侧栏</span>
+                <button type="button" id="mobile-sidebar-close" class="mobile-sidebar-close">&times;</button>
+            </div>
+            <!-- 搜索 section -->
+            <div class="mobile-section active" data-builtin="search">
+                <div class="mobile-section-title"><i class="icon-search"></i> 搜索</div>
+                <div class="mobile-section-content">
+                    <form id="mobile-search-form" class="mobile-search-form">
+                        <input id="mobile-query" type="text" placeholder="搜索文章标题或关键词…" autocomplete="off">
+                        <button type="button" class="mobile-search-clear">&times;</button>
+                    </form>
+                    <div id="mobile-search-results" class="mobile-search-results"></div>
+                </div>
+            </div>
+            <!-- 其他 widget 由 JS 从 #sidebar 移入 -->
+            <div id="mobile-sidebar-widgets"></div>
         </div>
         <script type="text/javascript">
             var menus = document.getElementById('nav-menu');
@@ -373,27 +458,74 @@ Yet no award for you……
 
 <!--{% include plugins/baidu_push %}-->
 
-<!-- 移动端搜索逻辑 -->
+<!-- 移动端侧边栏面板逻辑 -->
 <script>
 (function() {
-    var btn = document.getElementById('mobile-search-btn');
-    var panel = document.getElementById('mobile-search-panel');
+    var btn = document.getElementById('mobile-sidebar-btn');
+    var panel = document.getElementById('mobile-sidebar-panel');
+    var closeBtn = document.getElementById('mobile-sidebar-close');
+    var overlay = document.getElementById('mobile-sidebar-overlay');
+    var widgetContainer = document.getElementById('mobile-sidebar-widgets');
+    var sidebar = document.getElementById('sidebar');
     var input = document.getElementById('mobile-query');
-    var closeBtn = document.getElementById('mobile-search-close');
     var resultsDiv = document.getElementById('mobile-search-results');
+    var clearBtn = panel.querySelector('.mobile-search-clear');
     var form = document.getElementById('mobile-search-form');
-    var overlay = document.getElementById('mobile-search-overlay');
     var postsData = null;
+    var widgetsMoved = false;
 
-    if (!btn || !panel) return;
+    if (!btn || !panel || !sidebar) return;
 
-    function openSearch() {
-        panel.classList.add('active');
-        overlay.classList.add('active');
-        input.focus();
+    var sectionTitles = panel.querySelectorAll('.mobile-section-title');
+    for (var i = 0; i < sectionTitles.length; i++) {
+        sectionTitles[i].addEventListener('click', toggleSection);
     }
 
-    function closeSearch() {
+    function toggleSection() {
+        this.parentElement.classList.toggle('active');
+    }
+
+    function moveWidgets() {
+        if (widgetsMoved) return;
+        var widgets = sidebar.querySelectorAll('.widget');
+        for (var i = 0; i < widgets.length; i++) {
+            var w = widgets[i];
+            var titleEl = w.querySelector('.widget-title');
+            if (!titleEl) continue;
+            var section = document.createElement('div');
+            section.className = 'mobile-section';
+            var header = document.createElement('div');
+            header.className = 'mobile-section-title';
+            header.innerHTML = titleEl.innerHTML;
+            header.addEventListener('click', toggleSection);
+            var content = document.createElement('div');
+            content.className = 'mobile-section-content';
+            content.appendChild(w);
+            section.appendChild(header);
+            section.appendChild(content);
+            widgetContainer.appendChild(section);
+        }
+        widgetsMoved = true;
+    }
+
+    function restoreWidgets() {
+        if (!widgetsMoved) return;
+        var sections = widgetContainer.querySelectorAll('.mobile-section');
+        for (var i = 0; i < sections.length; i++) {
+            var w = sections[i].querySelector('.widget');
+            if (w) sidebar.appendChild(w);
+            sections[i].remove();
+        }
+        widgetsMoved = false;
+    }
+
+    function openPanel() {
+        moveWidgets();
+        panel.classList.add('active');
+        overlay.classList.add('active');
+    }
+
+    function closePanel() {
         panel.classList.remove('active');
         overlay.classList.remove('active');
         input.value = '';
@@ -403,15 +535,27 @@ Yet no award for you……
     btn.addEventListener('click', function(e) {
         e.preventDefault();
         if (panel.classList.contains('active')) {
-            closeSearch();
+            closePanel();
         } else {
-            openSearch();
+            openPanel();
         }
     });
 
-    closeBtn.addEventListener('click', closeSearch);
+    closeBtn.addEventListener('click', closePanel);
+    overlay.addEventListener('click', closePanel);
 
-    overlay.addEventListener('click', closeSearch);
+    clearBtn.addEventListener('click', function() {
+        input.value = '';
+        resultsDiv.innerHTML = '';
+        input.focus();
+    });
+
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 768 && widgetsMoved) {
+            closePanel();
+            restoreWidgets();
+        }
+    });
 
     function loadPosts(callback) {
         if (postsData) { callback(postsData); return; }
