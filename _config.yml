@@ -86,7 +86,7 @@ links: # 友情链接
     url: https://squirrel.qaq.ac.cn/
   - title: 山花园
     url: http://www.lisanwaier.cn/
-    # feed: http://www.lisanwaier.cn/feed.xml
+    feed: https://lisanwaier.cn/feed
   - title: 木猫的窝
     url: https://www.mumoiscat.site/
     # feed: https://www.mumoiscat.site/atom.xml

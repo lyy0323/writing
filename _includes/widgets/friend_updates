@@ -1,5 +1,8 @@
 <div class="widget" id="friend-updates-widget" style="display:none;">
-  <div class="widget-title"><i class="icon-rss"> 友人动态</i></div>
+  <div class="widget-title">
+    <i class="icon-rss"> 友人动态</i>
+    <a href="javascript:void(0)" id="friend-updates-refresh" style="float:right;font-size:12px;font-weight:normal;color:#999;cursor:pointer;">换一换</a>
+  </div>
   <ul class="post-list" id="friend-updates-list">
   </ul>
 </div>
@@ -18,7 +21,10 @@
 
   var CACHE_KEY = 'friend_updates_cache';
   var CACHE_TTL = 10 * 60 * 1000;
+  var PAGE_SIZE = 5;
   var API = 'https://api.rss2json.com/v1/api.json?rss_url=';
+  var sortedItems = [];
+  var page = 0;
 
   function relativeDate(dateStr) {
     var diff = Date.now() - new Date(dateStr).getTime();
@@ -31,37 +37,87 @@
     return Math.floor(days / 365) + '年前';
   }
 
-  function render(items) {
-    if (!items.length) return;
+  function stripHtml(html) {
+    var div = document.createElement('div');
+    div.innerHTML = html;
+    return (div.textContent || div.innerText || '').replace(/\s+/g, ' ').trim();
+  }
+
+  function diversify(items) {
+    var groups = {};
+    items.forEach(function(item) {
+      if (!groups[item.friend]) groups[item.friend] = [];
+      groups[item.friend].push(item);
+    });
+    var keys = Object.keys(groups);
+    keys.forEach(function(k) {
+      groups[k].sort(function(a, b) { return new Date(b.pubDate) - new Date(a.pubDate); });
+    });
+    var result = [];
+    var idx = {};
+    keys.forEach(function(k) { idx[k] = 0; });
+    while (result.length < items.length) {
+      var added = false;
+      keys.forEach(function(k) {
+        if (idx[k] < groups[k].length) {
+          result.push(groups[k][idx[k]++]);
+          added = true;
+        }
+      });
+      if (!added) break;
+    }
+    return result;
+  }
+
+  function render() {
+    if (!sortedItems.length) return;
     var list = document.getElementById('friend-updates-list');
     var widget = document.getElementById('friend-updates-widget');
-    items.sort(function(a, b) { return new Date(b.pubDate) - new Date(a.pubDate); });
-    items = items.slice(0, 5);
-    var html = '';
-    for (var i = 0; i < items.length; i++) {
-      var item = items[i];
+    var start = (page * PAGE_SIZE) % sortedItems.length;
+    var batch = [];
+    for (var i = 0; i < PAGE_SIZE && i < sortedItems.length; i++) {
+      batch.push(sortedItems[(start + i) % sortedItems.length]);
+    }
+    list.innerHTML = '';
+    batch.forEach(function(item) {
       var li = document.createElement('li');
       li.className = 'post-list-item';
+      li.style.cssText = 'margin-bottom:8px;';
       var a = document.createElement('a');
       a.className = 'post-list-link';
       a.href = item.link;
       a.target = '_blank';
       a.textContent = item.title;
-      var span = document.createElement('span');
-      span.style.cssText = 'color:#999;font-size:12px;margin-left:6px;';
-      span.textContent = item.friend + ' · ' + relativeDate(item.pubDate);
+      var meta = document.createElement('span');
+      meta.style.cssText = 'color:#999;font-size:12px;margin-left:6px;';
+      meta.textContent = item.friend + ' · ' + relativeDate(item.pubDate);
       li.appendChild(a);
-      li.appendChild(span);
+      li.appendChild(meta);
+      if (item.desc) {
+        var p = document.createElement('p');
+        p.style.cssText = 'color:#888;font-size:12px;margin:3px 0 0;line-height:1.5;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;';
+        p.textContent = item.desc;
+        li.appendChild(p);
+      }
       list.appendChild(li);
-    }
+    });
     widget.style.display = '';
   }
+
+  document.getElementById('friend-updates-refresh').addEventListener('click', function() {
+    page++;
+    render();
+  });
 
   var cached = sessionStorage.getItem(CACHE_KEY);
   if (cached) {
     try {
       var data = JSON.parse(cached);
-      if (Date.now() - data.ts < CACHE_TTL) { render(data.items); return; }
+      if (Date.now() - data.ts < CACHE_TTL) {
+        sortedItems = diversify(data.items);
+        render();
+        return;
+      }
     } catch(e) {}
   }
 
@@ -75,16 +131,19 @@
         var res = JSON.parse(xhr.responseText);
         if (res.status === 'ok' && res.items) {
           res.items.forEach(function(item) {
-            allItems.push({ title: item.title, link: item.link, pubDate: item.pubDate, friend: f.title });
+            var desc = item.description ? stripHtml(item.description) : '';
+            if (desc.length > 80) desc = desc.substring(0, 80) + '…';
+            allItems.push({ title: item.title, link: item.link, pubDate: item.pubDate, friend: f.title, desc: desc });
           });
         }
       } catch(e) {}
       if (++done === feeds.length) {
         sessionStorage.setItem(CACHE_KEY, JSON.stringify({ ts: Date.now(), items: allItems }));
-        render(allItems);
+        sortedItems = diversify(allItems);
+        render();
       }
     };
-    xhr.onerror = function() { if (++done === feeds.length) render(allItems); };
+    xhr.onerror = function() { if (++done === feeds.length) { sortedItems = diversify(allItems); render(); } };
     xhr.send();
   });
 })();
