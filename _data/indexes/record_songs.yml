@@ -111,3 +111,8 @@ items:
     id: 170
     album: "上海滩"
     cover: "/assets/imgs/cover/上海滩.jpeg"
+  - label: "浦东"
+    url: /pudong/
+    id: 171
+    album: "上海滩"
+    cover: "/assets/imgs/cover/上海滩.jpeg"
