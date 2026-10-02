@@ -1,6 +1,16 @@
 type: record
 title: "也许你可以来听听我的歌"
 items:
+  - label: "遗梦"
+    url: /yimeng/
+    id: 25
+    album: "钱塘门外"
+    cover: "/assets/imgs/cover/钱塘门外.png"
+  - label: "相思曲"
+    url: /xiangsiqiu/
+    id: 57
+    album: "寒碧温黄"
+    cover: "/assets/imgs/cover/寒碧温黄.jpg"
   - label: "月圆"
     url: /yueyuan/
     id: 58
@@ -11,6 +21,11 @@ items:
     id: 64
     album: "寒碧温黄"
     cover: "/assets/imgs/cover/寒碧温黄.jpg"
+  - label: "玉陨"
+    url: /yuyun/
+    id: 79
+    album: "钱塘门外"
+    cover: "/assets/imgs/cover/钱塘门外.png"
   - label: "星望"
     url: /xingwang/
     id: 94
@@ -31,6 +46,16 @@ items:
     id: 102
     album: "二〇一九"
     cover: "/assets/imgs/cover/二〇一九.jpg"
+  - label: "迷航"
+    url: /mihang/
+    id: 112
+    album: "钱塘门外"
+    cover: "/assets/imgs/cover/钱塘门外.png"
+  - label: "暮春"
+    url: /muchun/
+    id: 126
+    album: "寒碧温黄"
+    cover: "/assets/imgs/cover/寒碧温黄.jpg"
   - label: "不等"
     url: /budeng/
     id: 135
