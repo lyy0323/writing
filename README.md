@@ -1,4 +1,4 @@
-[芋椰的小世界](http://lyy0323.github.io/writing/)
+[芋椰的小世界 - 文字篇](https://lyy0323.space/writing/)
 =================================
 
 一个简洁的、多设备支持的 Jekyll 博客模板，基于 [maupassant-jekyll](https://github.com/alafighting/maupassant-jekyll.git) 的衍生版本 [oukohou](http://www.oukohou.wang/) 优化而来。  
