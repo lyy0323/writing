@@ -1,4 +1,4 @@
 # robots.txt  
 User-agent: *
 Disallow: 
-Sitemap: http://lyy0323.github.io/writing/sitemap.xml
+Sitemap: https://lyy0323.space/writing/sitemap.xml
